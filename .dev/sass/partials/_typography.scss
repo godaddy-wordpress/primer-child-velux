@@ -1,0 +1,52 @@
+body {
+	color: $color-text;
+}
+
+h1 {
+	font-size: 3.125rem;
+}
+
+h2 {
+	color: $color-disabled;
+	font-size: 2.5rem;
+}
+
+h3 {
+	font-size: 2.25rem;
+}
+
+h4 {
+	color: $color-red;
+	font-size: 1.5rem;
+}
+
+h5 {
+	font-size: 1.625rem;
+}
+
+h6 {
+	font-size: 1.625rem;
+	font-style: italic;
+}
+
+p {
+	font-size: 1rem;
+	line-height: 30px;
+}
+
+a {
+
+}
+
+button,
+a.button,
+.fl-button {
+	background: none;
+	border-radius: 0;
+	border-bottom: 1px solid $color-white;
+	padding: 6px 0;
+}
+
+input {
+
+}

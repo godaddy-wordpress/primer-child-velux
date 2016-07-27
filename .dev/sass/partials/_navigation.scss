@@ -1,0 +1,27 @@
+.main-navigation-container {
+	background: none;
+	float: right;
+}
+
+.site-header .site-header-wrapper .main-navigation {
+	margin: 0;
+}
+
+.main-navigation {
+	background: none;
+	margin: 0;
+
+	ul {
+
+		li {
+			margin: 40px 16px;
+
+			a {
+				padding: 0;
+			}
+
+		}
+
+	}
+
+}

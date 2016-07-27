@@ -1,0 +1,15 @@
+.widget {
+	background: none;
+	color: $color-white;
+
+	.hero & {
+		padding: 150px 75px;
+
+		h1 {
+			color: $color-white;
+			text-align: left;
+		}
+
+	}
+
+}

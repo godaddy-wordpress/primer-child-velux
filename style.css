@@ -1,0 +1,95 @@
+/*
+Theme Name: Velux
+Theme URI: http://liftux.com
+Author: Lift
+Author URI: http://liftux.com
+Description: This is a child theme for Primer.
+Version: 0.0.9
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: activation
+Domain Path: /languages/
+Tags:
+Template: wp-primer-theme
+
+This theme, like WordPress, is licensed under the GPL.
+
+*/
+/*--------------------------------------------------------------
+Variables
+--------------------------------------------------------------*/
+.site-header {
+  height: 100vh;
+  width: 100vw; }
+
+.site-header-wrapper {
+  border-bottom: 1px solid #ffffff; }
+
+.site-title-wrapper {
+  float: left;
+  padding: 0;
+  width: auto; }
+
+.site-title {
+  margin: 38px 0;
+  padding: 0; }
+
+.main-navigation-container {
+  background: none;
+  float: right; }
+
+.site-header .site-header-wrapper .main-navigation {
+  margin: 0; }
+
+.main-navigation {
+  background: none;
+  margin: 0; }
+  .main-navigation ul li {
+    margin: 40px 16px; }
+    .main-navigation ul li a {
+      padding: 0; }
+
+body {
+  color: #202223; }
+
+h1 {
+  font-size: 3.125rem; }
+
+h2 {
+  color: #c5c3c6;
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 2.25rem; }
+
+h4 {
+  color: #d24343;
+  font-size: 1.5rem; }
+
+h5 {
+  font-size: 1.625rem; }
+
+h6 {
+  font-size: 1.625rem;
+  font-style: italic; }
+
+p {
+  font-size: 1rem;
+  line-height: 30px; }
+
+button,
+a.button,
+.fl-button {
+  background: none;
+  border-radius: 0;
+  border-bottom: 1px solid #ffffff;
+  padding: 6px 0; }
+
+.widget {
+  background: none;
+  color: #ffffff; }
+  .hero .widget {
+    padding: 150px 75px; }
+    .hero .widget h1 {
+      color: #ffffff;
+      text-align: left; }
