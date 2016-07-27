@@ -1,10 +1,22 @@
 .site-header {
-	height: 100vh;
-	width: 100vw;
+
+
+	.home & {
+		background: url('.dev/img/header.png') no-repeat center center;
+		background-size: cover;
+		height: 100vh;
+		width: 100vw;
+	}
+
 }
 
 .site-header-wrapper {
-	border-bottom: 1px solid $color-white;
+	border-bottom: 1px solid $color-border;
+
+	.home & {
+		border-bottom: 1px solid $color-white;
+	}
+
 }
 
 .site-title-wrapper {
@@ -14,7 +26,31 @@
 }
 
 .site-title {
+	font-size: 2rem;
+	font-weight: 100;
 	margin: 38px 0;
 	padding: 0;
+	text-transform: uppercase;
+
+	a {
+		color: $color-text;
+
+		.home & {
+			color: $color-white !important;
+		}
+
+	}
+
+	span.site-description {
+		font-size: .875rem;
+		font-weight: 100;
+		position: relative;
+		top: -4px;
+
+		.home & {
+			color: $color-white;
+		}
+
+	}
 
 }

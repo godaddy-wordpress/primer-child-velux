@@ -36,7 +36,7 @@
 
 		<?php do_action( 'primer_before_header' ) ?>
 
-		<header id="masthead" class="site-header" role="banner"<?php if ( ! empty( velux_get_header_image() ) ) : ?> style="background:url('<?php echo velux_get_header_image( ); ?>') no-repeat top center; background-size: cover;"<?php endif; ?>>
+		<header id="masthead" class="site-header" role="banner"<?php if ( ! empty( velux_get_header_image() ) && is_front_page() ) : ?> style="background:url('<?php echo velux_get_header_image( ); ?>') no-repeat top center; background-size: cover;"<?php endif; ?>>
 
 			<div class="site-header-wrapper">
 

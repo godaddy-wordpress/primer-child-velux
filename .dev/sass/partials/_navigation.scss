@@ -14,10 +14,19 @@
 	ul {
 
 		li {
-			margin: 40px 16px;
+			margin: 43px 12px;
 
 			a {
+				color: $color-text;
+				font-size: .9375rem;
+				font-weight: bold;
 				padding: 0;
+				text-transform: uppercase;
+
+				.home & {
+					color: $color-white;
+				}
+
 			}
 
 		}

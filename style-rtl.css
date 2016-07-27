@@ -18,12 +18,16 @@ This theme, like WordPress, is licensed under the GPL.
 /*--------------------------------------------------------------
 Variables
 --------------------------------------------------------------*/
-.site-header {
+.home .site-header {
+  background: url(".dev/img/header.png") no-repeat center center;
+  background-size: cover;
   height: 100vh;
   width: 100vw; }
 
 .site-header-wrapper {
-  border-bottom: 1px solid #ffffff; }
+  border-bottom: 1px solid #5c6d7c; }
+  .home .site-header-wrapper {
+    border-bottom: 1px solid #ffffff; }
 
 .site-title-wrapper {
   float: right;
@@ -31,8 +35,22 @@ Variables
   width: auto; }
 
 .site-title {
+  font-size: 2rem;
+  font-weight: 100;
   margin: 38px 0;
-  padding: 0; }
+  padding: 0;
+  text-transform: uppercase; }
+  .site-title a {
+    color: #202223; }
+    .home .site-title a {
+      color: #ffffff !important; }
+  .site-title span.site-description {
+    font-size: .875rem;
+    font-weight: 100;
+    position: relative;
+    top: -4px; }
+    .home .site-title span.site-description {
+      color: #ffffff; }
 
 .main-navigation-container {
   background: none;
@@ -45,9 +63,15 @@ Variables
   background: none;
   margin: 0; }
   .main-navigation ul li {
-    margin: 40px 16px; }
+    margin: 43px 12px; }
     .main-navigation ul li a {
-      padding: 0; }
+      color: #202223;
+      font-size: .9375rem;
+      font-weight: bold;
+      padding: 0;
+      text-transform: uppercase; }
+      .home .main-navigation ul li a {
+        color: #ffffff; }
 
 @media only screen and (min-width: 64.063em) {
   .footer-widget-area .footer-widget {
@@ -108,7 +132,8 @@ body {
   color: #202223; }
 
 h1 {
-  font-size: 3.125rem; }
+  font-size: 3.125rem;
+  font-weight: 100; }
 
 h2 {
   color: #c5c3c6;
@@ -144,7 +169,23 @@ a.button,
   background: none;
   color: #ffffff; }
   .hero .widget {
-    padding: 150px 75px; }
+    padding: 150px 90px; }
     .hero .widget h1 {
       color: #ffffff;
+      font-size: 5.5rem;
+      line-height: 1;
       text-align: right; }
+
+.single .entry-header {
+  border-bottom: 1px solid #5c6d7c;
+  border-top: 1px solid #5c6d7c;
+  margin: 50px 0;
+  padding: 30px 0;
+  text-align: center; }
+
+.single .entry-title {
+  margin-top: 0; }
+
+.single .entry-meta {
+  margin: 0;
+  padding: 0; }

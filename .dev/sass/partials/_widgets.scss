@@ -3,10 +3,12 @@
 	color: $color-white;
 
 	.hero & {
-		padding: 150px 75px;
+		padding: 150px 90px;
 
 		h1 {
 			color: $color-white;
+			font-size: 5.5rem;
+			line-height: 1;
 			text-align: left;
 		}
 
