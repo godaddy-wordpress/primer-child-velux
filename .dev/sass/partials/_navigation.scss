@@ -1,6 +1,10 @@
 .main-navigation-container {
-	background: none;
-	float: right;
+
+	@media screen and (min-width: 1050px) {
+		background: none;
+		float: right;
+	}
+
 }
 
 .site-header .site-header-wrapper .main-navigation {
@@ -16,10 +20,9 @@
 
 .menu-toggle {
 	display: block;
-	float: right;
+	float: left;
 	position: relative;
-	float: right;
-	top: 25px;
+	z-index: 999999;
 
 	@media screen and (min-width: 600px) {
 		display: block;
@@ -32,23 +35,38 @@
 }
 
 .main-navigation {
-	background: none;
+	background: transparentize($color-widget-bg, .05);
+	bottom: 0;
+	left: 0;
 	margin: 0;
+	position: absolute;
+	right: 0;
+	top: 85px;
 
 	@media screen and (min-width: 600px) {
 		display: none;
 	}
 
 	@media screen and (min-width: 1050px) {
+		background: none;
 		display: block;
 		position: relative;
 		z-index: auto;
 	}
 
 	ul {
+		text-align: center;
+
+		@media screen and (min-width: 1050px) {
+			text-align: left;
+		}
 
 		li {
-			margin: 49px 12px;
+			margin: 15px;
+
+			@media screen and (min-width: 1050px) {
+				margin: 49px 12px;
+			}
 
 			a {
 				color: $color-text;
@@ -67,7 +85,7 @@
 
 				li {
 					margin: 12px;
-					
+
 					a {
 
 					}

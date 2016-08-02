@@ -12,6 +12,11 @@
 
 .site-header-wrapper {
 	border-bottom: 1px solid $color-border;
+	padding-bottom: 25px;
+
+	@media screen and (min-width: 1050px) {
+		padding-bottom: 0;
+	}
 
 	.home & {
 		border-bottom: 1px solid $color-white !important;
@@ -23,20 +28,49 @@
 	left: auto;
 	position: static;
 	top: auto;
+
+	@media screen and (max-width: 1049px) {
+
+		.hero-wrapper {
+
+			.widget {
+				padding: 0;
+
+				h1 {
+					font-size: 3rem;
+				}
+
+			}
+
+		}
+
+	}
+
 }
 
 .site-title-wrapper {
-	float: left;
+	float: right;
 	padding: 0;
 	width: auto;
+
+	@media screen and (min-width: 1050px) {
+		float: left;
+	}
+
 }
 
 .site-title {
-	font-size: 2rem;
+	display: inline-block;
+	font-size: 1.6rem;
 	font-weight: 100;
-	margin: 38px 0;
+	margin: 0 10px 0 0;
 	padding: 0;
 	text-transform: uppercase;
+
+	@media screen and (min-width: 1050px) {
+		font-size: 2rem;
+		margin: 38px 0;
+	}
 
 	a {
 		color: $color-text;
@@ -48,6 +82,7 @@
 	}
 
 	span.site-description {
+		display: block;
 		font-size: .875rem;
 		font-weight: 100;
 		position: relative;
