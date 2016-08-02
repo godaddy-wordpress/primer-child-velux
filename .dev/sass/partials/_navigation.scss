@@ -7,9 +7,36 @@
 	margin: 0;
 }
 
+.menu-toggle {
+	display: block;
+	float: right;
+	position: relative;
+	float: right;
+	top: 25px;
+
+	@media screen and (min-width: 600px) {
+		display: block;
+	}
+
+	@media screen and (min-width: 1050px) {
+		display: none;
+	}
+
+}
+
 .main-navigation {
 	background: none;
 	margin: 0;
+
+	@media screen and (min-width: 600px) {
+		display: none;
+	}
+
+	@media screen and (min-width: 1050px) {
+		display: block;
+		position: relative;
+		z-index: auto;
+	}
 
 	ul {
 
