@@ -14,7 +14,7 @@
 	border-bottom: 1px solid $color-border;
 
 	.home & {
-		border-bottom: 1px solid $color-white;
+		border-bottom: 1px solid $color-white !important;
 	}
 
 }
@@ -54,7 +54,7 @@
 		top: -4px;
 
 		.home & {
-			color: $color-white;
+			color: $color-white !important;
 		}
 
 	}

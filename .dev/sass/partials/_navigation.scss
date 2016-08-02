@@ -58,7 +58,7 @@
 				text-transform: uppercase;
 
 				.home & {
-					color: $color-white;
+					color: $color-white !important;
 				}
 
 			}

@@ -29,7 +29,7 @@ Variables
 .site-header-wrapper {
   border-bottom: 1px solid #5c6d7c; }
   .home .site-header-wrapper {
-    border-bottom: 1px solid #ffffff; }
+    border-bottom: 1px solid #ffffff !important; }
 
 .hero {
   right: auto;
@@ -57,7 +57,7 @@ Variables
     position: relative;
     top: -4px; }
     .home .site-title span.site-description {
-      color: #ffffff; }
+      color: #ffffff !important; }
 
 .row,
 .footer-widget-area {
@@ -118,7 +118,7 @@ Variables
       padding: 0;
       text-transform: uppercase; }
       .home .main-navigation ul li a {
-        color: #ffffff; }
+        color: #ffffff !important; }
 
 @media only screen and (min-width: 64.063em) {
   .footer-widget-area .footer-widget {
