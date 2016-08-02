@@ -72,7 +72,7 @@ Variables
 .site-header .site-header-wrapper .main-navigation {
   margin: 0; }
 
-.menu-main-menu-container {
+.main-navigation .menu-main-menu-container {
   float: none;
   margin-left: 0;
   margin-right: 0;
