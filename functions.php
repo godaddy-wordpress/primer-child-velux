@@ -185,7 +185,7 @@ function velux_colors() {
 			'name'    => 'header_textcolor',
 			'default' => '#212121',
 			'css'     => array(
-				'.side-masthead, .site-title a, .site-description, ..site-title a:hover, .site-title a:visited, .site-title a:focus, .hero-widget, header .main-navigation-container .menu li a, .main-navigation-container .menu li.current-menu-item > a, .main-navigation-container .menu li.current-menu-item > a:hover, .side-masthead .site-title a, .side-masthead .site-title a:hover, .hero-widget h2.widget-title' => array(
+				'.side-masthead, .site-title a, .site-description, .site-title a:hover, .site-title a:visited, .site-title a:focus, .hero-widget, header .main-navigation-container .menu li a, .main-navigation-container .menu li.current-menu-item > a, .main-navigation-container .menu li.current-menu-item > a:hover, .side-masthead .site-title a, .side-masthead .site-title a:hover, .hero-widget h2.widget-title' => array(
 					'color' => '%1$s',
 				),
 			),
