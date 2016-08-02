@@ -29,6 +29,11 @@ Variables
   .home .site-header-wrapper {
     border-bottom: 1px solid #ffffff; }
 
+.hero {
+  right: auto;
+  position: static;
+  top: auto; }
+
 .site-title-wrapper {
   float: right;
   padding: 0;
