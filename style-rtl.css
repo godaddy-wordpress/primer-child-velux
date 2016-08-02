@@ -52,6 +52,19 @@ Variables
     .home .site-title span.site-description {
       color: #ffffff; }
 
+.row,
+.footer-widget-area {
+  padding-right: 25px;
+  padding-left: 25px;
+  width: 100%; }
+
+@media only screen and (min-width: 64.063em) {
+  .row,
+  .footer-widget-area {
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto; } }
+
 .main-navigation-container {
   background: none;
   float: left; }
