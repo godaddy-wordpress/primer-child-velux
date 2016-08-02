@@ -72,6 +72,12 @@ Variables
 .site-header .site-header-wrapper .main-navigation {
   margin: 0; }
 
+.menu-main-menu-container {
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
+  width: auto; }
+
 .menu-toggle {
   display: block;
   float: right;
@@ -130,25 +136,34 @@ Variables
   background: #191919;
   color: #606365;
   margin: 0 auto;
-  padding: 50px 0; }
+  padding: 0 0 20px; }
   .site-info-wrapper a {
     color: #606365; }
 
-.footer-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-  .footer-nav ul li {
-    display: inline-block;
-    font-size: .875rem;
-    margin: 0 15px;
-    text-align: center;
-    text-transform: uppercase; }
+.footer-nav {
+  background: #191919;
+  margin: 0 auto;
+  padding-top: 30px; }
+  .footer-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; }
     @media only screen and (min-width: 64.063em) {
-      .footer-nav ul li {
+      .footer-nav ul {
         text-align: left; } }
-    .footer-nav ul li a {
-      color: #ffffff; }
+    .footer-nav ul li {
+      display: inline-block;
+      font-size: .875rem;
+      font-weight: 600;
+      margin: 0 10px;
+      text-align: center;
+      text-transform: uppercase; }
+      @media only screen and (min-width: 64.063em) {
+        .footer-nav ul li {
+          text-align: left; } }
+      .footer-nav ul li a {
+        color: #ffffff; }
 
 .site-info-wrapper .site-info {
   overflow: visible;
