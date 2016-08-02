@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: basis-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-02 18:46-0400\n"
+"POT-Creation-Date: 2016-08-02 19:52-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -64,6 +64,14 @@ msgstr ""
 
 #: functions.php:296
 msgid "Dark Blue"
+msgstr ""
+
+#: functions.php:324
+msgid "Primary Font"
+msgstr ""
+
+#: functions.php:334
+msgid "Secondary Font"
 msgstr ""
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php

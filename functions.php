@@ -310,3 +310,35 @@ function velux_color_schemes() {
 	);
 }
 add_action( 'primer_color_schemes', 'velux_color_schemes' );
+
+/**
+ *
+ * Add selectors for font customizing.
+ *
+ * @since 1.0.0
+ */
+function update_font_types() {
+	return	array(
+		array(
+			'name'    => 'primary_font',
+			'label'   => __( 'Primary Font', 'primer' ),
+			'default' => 'Roboto',
+			'css'     => array(
+				'body, p, .hero-wrapper .textwidget p, .site-description, .search-form input[type="search”], .widget li a, .site-info-text, h6, body p, .widget p, ' => array(
+					'font-family' => '"%s", sans-serif',
+				),
+			),
+		),
+		array(
+			'name'    => 'secondary_font',
+			'label'   => __( 'Secondary Font', 'primer' ),
+			'default' => 'Playfair Display',
+			'css'     => array(
+				'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"], blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text, .site-title, .hero-wrapper .textwidget h1, .hero-wrapper .textwidget .button, .main-navigation li a, .widget-title, .footer-nav ul li a, h1, h2, h3, h4, h5, .entry-title, .single .entry-meta, .hero .widget h1' => array(
+					'font-family' => '"%s", serif',
+				),
+			),
+		),
+	);
+}
+add_action( 'primer_font_types', 'update_font_types' );

@@ -92,6 +92,10 @@
 			color: $color-white !important;
 		}
 
+		@media screen and (min-width: 1050px) {
+			display: inline-block;
+		}
+
 	}
 
 }
