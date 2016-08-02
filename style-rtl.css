@@ -18,11 +18,13 @@ This theme, like WordPress, is licensed under the GPL.
 /*--------------------------------------------------------------
 Variables
 --------------------------------------------------------------*/
-.home .site-header {
-  background: url(".dev/img/header.png") no-repeat center center;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw; }
+.site-header {
+  background-color: #ffffff; }
+  .home .site-header {
+    background: url(".dev/img/header.png") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw; }
 
 .site-header-wrapper {
   border-bottom: 1px solid #5c6d7c; }
