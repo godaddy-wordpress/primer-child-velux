@@ -45,7 +45,14 @@ a.button,
 	background: none;
 	border-radius: 0;
 	border-bottom: 1px solid $color-white;
+	letter-spacing: .4em;
 	padding: 6px 0;
+	text-transform: uppercase;
+
+	&:hover {
+		background: none;
+	}
+
 }
 
 input {

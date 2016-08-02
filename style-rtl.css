@@ -122,6 +122,8 @@ Variables
       text-transform: uppercase; }
       .home .main-navigation ul li a {
         color: #ffffff !important; }
+    .main-navigation ul li .sub-menu li {
+      margin: 12px; }
 
 .site-footer {
   background-color: #212121; }
@@ -227,7 +229,13 @@ a.button,
   background: none;
   border-radius: 0;
   border-bottom: 1px solid #ffffff;
-  padding: 6px 0; }
+  letter-spacing: .4em;
+  padding: 6px 0;
+  text-transform: uppercase; }
+  button:hover,
+  a.button:hover,
+  .fl-button:hover {
+    background: none; }
 
 .widget {
   background: none;
