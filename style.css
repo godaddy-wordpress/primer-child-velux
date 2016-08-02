@@ -151,7 +151,8 @@ Variables
       color: #ffffff; }
 
 .site-info-wrapper .site-info {
-  overflow: visible; }
+  overflow: visible;
+  padding: 0 20px; }
   .site-info-wrapper .site-info .social-menu a {
     background: none; }
 

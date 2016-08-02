@@ -11,18 +11,14 @@ function velux_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'velux_theme_enqueue_styles' );
 
 /**
- * Register custom Custom Navigation Menus.
  *
- * @link https://codex.wordpress.org/Function_Reference/register_nav_menus
+ * Register Footer Menu.
+ *
  */
-function velux_register_site_info_menu() {
-	register_nav_menus(
-		array(
-			'site-info' => esc_html__( 'Site Info', 'velux' ),
-		)
-	);
+function velux_theme_register_nav_menu() {
+	 register_nav_menu( 'footer', __( 'Footer Menu', 'velux' ) );
 }
-add_action( 'after_setup_theme', 'velux_register_site_info_menu' );
+add_action( 'after_setup_theme', 'velux_theme_register_nav_menu' );
 
 /**
  * Remove primer navigation and add velux navigation
@@ -42,6 +38,21 @@ function velux_add_mobile_menu() {
 	get_template_part( 'templates/parts/mobile-menu' );
 }
 add_action( 'primer_header', 'velux_add_mobile_menu', 0 );
+
+/**
+ * Display the footer nav before the site info.
+ *
+ * @action primer_after_footer
+ *
+ * @since 1.0.0
+ */
+function velux_add_nav_footer() {
+
+	get_template_part( 'templates/parts/footer-nav' );
+
+}
+add_action( 'primer_after_footer', 'velux_add_nav_footer', 10 );
+
 /**
  * Move navigation from after_header to header
  *
