@@ -213,7 +213,7 @@ function velux_colors() {
 			'label'   => __( 'Button Color', 'primer' ),
 			'default' => '#8e452a',
 			'css'     => array(
-				'.cta, button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"]:not(.search-submit), a.fl-button' => array(
+				'.cta, button, input[type="button"], input[type="reset"], input[type="submit"]:not(.search-submit), a.fl-button' => array(
 					'background-color' => '%1$s',
 				),
 			),
