@@ -40,6 +40,16 @@ function velux_add_mobile_menu() {
 add_action( 'primer_header', 'velux_add_mobile_menu', 0 );
 
 /**
+ *
+ * Adding content to footer via action.
+ *
+ */
+function velux_theme_footer_content() {
+	return;
+}
+add_action( 'primer_footer', 'velux_theme_footer_content' );
+
+/**
  * Display the footer nav before the site info.
  *
  * @action primer_after_footer
