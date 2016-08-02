@@ -59,6 +59,9 @@ Variables
     .home .site-title span.site-description {
       color: #ffffff !important; }
 
+.site-title a:hover {
+  color: #202223; }
+
 .row,
 .footer-widget-area {
   padding-right: 25px;
