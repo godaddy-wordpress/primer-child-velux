@@ -123,13 +123,17 @@ Variables
       .home .main-navigation ul li a {
         color: #ffffff !important; }
 
+.site-footer {
+  background-color: #212121; }
+
 @media only screen and (min-width: 64.063em) {
   .footer-widget-area .footer-widget {
     width: 33%; } }
 
 .footer-widget-area .footer-widget .widget {
   background-color: transparent;
-  font-size: .875rem; }
+  font-size: .875rem;
+  padding: 0; }
   .footer-widget-area .footer-widget .widget ul,
   .footer-widget-area .footer-widget .widget li,
   .footer-widget-area .footer-widget .widget a,
