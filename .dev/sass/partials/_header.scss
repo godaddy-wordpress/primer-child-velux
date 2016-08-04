@@ -1,25 +1,22 @@
 .site-header {
-	background-color: $color-white;
+	background-color: $color-label;
 
 	.home & {
 		background-size: cover;
-		height: 100vh;
+		min-height: 100vh;
 		width: 100vw;
 	}
 
 }
 
 .site-header-wrapper {
-	border-bottom: 1px solid $color-border;
+	border-bottom: 1px solid $color-white;
 	padding-bottom: 25px;
 
 	@media screen and (min-width: 1050px) {
 		padding-bottom: 0;
 	}
 
-	.home & {
-		border-bottom: 1px solid $color-white !important;
-	}
 
 }
 
@@ -48,12 +45,13 @@
 }
 
 .site-title-wrapper {
-	float: right;
-	padding: 0;
+	padding: 20px 0 0;
+	float: left;
 	width: auto;
+	display: inline;
 
 	@media screen and (min-width: 1050px) {
-		float: left;
+		padding-top: 0;
 	}
 
 }
@@ -72,12 +70,11 @@
 	}
 
 	a {
-		color: $color-text;
+		color: $color-white;
 
-		.home & {
-			color: $color-white !important;
+		&:hover{
+			color: $color-white;
 		}
-
 	}
 
 	span.site-description {
@@ -86,10 +83,7 @@
 		font-weight: 100;
 		position: relative;
 		top: -4px;
-
-		.home & {
-			color: $color-white !important;
-		}
+		color: $color-white;
 
 		@media screen and (min-width: 1050px) {
 			display: inline-block;
@@ -100,7 +94,7 @@
 }
 
 .site-title a:hover {
-	color: $color-text;
+	color: $color-white;
 }
 
 .row,
@@ -108,6 +102,14 @@
 	padding-left: 25px;
 	padding-right: 25px;
 	width: 100%;
+}
+
+.page-title-container {
+	padding: 3em 0;
+
+	.page-title{
+		color: $color-white;
+	}
 }
 
 @media only screen and (min-width: 64.063em) {

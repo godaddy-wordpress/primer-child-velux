@@ -19,20 +19,18 @@ This theme, like WordPress, is licensed under the GPL.
 Variables
 --------------------------------------------------------------*/
 .site-header {
-  background-color: #ffffff; }
+  background-color: #606365; }
   .home .site-header {
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw; }
 
 .site-header-wrapper {
-  border-bottom: 1px solid #5c6d7c;
+  border-bottom: 1px solid #ffffff;
   padding-bottom: 25px; }
   @media screen and (min-width: 1050px) {
     .site-header-wrapper {
       padding-bottom: 0; } }
-  .home .site-header-wrapper {
-    border-bottom: 1px solid #ffffff !important; }
 
 .hero {
   left: auto;
@@ -45,12 +43,13 @@ Variables
         font-size: 3rem; } }
 
 .site-title-wrapper {
-  float: right;
-  padding: 0;
-  width: auto; }
+  padding: 20px 0 0;
+  float: left;
+  width: auto;
+  display: inline; }
   @media screen and (min-width: 1050px) {
     .site-title-wrapper {
-      float: left; } }
+      padding-top: 0; } }
 
 .site-title {
   display: inline-block;
@@ -64,29 +63,33 @@ Variables
       font-size: 2rem;
       margin: 38px 0; } }
   .site-title a {
-    color: #202223; }
-    .home .site-title a {
-      color: #ffffff !important; }
+    color: #ffffff; }
+    .site-title a:hover {
+      color: #ffffff; }
   .site-title span.site-description {
     display: block;
     font-size: .875rem;
     font-weight: 100;
     position: relative;
-    top: -4px; }
-    .home .site-title span.site-description {
-      color: #ffffff !important; }
+    top: -4px;
+    color: #ffffff; }
     @media screen and (min-width: 1050px) {
       .site-title span.site-description {
         display: inline-block; } }
 
 .site-title a:hover {
-  color: #202223; }
+  color: #ffffff; }
 
 .row,
 .footer-widget-area {
   padding-left: 25px;
   padding-right: 25px;
   width: 100%; }
+
+.page-title-container {
+  padding: 3em 0; }
+  .page-title-container .page-title {
+    color: #ffffff; }
 
 @media only screen and (min-width: 64.063em) {
   .row,
@@ -113,7 +116,8 @@ Variables
   display: block;
   float: left;
   position: relative;
-  z-index: 999999; }
+  z-index: 999999;
+  top: 9px; }
   @media screen and (min-width: 600px) {
     .menu-toggle {
       display: block; } }
@@ -153,15 +157,21 @@ Variables
       .main-navigation ul li {
         margin: 49px 12px; } }
     .main-navigation ul li a {
-      color: #202223;
       font-size: .9375rem;
       font-weight: bold;
       padding: 0;
-      text-transform: uppercase; }
-      .home .main-navigation ul li a {
-        color: #ffffff !important; }
+      text-transform: uppercase;
+      color: #ffffff; }
     .main-navigation ul li .sub-menu li {
       margin: 12px; }
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a,
+.main-navigation a:hover,
+.main-navigation a:visited:hover {
+  background: none; }
 
 .site-footer {
   background-color: #212121; }
@@ -282,7 +292,7 @@ a.button,
   background: none;
   color: #ffffff; }
   .hero .widget {
-    padding: 150px 90px; }
+    padding: 6em 20px; }
     .hero .widget h1 {
       color: #ffffff;
       font-size: 5.5rem;

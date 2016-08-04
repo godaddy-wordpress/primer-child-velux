@@ -1,4 +1,31 @@
 <?php
+
+/**
+ * Move titles above menu templates.
+ *
+ * @since 1.0.0
+ */
+function velux_remove_titles(){
+
+}
+add_action( 'init', 'velux_remove_titles' );
+
+/**
+ * Remove hero for all pages except front.
+ *
+ * @since 1.0.0
+ */
+function velux_remove_hero_if_not_home() {
+
+	remove_action( 'primer_header', 'primer_add_hero', 10 );
+
+	if( is_front_page() && is_active_sidebar( 'hero' ) ){
+		add_action( 'primer_after_header', 'primer_add_hero' );
+	}
+
+}
+add_action( 'primer_before_header', 'velux_remove_hero_if_not_home' );
+
 /**
  *
  * Add child and parent theme files.
@@ -142,18 +169,6 @@ function velux_update_custom_header_args( $args ) {
 	return $args;
 }
 add_filter( 'primer_custom_header_args', 'velux_update_custom_header_args' );
-
-/**
- * Display hero in the header
- *
- * @action velux_header
- */
-function velux_add_hero() {
-	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
-		get_template_part( 'templates/parts/hero' );
-	}
-}
-add_action( 'primer_after_header', 'velux_add_hero', 25 );
 
 /**
  * Get header image with image size

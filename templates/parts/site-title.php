@@ -16,9 +16,11 @@
 
 		<h1 class="site-title">
 
-			<a href="<?php echo esc_url( home_url( '/' ) ) ?>" rel="home"><?php bloginfo( 'name' ) ?> | <span class="site-description"><?php bloginfo( 'description' ) ?></span></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ) ?>" rel="home"><?php bloginfo( 'name' ) ?> | </a>
 
 		</h1>
+
+		<span class="site-description"><?php bloginfo( 'description' ) ?></span>
 
 	<?php endif; ?>
 

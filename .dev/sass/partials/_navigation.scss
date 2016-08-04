@@ -23,6 +23,7 @@
 	float: left;
 	position: relative;
 	z-index: 999999;
+	top: 9px;
 
 	@media screen and (min-width: 600px) {
 		display: block;
@@ -72,15 +73,11 @@
 			}
 
 			a {
-				color: $color-text;
 				font-size: .9375rem;
 				font-weight: bold;
 				padding: 0;
 				text-transform: uppercase;
-
-				.home & {
-					color: $color-white !important;
-				}
+				color: $color-white;
 
 			}
 
@@ -101,4 +98,15 @@
 
 	}
 
+}
+
+.main-navigation {
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a,
+	a:hover,
+	a:visited:hover{
+		background: none;
+	}
 }
