@@ -343,9 +343,9 @@ function update_font_types() {
 }
 add_action( 'primer_font_types', 'update_font_types' );
 
-function activation_add_default_header_image( $array ) {
+function velux_add_default_header_image( $array ) {
 	$array['default-image'] = get_stylesheet_directory_uri() . '/.dev/img/header.png';
 
 	return $array;
 }
-add_filter( 'primer_custom_header_args', 'activation_add_default_header_image', 20 );
+add_filter( 'primer_custom_header_args', 'velux_add_default_header_image', 20 );
