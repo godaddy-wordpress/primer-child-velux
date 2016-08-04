@@ -1,5 +1,7 @@
 .site-header {
 	background-color: $color-label;
+	position: relative;
+    z-index: 999;
 
 	.home & {
 		background-size: cover;
@@ -60,9 +62,10 @@
 	display: inline-block;
 	font-size: 1.6rem;
 	font-weight: 100;
-	margin: 0 10px 0 0;
-	padding: 0;
+	margin: 0;
+	padding: 0 15px 0 0;
 	text-transform: uppercase;
+	border-right: 1px solid $color-white;
 
 	@media screen and (min-width: 1050px) {
 		font-size: 2rem;
@@ -77,20 +80,21 @@
 		}
 	}
 
-	span.site-description {
-		display: block;
-		font-size: .875rem;
-		font-weight: 100;
-		position: relative;
-		top: -4px;
-		color: $color-white;
+}
 
-		@media screen and (min-width: 1050px) {
-			display: inline-block;
-		}
 
+.site-description {
+	padding-left: 10px;
+	font-size: .875rem;
+	font-weight: 100;
+	position: relative;
+	top: -4px;
+	color: $color-white;
+	display: inline;
+
+	@media screen and (min-width: 1050px) {
+		display: inline-block;
 	}
-
 }
 
 .site-title a:hover {

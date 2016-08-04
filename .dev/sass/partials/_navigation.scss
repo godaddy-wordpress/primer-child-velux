@@ -36,15 +36,10 @@
 }
 
 .main-navigation {
+	background: transparentize($color-widget-bg, .05);
 
 	@media screen and (max-width: 1049px) {
-		background: transparentize($color-widget-bg, .05);
-		bottom: 0;
-		left: 0;
 		margin: 0;
-		position: absolute;
-		right: 0;
-		top: 85px;
 	}
 
 	@media screen and (min-width: 600px) {
