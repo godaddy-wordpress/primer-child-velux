@@ -5,6 +5,15 @@
 		float: right;
 	}
 
+	@media screen and (max-width: 767px) {
+		background-color: transparent;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 67px;
+		z-index: 9999999;
+	}
+
 }
 
 .site-header .site-header-wrapper .main-navigation {
@@ -65,6 +74,10 @@
 
 			@media screen and (min-width: 1050px) {
 				margin: 49px 12px;
+			}
+
+			@media screen and (max-width: 767px) {
+				padding: 7px 0;
 			}
 
 			a {

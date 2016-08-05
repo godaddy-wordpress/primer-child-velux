@@ -52,6 +52,10 @@ Variables
   @media screen and (min-width: 1050px) {
     .site-title-wrapper {
       padding-top: 0; } }
+  @media screen and (max-width: 568px) {
+    .site-title-wrapper {
+      float: right;
+      text-align: right; } }
 
 .site-title {
   display: inline-block;
@@ -69,6 +73,11 @@ Variables
     color: #ffffff; }
     .site-title a:hover {
       color: #ffffff; }
+  @media screen and (max-width: 568px) {
+    .site-title {
+      border-right: none;
+      display: block;
+      text-align: right; } }
 
 .site-description {
   padding-left: 10px;
@@ -81,6 +90,10 @@ Variables
   @media screen and (min-width: 1050px) {
     .site-description {
       display: inline-block; } }
+  @media screen and (max-width: 568px) {
+    .site-description {
+      padding: 0 15px 0 0;
+      text-align: right; } }
 
 .site-title a:hover {
   color: #ffffff; }
@@ -107,6 +120,15 @@ Variables
   .main-navigation-container {
     background: none;
     float: right; } }
+
+@media screen and (max-width: 767px) {
+  .main-navigation-container {
+    background-color: transparent;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 67px;
+    z-index: 9999999; } }
 
 .site-header .site-header-wrapper .main-navigation {
   margin: 0; }
@@ -154,6 +176,9 @@ Variables
       @media screen and (min-width: 1050px) {
         .main-navigation ul li {
           margin: 49px 12px; } }
+      @media screen and (max-width: 767px) {
+        .main-navigation ul li {
+          padding: 7px 0; } }
       .main-navigation ul li a {
         font-size: .9375rem;
         font-weight: bold;

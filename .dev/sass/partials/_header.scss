@@ -1,7 +1,7 @@
 .site-header {
 	background-color: $color-label;
 	position: relative;
-    z-index: 999;
+	z-index: 999;
 
 	.home & {
 		background-size: cover;
@@ -56,6 +56,11 @@
 		padding-top: 0;
 	}
 
+	@media screen and (max-width: 568px) {
+		float: right;
+		text-align: right;
+	}
+
 }
 
 .site-title {
@@ -80,6 +85,12 @@
 		}
 	}
 
+	@media screen and (max-width: 568px) {
+		border-right: none;
+		display: block;
+		text-align: right;
+	}
+
 }
 
 
@@ -94,6 +105,11 @@
 
 	@media screen and (min-width: 1050px) {
 		display: inline-block;
+	}
+
+	@media screen and (max-width: 568px) {
+		padding: 0 15px 0 0;
+		text-align: right;
 	}
 }
 
