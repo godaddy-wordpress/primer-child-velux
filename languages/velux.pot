@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: basis-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-04 18:05-0500\n"
+"POT-Creation-Date: 2016-08-05 15:53-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,43 +34,27 @@ msgstr ""
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:229
-msgid "Main Text Color"
-msgstr ""
-
-#: functions.php:239
-msgid "Secondary Text Color"
-msgstr ""
-
-#: functions.php:249
+#: functions.php:220
 msgid "Button Color"
 msgstr ""
 
-#: functions.php:259
-msgid "Widget Text Color"
-msgstr ""
-
-#: functions.php:269
+#: functions.php:231
 msgid "Widget Background Color"
 msgstr ""
 
-#: functions.php:279
-msgid "Footer Text Color"
-msgstr ""
-
-#: functions.php:289
+#: functions.php:241
 msgid "Footer Background Color"
 msgstr ""
 
-#: functions.php:311
+#: functions.php:263
 msgid "Dark Blue"
 msgstr ""
 
-#: functions.php:339
+#: functions.php:286
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:349
+#: functions.php:296
 msgid "Secondary Font"
 msgstr ""
 

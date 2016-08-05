@@ -335,3 +335,20 @@ a.button,
 .single .entry-meta {
   margin: 0;
   padding: 0; }
+
+label {
+  text-transform: uppercase; }
+
+input[type="submit"],
+.button,
+.btn,
+.fl-button,
+.fl-button a,
+button {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #8e452a;
+  border-radius: 0;
+  font-size: .875rem;
+  letter-spacing: .2em;
+  text-transform: uppercase; }

@@ -23,3 +23,22 @@ textarea {
 :-ms-input-placeholder {
 
 }
+
+label {
+	text-transform: uppercase;
+}
+
+input[type="submit"],
+.button,
+.btn,
+.fl-button,
+.fl-button a,
+button {
+	background: none;
+	border: 0;
+	border-bottom: 2px solid $color-button;
+	border-radius: 0;
+	font-size: .875rem;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+}
