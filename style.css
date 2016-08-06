@@ -353,3 +353,11 @@ button {
   font-size: .875rem;
   letter-spacing: .2em;
   text-transform: uppercase; }
+  
+input[type="submit"]:hover,
+.button:hover,
+.btn:hover,
+.fl-button:hover,
+.fl-button a:hover,
+button:hover {
+  background-color: transparent; }
