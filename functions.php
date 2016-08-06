@@ -1,16 +1,6 @@
 <?php
 
 /**
- * Move titles above menu templates.
- *
- * @since 1.0.0
- */
-function velux_remove_titles(){
-
-}
-add_action( 'init', 'velux_remove_titles' );
-
-/**
  * Remove hero for all pages except front.
  *
  * @since 1.0.0
@@ -67,16 +57,6 @@ function velux_add_mobile_menu() {
 add_action( 'primer_header', 'velux_add_mobile_menu', 0 );
 
 /**
- *
- * Adding content to footer via action.
- *
- */
-function velux_theme_footer_content() {
-	return;
-}
-add_action( 'primer_footer', 'velux_theme_footer_content' );
-
-/**
  * Display the footer nav before the site info.
  *
  * @action primer_after_footer
@@ -128,21 +108,32 @@ function velux_get_custom_header() {
 }
 
 /**
+ * Register sidebar areas.
  *
- * Register Hero Widget.
- *
+ * @link  http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @since 1.0.0
  */
-register_sidebar(
-	array(
-		'name'          => esc_html__( 'Hero', 'velux' ),
-		'id'            => 'hero',
-		'description'   => esc_html__( 'The Hero widget area.', 'velux' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
-	)
-);
+function velux_register_sidebars() {
+
+	/**
+	 *
+	 * Register Hero Widget.
+	 *
+	 */
+	register_sidebar(
+		array(
+			'name'          => esc_attr__( 'Hero', 'velux' ),
+			'id'            => 'hero',
+			'description'   => esc_attr__( 'The Hero widget area.', 'velux' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h6 class="widget-title">',
+			'after_title'   => '</h6>',
+		)
+	);
+
+}
+add_action( 'widgets_init', 'velux_register_sidebars' );
 
 /**
  * Add image size for hero image
@@ -201,7 +192,7 @@ function velux_colors() {
 			'label'   => __( 'Link Color', 'primer' ),
 			'default' => '#51748e',
 			'css'     => array(
-				'a, a:visited, .entry-footer a, .sticky .entry-title a:before, .footer-widget-area .footer-widget .widget a' => array(
+				'#content a, #content a:visited, .entry-footer a, .entry-footer a:visited, .sticky .entry-title a:before, .footer-widget-area .footer-widget .widget a, .footer-widget-area .footer-widget .widget a:visited' => array(
 					'color' => '%1$s',
 				),
 			),
