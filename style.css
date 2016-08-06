@@ -346,7 +346,7 @@ input[type="submit"],
 .fl-button a,
 button {
   background: none;
-  background-color: transparent;
+  background-color: transparent !important;
   border: 0;
   border-bottom: 2px solid #8e452a;
   border-radius: 0;
@@ -360,4 +360,4 @@ input[type="submit"]:hover,
 .fl-button:hover,
 .fl-button a:hover,
 button:hover {
-  background-color: transparent; }
+  background-color: transparent !important; }
