@@ -297,7 +297,7 @@ function update_font_types() {
 add_action( 'primer_font_types', 'update_font_types' );
 
 function velux_add_default_header_image( $array ) {
-	$array['default-image'] = get_stylesheet_directory_uri() . '/.dev/img/header.png';
+	$array['default-image'] = get_stylesheet_directory_uri() . '/assets/img/header.png';
 
 	return $array;
 }
