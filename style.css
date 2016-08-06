@@ -207,6 +207,8 @@ Variables
   background-color: transparent;
   font-size: .875rem;
   padding: 0; }
+  .footer-widget-area .footer-widget .widget h1, .footer-widget-area .footer-widget .widget h2, .footer-widget-area .footer-widget .widget h3, .footer-widget-area .footer-widget .widget h4, .footer-widget-area .footer-widget .widget h5, .footer-widget-area .footer-widget .widget h6 {
+    color: #ffffff; }
   .footer-widget-area .footer-widget .widget ul,
   .footer-widget-area .footer-widget .widget li,
   .footer-widget-area .footer-widget .widget a,
@@ -276,15 +278,15 @@ h1 {
   font-weight: 100; }
 
 h2 {
-  color: #c5c3c6;
   font-size: 2.5rem; }
 
 h3 {
   font-size: 2.25rem; }
 
 h4 {
-  color: #d24343;
   font-size: 1.5rem; }
+  #content h4 {
+    color: #d24343; }
 
 h5 {
   font-size: 1.625rem; }
@@ -346,20 +348,10 @@ input[type="submit"],
 .fl-button a,
 button {
   background: none;
-  background-color: transparent !important;
+  background-color: transparent;
   border: 0;
   border-bottom: 2px solid #8e452a;
   border-radius: 0;
   font-size: .875rem;
   letter-spacing: .2em;
   text-transform: uppercase; }
-  
-input[type="submit"]:hover,
-input[type="submit"]:active,
-input[type="submit"]:focus,
-.button:hover,
-.btn:hover,
-.fl-button:hover,
-.fl-button a:hover,
-button:hover {
-  background-color: transparent !important; }
