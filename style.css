@@ -355,6 +355,8 @@ button {
   text-transform: uppercase; }
   
 input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus,
 .button:hover,
 .btn:hover,
 .fl-button:hover,
