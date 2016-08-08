@@ -43,18 +43,6 @@ function velux_theme_register_nav_menu() {
 add_action( 'after_setup_theme', 'velux_theme_register_nav_menu' );
 
 /**
- * Remove primer navigation and add velux navigation
- *
- * @package Velux
- * @since 1.0.0
- */
-function velux_navigation() {
-	wp_dequeue_script( 'primer-navigation' );
-	wp_enqueue_script( 'velux-navigation', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20120206', true );
-}
-add_action( 'wp_print_scripts', 'velux_navigation', 100 );
-
-/**
  * Add mobile menu to header
  *
  * @package Velux

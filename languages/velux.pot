@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: basis-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-06 12:10-0500\n"
+"POT-Creation-Date: 2016-08-08 15:45-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,49 +18,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: functions.php:36
+#: functions.php:41
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:125
+#: functions.php:129
 msgid "Hero"
 msgstr ""
 
-#: functions.php:127
+#: functions.php:131
 msgid "The Hero widget area."
 msgstr ""
 
-#: functions.php:192
+#: functions.php:204
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:211
+#: functions.php:223
 msgid "Button Color"
 msgstr ""
 
-#: functions.php:222
+#: functions.php:234
 msgid "Widget Background Color"
 msgstr ""
 
-#: functions.php:232
+#: functions.php:244
 msgid "Footer Background Color"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:268
 msgid "Dark Blue"
 msgstr ""
 
-#: functions.php:277
+#: functions.php:292
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:287
+#: functions.php:302
 msgid "Secondary Font"
 msgstr ""
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
 #. *
-#. * @package Primer
+#. * @package Velux
 #.
 #: header.php:35
 msgid "Skip to content"
@@ -86,7 +86,7 @@ msgstr[1] ""
 msgid "yyyy-mm-dd"
 msgstr ""
 
-#: templates/parts/loop/post-title.php:38
+#: templates/parts/loop/post-title.php:39
 #, php-format
 msgctxt "1. post date, 2. author name"
 msgid "%1$s | %2$s"
