@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#content-slug-php
  *
- * @package Primer
+ * @package Velux
  * @since 1.0.0
  */
 ?>

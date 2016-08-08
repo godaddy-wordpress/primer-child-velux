@@ -3,13 +3,14 @@
 /**
  * Remove hero for all pages except front.
  *
+ * @package Velux
  * @since 1.0.0
  */
 function velux_remove_hero_if_not_home() {
 
 	remove_action( 'primer_header', 'primer_add_hero', 10 );
 
-	if( is_front_page() && is_active_sidebar( 'hero' ) ){
+	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
 		add_action( 'primer_after_header', 'primer_add_hero' );
 	}
 
@@ -20,6 +21,8 @@ add_action( 'primer_before_header', 'velux_remove_hero_if_not_home' );
  *
  * Add child and parent theme files.
  *
+ * @package Velux
+ * @since 1.0.0
  */
 function velux_theme_enqueue_styles() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
@@ -31,6 +34,8 @@ add_action( 'wp_enqueue_scripts', 'velux_theme_enqueue_styles' );
  *
  * Register Footer Menu.
  *
+ * @package Velux
+ * @since 1.0.0
  */
 function velux_theme_register_nav_menu() {
 	 register_nav_menu( 'footer', __( 'Footer Menu', 'velux' ) );
@@ -39,6 +44,9 @@ add_action( 'after_setup_theme', 'velux_theme_register_nav_menu' );
 
 /**
  * Remove primer navigation and add velux navigation
+ *
+ * @package Velux
+ * @since 1.0.0
  */
 function velux_navigation() {
 	wp_dequeue_script( 'primer-navigation' );
@@ -48,6 +56,9 @@ add_action( 'wp_print_scripts', 'velux_navigation', 100 );
 
 /**
  * Add mobile menu to header
+ *
+ * @package Velux
+ * @since 1.0.0
  *
  * @link https://codex.wordpress.org/Function_Reference/get_template_part
  */
@@ -59,8 +70,7 @@ add_action( 'primer_header', 'velux_add_mobile_menu', 0 );
 /**
  * Display the footer nav before the site info.
  *
- * @action primer_after_footer
- *
+ * @package Velux
  * @since 1.0.0
  */
 function velux_add_nav_footer() {
@@ -73,6 +83,8 @@ add_action( 'primer_after_footer', 'velux_add_nav_footer', 10 );
 /**
  * Move navigation from after_header to header
  *
+ * @package Velux
+ * @since 1.0.0
  * @link https://codex.wordpress.org/Function_Reference/remove_action
  * @link https://codex.wordpress.org/Function_Reference/add_action
  */
@@ -85,6 +97,8 @@ add_action( 'primer_header', 'velux_move_navigation', 19 );
 /**
  * Returns the featured image, custom header or false in this priority order.
  *
+ * @package Velux
+ * @since 1.0.0
  * @return false|string
  */
 function velux_get_custom_header() {
@@ -111,6 +125,8 @@ function velux_get_custom_header() {
  * Register sidebar areas.
  *
  * @link  http://codex.wordpress.org/Function_Reference/register_sidebar
+ *
+ * @package Velux
  * @since 1.0.0
  */
 function velux_register_sidebars() {
@@ -138,6 +154,8 @@ add_action( 'widgets_init', 'velux_register_sidebars' );
 /**
  * Add image size for hero image
  *
+ * @package Velux
+ * @since 1.0.0
  * @link https://codex.wordpress.org/Function_Reference/add_image_size
  */
 function velux_add_image_size() {
@@ -150,6 +168,8 @@ add_action( 'after_setup_theme', 'velux_add_image_size' );
 /**
  * Update custom header arguments
  *
+ * @package Velux
+ * @since 1.0.0
  * @param $args
  * @return mixed
  */
@@ -164,6 +184,8 @@ add_filter( 'primer_custom_header_args', 'velux_update_custom_header_args' );
 /**
  * Get header image with image size
  *
+ * @package Velux
+ * @since 1.0.0
  * @return false|string
  */
 function velux_get_header_image() {
@@ -183,13 +205,15 @@ function velux_get_header_image() {
 /**
  * Update colors
  *
+ * @package Velux
+ * @since 1.0.0
  * @action primer_colors
  */
 function velux_colors() {
 	return array(
 		array(
 			'name'    => 'link_color',
-			'label'   => __( 'Link Color', 'primer' ),
+			'label'   => __( 'Link Color', 'velux' ),
 			'default' => '#51748e',
 			'css'     => array(
 				'#content a, #content a:visited, .entry-footer a, .entry-footer a:visited, .sticky .entry-title a:before, .footer-widget-area .footer-widget .widget a, .footer-widget-area .footer-widget .widget a:visited' => array(
@@ -208,7 +232,7 @@ function velux_colors() {
 		),
 		array(
 			'name'    => 'button_color',
-			'label'   => __( 'Button Color', 'primer' ),
+			'label'   => __( 'Button Color', 'velux' ),
 			'default' => '#8e452a',
 			'css'     => array(
 				'.cta, button, input[type="button"], input[type="reset"], input[type="submit"]:not(.search-submit), a.fl-button' => array(
@@ -219,7 +243,7 @@ function velux_colors() {
 		),
 		array(
 			'name'    => 'w_background_color',
-			'label'   => __( 'Widget Background Color', 'primer' ),
+			'label'   => __( 'Widget Background Color', 'velux' ),
 			'default' => '#212121',
 			'css'     => array(
 				'.site-footer' => array(
@@ -229,7 +253,7 @@ function velux_colors() {
 		),
 		array(
 			'name'    => 'footer_backgroundcolor',
-			'label'   => __( 'Footer Background Color', 'primer' ),
+			'label'   => __( 'Footer Background Color', 'velux' ),
 			'default' => '#191919',
 			'css'     => array(
 				'.site-info-wrapper, .footer-nav, .site-info-wrapper' => array(
@@ -245,6 +269,8 @@ add_action( 'primer_colors', 'velux_colors', 9 );
  * Change velux color schemes
  *
  * @action primer_color_schemes
+ *
+ * @package Velux
  * @since 1.0.0
  * @return array
  */
@@ -268,13 +294,14 @@ add_action( 'primer_color_schemes', 'velux_color_schemes' );
  *
  * Add selectors for font customizing.
  *
+ * @package Velux
  * @since 1.0.0
  */
-function update_font_types() {
+function velux_update_font_types() {
 	return	array(
 		array(
 			'name'    => 'primary_font',
-			'label'   => __( 'Primary Font', 'primer' ),
+			'label'   => __( 'Primary Font', 'velux' ),
 			'default' => 'Roboto',
 			'css'     => array(
 				'body, p, .hero-wrapper .textwidget p, .site-description, .search-form input[type="search”], .widget li a, .site-info-text, h6, body p, .widget p, ' => array(
@@ -284,7 +311,7 @@ function update_font_types() {
 		),
 		array(
 			'name'    => 'secondary_font',
-			'label'   => __( 'Secondary Font', 'primer' ),
+			'label'   => __( 'Secondary Font', 'velux' ),
 			'default' => 'Playfair Display',
 			'css'     => array(
 				'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"], blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text, .site-title, .hero-wrapper .textwidget h1, .hero-wrapper .textwidget .button, .main-navigation li a, .widget-title, .footer-nav ul li a, h1, h2, h3, h4, h5, .entry-title, .single .entry-meta, .hero .widget h1, button, .button, .btn, input[type="submit"], .fl-button, .fl-button a' => array(
@@ -294,8 +321,15 @@ function update_font_types() {
 		),
 	);
 }
-add_action( 'primer_font_types', 'update_font_types' );
+add_action( 'primer_font_types', 'velux_update_font_types' );
 
+/**
+ * Add a default hero image in the header area.
+ *
+ * @package Velux
+ * @since 1.0.0
+ * @return array
+ */
 function velux_add_default_header_image( $array ) {
 	$array['default-image'] = get_stylesheet_directory_uri() . '/assets/img/header.png';
 

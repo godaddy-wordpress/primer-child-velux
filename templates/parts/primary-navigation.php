@@ -2,7 +2,7 @@
 /**
  * Displays the primary navigation.
  *
- * @package ascension
+ * @package Velux
  */
 ?>
 

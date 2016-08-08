@@ -2,7 +2,7 @@
 /**
  * Displays the site title.
  *
- * @package Primer
+ * @package Velux
  */
 ?>
 

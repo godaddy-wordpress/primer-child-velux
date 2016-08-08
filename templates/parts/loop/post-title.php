@@ -2,7 +2,7 @@
 /**
  * Template part for displaying the post title inside The Loop.
  *
- * @package Primer
+ * @package Velux
  */
 ?>
 
@@ -16,6 +16,7 @@
 			/**
 			 * Fires before the post title element.
 			 *
+			 * @package Velux
 			 * @since 1.0.0
 			 */
 			do_action( 'primer_before_post_title' );
@@ -45,6 +46,7 @@
 			/**
 			 * Fires after the post title element.
 			 *
+			 * @package Velux
 			 * @since 1.0.0
 			 */
 			do_action( 'primer_after_post_title' );
