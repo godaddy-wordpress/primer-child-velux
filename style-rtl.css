@@ -185,8 +185,12 @@ Variables
         padding: 0;
         text-transform: uppercase;
         color: #ffffff; }
-      .main-navigation ul li .sub-menu li {
-        margin: 12px; }
+      .main-navigation ul li .sub-menu {
+        background-color: transparent; }
+        .main-navigation ul li .sub-menu li {
+          background-color: #0b3954;
+          padding: 12px;
+          margin: 0; }
 
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
