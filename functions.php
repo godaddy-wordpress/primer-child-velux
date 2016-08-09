@@ -292,7 +292,7 @@ function velux_update_font_types() {
 			'label'   => __( 'Primary Font', 'velux' ),
 			'default' => 'Roboto',
 			'css'     => array(
-				'body, p, .hero-wrapper .textwidget p, .site-description, .search-form input[type="search”], .widget li a, .site-info-text, h6, body p, .widget p, ' => array(
+				'body, p, .hero-wrapper .textwidget p, .site-description, .search-form input[type="search"], .widget li a, .site-info-text, h6, body p, .widget p, ' => array(
 					'font-family' => '"%s", sans-serif',
 				),
 			),
