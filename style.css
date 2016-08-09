@@ -30,7 +30,7 @@ Variables
 .site-header-wrapper {
   border-bottom: 1px solid #ffffff;
   padding-bottom: 25px; }
-  @media screen and (min-width: 1050px) {
+  @media screen and (min-width: 800px) {
     .site-header-wrapper {
       padding-bottom: 0; } }
 
@@ -38,7 +38,7 @@ Variables
   left: auto;
   position: static;
   top: auto; }
-  @media screen and (max-width: 1049px) {
+  @media screen and (max-width: 799px) {
     .hero .hero-wrapper .widget {
       padding: 0; }
       .hero .hero-wrapper .widget h1 {
@@ -49,10 +49,10 @@ Variables
   float: left;
   width: auto;
   display: inline; }
-  @media screen and (min-width: 1050px) {
+  @media screen and (min-width: 800px) {
     .site-title-wrapper {
       padding-top: 0; } }
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 799px) {
     .site-title-wrapper {
       float: right;
       text-align: right; } }
@@ -65,7 +65,7 @@ Variables
   padding: 0 15px 0 0;
   text-transform: uppercase;
   border-right: 1px solid #ffffff; }
-  @media screen and (min-width: 1050px) {
+  @media screen and (min-width: 800px) {
     .site-title {
       font-size: 2rem;
       margin: 38px 0; } }
@@ -73,7 +73,7 @@ Variables
     color: #ffffff; }
     .site-title a:hover {
       color: #ffffff; }
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 799px) {
     .site-title {
       border-right: none;
       display: block;
@@ -86,11 +86,11 @@ Variables
   position: relative;
   color: #ffffff;
   display: inline; }
-  @media screen and (min-width: 1050px) {
+  @media screen and (min-width: 800px) {
     .site-description {
       display: inline-block;
       top: -4px; } }
-  @media screen and (max-width: 568px) {
+  @media screen and (max-width: 799px) {
     .site-description {
       padding: 0 15px 0 0;
       text-align: right; } }
@@ -109,19 +109,19 @@ Variables
   .page-title-container .page-title {
     color: #ffffff; }
 
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 800px) {
   .row,
   .footer-widget-area {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto; } }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 800px) {
   .main-navigation-container {
     background: none;
     float: right; } }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 799px) {
   .main-navigation-container {
     background-color: transparent;
     clear: none;
@@ -146,41 +146,36 @@ Variables
   position: relative;
   z-index: 999999;
   top: 9px; }
-  @media screen and (min-width: 600px) {
-    .menu-toggle {
-      display: block; } }
-  @media screen and (min-width: 1050px) {
+  @media screen and (min-width: 800px) {
     .menu-toggle {
       display: none; } }
 
 .main-navigation {
   background: rgba(33, 33, 33, 0.95); }
-  @media screen and (max-width: 1049px) {
+  @media screen and (max-width: 799px) {
     .main-navigation {
       margin: 0; } }
-  @media screen and (min-width: 600px) {
-    .main-navigation {
-      display: none; } }
-  @media screen and (min-width: 1050px) {
+  @media screen and (min-width: 800px) {
     .main-navigation {
       background: none;
       display: block;
       position: relative;
       z-index: auto; } }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 799px) {
     .main-navigation {
       padding: 15px 0; } }
   .main-navigation ul {
     text-align: center; }
-    @media screen and (min-width: 1050px) {
+    @media screen and (min-width: 800px) {
       .main-navigation ul {
         text-align: left; } }
     .main-navigation ul li {
       margin: 15px; }
-      @media screen and (min-width: 1050px) {
+      @media screen and (min-width: 800px) {
         .main-navigation ul li {
+          float: left;
           margin: 49px 12px; } }
-      @media screen and (max-width: 800px) {
+      @media screen and (max-width: 799px) {
         .main-navigation ul li {
           padding: 12px 0; } }
       .main-navigation ul li a {

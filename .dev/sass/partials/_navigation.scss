@@ -1,11 +1,11 @@
 .main-navigation-container {
 
-	@media screen and (min-width: 1050px) {
+	@media screen and (min-width: 800px) {
 		background: none;
 		float: right;
 	}
 
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 799px) {
 		background-color: transparent;
 		clear: none;
 		left: 0;
@@ -35,11 +35,7 @@
 	z-index: 999999;
 	top: 9px;
 
-	@media screen and (min-width: 600px) {
-		display: block;
-	}
-
-	@media screen and (min-width: 1050px) {
+	@media screen and (min-width: 800px) {
 		display: none;
 	}
 
@@ -48,40 +44,37 @@
 .main-navigation {
 	background: transparentize($color-widget-bg, .05);
 
-	@media screen and (max-width: 1049px) {
+	@media screen and (max-width: 799px) {
 		margin: 0;
 	}
 
-	@media screen and (min-width: 600px) {
-		display: none;
-	}
-
-	@media screen and (min-width: 1050px) {
+	@media screen and (min-width: 800px) {
 		background: none;
 		display: block;
 		position: relative;
 		z-index: auto;
 	}
 
-	@media screen and (max-width: 800px) {
+	@media screen and (max-width: 799px) {
 		padding: 15px 0;
 	}
 
 	ul {
 		text-align: center;
 
-		@media screen and (min-width: 1050px) {
+		@media screen and (min-width: 800px) {
 			text-align: left;
 		}
 
 		li {
 			margin: 15px;
 
-			@media screen and (min-width: 1050px) {
+			@media screen and (min-width: 800px) {
+				float: left;
 				margin: 49px 12px;
 			}
 
-			@media screen and (max-width: 800px) {
+			@media screen and (max-width: 799px) {
 				padding: 12px 0;
 			}
 
