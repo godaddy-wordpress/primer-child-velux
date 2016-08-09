@@ -182,7 +182,7 @@ Variables
           margin: 49px 12px; } }
       @media screen and (max-width: 800px) {
         .main-navigation ul li {
-          padding: 15px 0; } }
+          padding: 12px 0; } }
       .main-navigation ul li a {
         font-size: .9375rem;
         font-weight: bold;
