@@ -122,9 +122,10 @@ Variables
     background: none;
     float: right; } }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 800px) {
   .main-navigation-container {
     background-color: transparent;
+    clear: none;
     left: 0;
     position: absolute;
     right: 0;
@@ -167,6 +168,9 @@ Variables
       display: block;
       position: relative;
       z-index: auto; } }
+  @media screen and (max-width: 800px) {
+    .main-navigation {
+      padding: 15px 0; } }
   .main-navigation ul {
     text-align: center; }
     @media screen and (min-width: 1050px) {
@@ -177,9 +181,9 @@ Variables
       @media screen and (min-width: 1050px) {
         .main-navigation ul li {
           margin: 49px 12px; } }
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 800px) {
         .main-navigation ul li {
-          padding: 7px 0; } }
+          padding: 15px 0; } }
       .main-navigation ul li a {
         font-size: .9375rem;
         font-weight: bold;

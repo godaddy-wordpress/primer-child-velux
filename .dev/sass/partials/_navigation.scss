@@ -5,8 +5,9 @@
 		float: right;
 	}
 
-	@media screen and (max-width: 767px) {
+	@media screen and (max-width: 800px) {
 		background-color: transparent;
+		clear: none;
 		left: 0;
 		position: absolute;
 		right: 0;
@@ -62,6 +63,10 @@
 		z-index: auto;
 	}
 
+	@media screen and (max-width: 800px) {
+		padding: 15px 0;
+	}
+
 	ul {
 		text-align: center;
 
@@ -76,8 +81,8 @@
 				margin: 49px 12px;
 			}
 
-			@media screen and (max-width: 767px) {
-				padding: 7px 0;
+			@media screen and (max-width: 800px) {
+				padding: 15px 0;
 			}
 
 			a {
