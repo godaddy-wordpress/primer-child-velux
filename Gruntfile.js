@@ -86,7 +86,7 @@ module.exports = function(grunt) {
 				]
 			},
 			options: {
-				proxy: 'http://velux.dev/', // enter your local WP URL here
+				proxy: 'http://wp.dev', // enter your local WP URL here
 				watchTask: true
 			}
 			}

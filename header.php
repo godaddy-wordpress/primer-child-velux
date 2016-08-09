@@ -38,7 +38,7 @@
 
 		<?php $header_img = velux_get_header_image(); ?>
 
-		<header id="masthead" class="site-header" role="banner"<?php if ( ! empty( $header_img ) ) : ?> style="background:url('<?php echo $header_img; ?>') no-repeat top center; background-size: cover;"<?php endif; ?>>
+		<header id="masthead" class="site-header" role="banner"<?php if ( ! empty( $header_img ) ) : ?> style="background:url('<?php echo esc_attr( $header_img ); ?>') no-repeat top center; background-size: cover;"<?php endif; ?>>
 
 			<div class="site-header-wrapper">
 
