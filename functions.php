@@ -11,10 +11,13 @@ function velux_remove_hero_if_not_home() {
 	remove_action( 'primer_header', 'primer_add_hero', 10 );
 
 	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
+
 		add_action( 'primer_after_header', 'primer_add_hero' );
+
 	}
 
 }
+
 add_action( 'primer_before_header', 'velux_remove_hero_if_not_home' );
 
 /**
@@ -25,9 +28,12 @@ add_action( 'primer_before_header', 'velux_remove_hero_if_not_home' );
  * @since 1.0.0
  */
 function velux_theme_enqueue_styles() {
+
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'parent-style' ) );
+
 }
+
 add_action( 'wp_enqueue_scripts', 'velux_theme_enqueue_styles' );
 
 /**
@@ -38,8 +44,11 @@ add_action( 'wp_enqueue_scripts', 'velux_theme_enqueue_styles' );
  * @since 1.0.0
  */
 function velux_theme_register_nav_menu() {
+
 	 register_nav_menu( 'footer', __( 'Footer Menu', 'velux' ) );
+
 }
+
 add_action( 'after_setup_theme', 'velux_theme_register_nav_menu' );
 
 /**
@@ -51,8 +60,11 @@ add_action( 'after_setup_theme', 'velux_theme_register_nav_menu' );
  * @link https://codex.wordpress.org/Function_Reference/get_template_part
  */
 function velux_add_mobile_menu() {
+
 	get_template_part( 'templates/parts/mobile-menu' );
+
 }
+
 add_action( 'primer_header', 'velux_add_mobile_menu', 0 );
 
 /**
@@ -66,6 +78,7 @@ function velux_add_nav_footer() {
 	get_template_part( 'templates/parts/footer-nav' );
 
 }
+
 add_action( 'primer_after_footer', 'velux_add_nav_footer', 10 );
 
 /**
@@ -77,36 +90,42 @@ add_action( 'primer_after_footer', 'velux_add_nav_footer', 10 );
  * @link https://codex.wordpress.org/Function_Reference/add_action
  */
 function velux_move_navigation() {
+
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 20 );
+
 	get_template_part( 'templates/parts/primary-navigation' );
+
 }
+
 add_action( 'primer_header', 'velux_move_navigation', 19 );
 
 /**
- * Returns the featured image, custom header or false in this priority order.
+ * Get header image with image size
  *
  * @package Velux
  * @since 1.0.0
+ *
  * @return false|string
  */
-function velux_get_custom_header() {
-	$post_id = get_queried_object_id();
-	$image_size = (int) get_theme_mod( 'full_width' ) === 1 ? 'hero-2x' : 'hero';
-	if ( has_post_thumbnail( $post_id ) ) {
-		$image = get_the_post_thumbnail_url( $post_id, $image_size );
-		if ( getimagesize( $image ) ) {
-			return $image;
-		}
-	}
+function velux_get_header_image() {
+
+	$image_size    = (int) get_theme_mod( 'full_width' ) === 1 ? 'hero-2x' : 'hero';
 	$custom_header = get_custom_header();
+
 	if ( ! empty( $custom_header->attachment_id ) ) {
+
 		$image = wp_get_attachment_image_url( $custom_header->attachment_id, $image_size );
+
 		if ( getimagesize( $image ) ) {
+
 			return $image;
+
 		}
+
 	}
-	$header_image = get_header_image();
-	return $header_image;
+
+	return get_header_image();
+
 }
 
 /**
@@ -120,9 +139,7 @@ function velux_get_custom_header() {
 function velux_register_sidebars() {
 
 	/**
-	 *
 	 * Register Hero Widget.
-	 *
 	 */
 	register_sidebar(
 		array(
@@ -137,6 +154,7 @@ function velux_register_sidebars() {
 	);
 
 }
+
 add_action( 'widgets_init', 'velux_register_sidebars' );
 
 /**
@@ -151,6 +169,7 @@ function velux_add_image_size() {
 	add_image_size( 'hero', 2400, 1320, array( 'center', 'center' ) );
 
 }
+
 add_action( 'after_setup_theme', 'velux_add_image_size' );
 
 /**
@@ -159,36 +178,19 @@ add_action( 'after_setup_theme', 'velux_add_image_size' );
  * @package Velux
  * @since 1.0.0
  * @param $args
+ *
  * @return mixed
  */
 function velux_update_custom_header_args( $args ) {
-	$args['width'] = 2400;
+
+	$args['width']  = 2400;
 	$args['height'] = 1320;
 
 	return $args;
+
 }
+
 add_filter( 'primer_custom_header_args', 'velux_update_custom_header_args' );
-
-/**
- * Get header image with image size
- *
- * @package Velux
- * @since 1.0.0
- * @return false|string
- */
-function velux_get_header_image() {
-	$image_size = (int) get_theme_mod( 'full_width' ) === 1 ? 'hero-2x' : 'hero';
-	$custom_header = get_custom_header();
-
-	if ( ! empty( $custom_header->attachment_id ) ) {
-		$image = wp_get_attachment_image_url( $custom_header->attachment_id, $image_size );
-		if ( getimagesize( $image ) ) {
-			return $image;
-		}
-	}
-	$header_image = get_header_image();
-	return $header_image;
-}
 
 /**
  * Update colors
@@ -196,8 +198,11 @@ function velux_get_header_image() {
  * @package Velux
  * @since 1.0.0
  * @action primer_colors
+ *
+ * @return array
  */
 function velux_colors() {
+
 	return array(
 		array(
 			'name'    => 'link_color',
@@ -250,7 +255,9 @@ function velux_colors() {
 			),
 		),
 	);
+
 }
+
 add_action( 'primer_colors', 'velux_colors', 9 );
 
 /**
@@ -260,9 +267,11 @@ add_action( 'primer_colors', 'velux_colors', 9 );
  *
  * @package Velux
  * @since 1.0.0
+ *
  * @return array
  */
 function velux_color_schemes() {
+
 	return array(
 		'dark_blue' => array(
 			'label'  => esc_html__( 'Dark Blue', 'velux' ),
@@ -275,7 +284,9 @@ function velux_color_schemes() {
 			),
 		),
 	);
+
 }
+
 add_action( 'primer_color_schemes', 'velux_color_schemes' );
 
 /**
@@ -284,9 +295,12 @@ add_action( 'primer_color_schemes', 'velux_color_schemes' );
  *
  * @package Velux
  * @since 1.0.0
+ *
+ * @return array
  */
 function velux_update_font_types() {
-	return	array(
+
+	return array(
 		array(
 			'name'    => 'primary_font',
 			'label'   => __( 'Primary Font', 'velux' ),
@@ -308,21 +322,29 @@ function velux_update_font_types() {
 			),
 		),
 	);
+
 }
+
 add_action( 'primer_font_types', 'velux_update_font_types' );
 
 /**
  * Add a default hero image in the header area.
  *
  * @package Velux
- * @since 1.0.0
+ * @since   1.0.0
+ *
+ * @param array $array
+ *
  * @return array
  */
 function velux_add_default_header_image( $array ) {
+
 	$array['default-image'] = get_stylesheet_directory_uri() . '/assets/img/header.png';
 
 	return $array;
+
 }
+
 add_filter( 'primer_custom_header_args', 'velux_add_default_header_image', 20 );
 
 /**
