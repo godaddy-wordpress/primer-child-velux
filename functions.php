@@ -324,3 +324,12 @@ function velux_add_default_header_image( $array ) {
 	return $array;
 }
 add_filter( 'primer_custom_header_args', 'velux_add_default_header_image', 20 );
+
+/**
+ * Enqueue lt IE 9 Conditional
+ *
+ * @package Velux
+ * @since 1.0.0
+ */
+wp_enqueue_style( 'velux-lt-ie9-style', get_stylesheet_directory_uri() . '/ie.css', array(), PRIMER_VERSION );
+wp_style_add_data( 'velux-lt-ie9-style', 'conditional', 'lt IE 9' );
