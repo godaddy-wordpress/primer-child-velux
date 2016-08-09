@@ -32,6 +32,9 @@ function velux_theme_enqueue_styles() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'parent-style' ) );
 
+	wp_enqueue_style( 'velux-lt-ie9-style', get_stylesheet_directory_uri() . '/ie.css', array(), PRIMER_VERSION );
+	wp_style_add_data( 'velux-lt-ie9-style', 'conditional', 'lt IE 9' );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'velux_theme_enqueue_styles' );
@@ -347,11 +350,3 @@ function velux_add_default_header_image( $array ) {
 
 add_filter( 'primer_custom_header_args', 'velux_add_default_header_image', 20 );
 
-/**
- * Enqueue lt IE 9 Conditional
- *
- * @package Velux
- * @since 1.0.0
- */
-wp_enqueue_style( 'velux-lt-ie9-style', get_stylesheet_directory_uri() . '/ie.css', array(), PRIMER_VERSION );
-wp_style_add_data( 'velux-lt-ie9-style', 'conditional', 'lt IE 9' );
