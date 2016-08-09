@@ -100,12 +100,12 @@
 	font-size: .875rem;
 	font-weight: 100;
 	position: relative;
-	top: -4px;
 	color: $color-white;
 	display: inline;
 
 	@media screen and (min-width: 1050px) {
 		display: inline-block;
+		top: -4px;
 	}
 
 	@media screen and (max-width: 568px) {

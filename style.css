@@ -85,12 +85,12 @@ Variables
   font-size: .875rem;
   font-weight: 100;
   position: relative;
-  top: -4px;
   color: #ffffff;
   display: inline; }
   @media screen and (min-width: 1050px) {
     .site-description {
-      display: inline-block; } }
+      display: inline-block;
+      top: -4px; } }
   @media screen and (max-width: 568px) {
     .site-description {
       padding: 0 15px 0 0;
