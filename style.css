@@ -325,7 +325,10 @@ a.button,
       .hero .hero-wrapper .widget {
         padding: 2em 0; }
         .hero .hero-wrapper .widget h1 {
-          font-size: 3rem; } }
+          color: #ffffff;
+          font-size: 3rem;
+          line-height: 1;
+          text-align: left; } }
     @media only screen and (min-width: 800px) {
       .hero .hero-wrapper .widget {
         padding: 6em 20px; }
