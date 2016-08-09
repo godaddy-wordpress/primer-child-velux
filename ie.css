@@ -1,3 +1,7 @@
 body .hero {
   background-size: 100% auto !important;
   background-position: top center !important; }
+
+.site-title-wrapper {
+  height: 0;
+  line-height: 0; }
