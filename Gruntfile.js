@@ -1,3 +1,5 @@
+/* global module */
+
 module.exports = function(grunt) {
 
 	grunt.initConfig({
@@ -8,7 +10,7 @@ module.exports = function(grunt) {
 				files: {
 					'style.css'        : '.dev/sass/style.scss',
 					'editor-style.css' : '.dev/sass/editor-style.scss',
-					'ie.css'          : '.dev/sass/ie.scss'
+					'ie.css'           : '.dev/sass/ie.scss'
 				}
 			}
 		},
@@ -21,9 +23,9 @@ module.exports = function(grunt) {
 			options: {
 				// Task-specific options go here.
 			},
-			your_target: {
+			dist: {
 				src: '*.css'
-			},
+			}
 		},
 
 		cssjanus: {
@@ -59,11 +61,11 @@ module.exports = function(grunt) {
 						'_nx:1,2,4c',
 						'_n_noop:1,2',
 						'_nx_noop:1,2,3c'
-					],
+					]
 				},
 				files:{
 					src:  [ '**/*.php' ], //Parse all php files
-					expand: true,
+					expand: true
 				}
 		},
 
@@ -78,13 +80,13 @@ module.exports = function(grunt) {
 			dev: {
 			bsFiles: {
 				src: [
-					"*.css",
-					"**/*.php",
-					"*.js"
+					'*.css',
+					'**/*.php',
+					'*.js'
 				]
 			},
 			options: {
-				proxy: "http://velux.dev/", // enter your local WP URL here
+				proxy: 'http://velux.dev/', // enter your local WP URL here
 				watchTask: true
 			}
 			}
@@ -99,13 +101,13 @@ module.exports = function(grunt) {
 				files: ['js/**/*.js', 'Gruntfile.js' ],
 				tasks: ['jshint'],
 				options: {
-					interrupt: true,
+					interrupt: true
 				}
 			},
 			pot: {
 				files: [ '**/*.php' ],
-				tasks: ['pot'],
-			},
+				tasks: ['pot']
+			}
 		}
 	});
 
