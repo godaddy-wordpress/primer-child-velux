@@ -319,16 +319,21 @@ a.button,
 .widget {
   background: none;
   color: #ffffff; }
-  .hero .widget {
+  .hero .hero-wrapper .widget {
     padding: 2em 0; }
+    @media only screen and (max-width: 799px) {
+      .hero .hero-wrapper .widget {
+        padding: 2em 0; }
+        .hero .hero-wrapper .widget h1 {
+          font-size: 3rem; } }
     @media only screen and (min-width: 800px) {
-      .hero .widget {
-        padding: 6em 20px; } }
-    .hero .widget h1 {
-      color: #ffffff;
-      font-size: 5.5rem;
-      line-height: 1;
-      text-align: right; }
+      .hero .hero-wrapper .widget {
+        padding: 6em 20px; }
+        .hero .hero-wrapper .widget h1 {
+          color: #ffffff;
+          font-size: 5.5rem;
+          line-height: 1;
+          text-align: right; } }
 
 .single .entry-header {
   border-bottom: 1px solid #5c6d7c;

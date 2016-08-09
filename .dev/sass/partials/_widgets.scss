@@ -2,18 +2,28 @@
 	background: none;
 	color: $color-white;
 
-	.hero & {
+	.hero .hero-wrapper & {
 		padding: 2em 0;
+
+		@media only screen and (max-width: 799px) {
+			padding: 2em 0;
+
+			h1 {
+				font-size: 3rem;
+			}
+
+		}
 
 		@media only screen and (min-width: 800px) {
 			padding: 6em 20px;
-		}
 
-		h1 {
-			color: $color-white;
-			font-size: 5.5rem;
-			line-height: 1;
-			text-align: left;
+			h1 {
+				color: $color-white;
+				font-size: 5.5rem;
+				line-height: 1;
+				text-align: left;
+			}
+
 		}
 
 	}
