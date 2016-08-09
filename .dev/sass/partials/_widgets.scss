@@ -3,7 +3,11 @@
 	color: $color-white;
 
 	.hero & {
-		padding: 6em 20px;
+		padding: 2em 0;
+
+		@media only screen and (min-width: 800px) {
+			padding: 6em 20px;
+		}
 
 		h1 {
 			color: $color-white;

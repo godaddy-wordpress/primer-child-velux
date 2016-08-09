@@ -320,7 +320,10 @@ a.button,
   background: none;
   color: #ffffff; }
   .hero .widget {
-    padding: 6em 20px; }
+    padding: 2em 0; }
+    @media only screen and (min-width: 800px) {
+      .hero .widget {
+        padding: 6em 20px; } }
     .hero .widget h1 {
       color: #ffffff;
       font-size: 5.5rem;
