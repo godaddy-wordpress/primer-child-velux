@@ -338,6 +338,9 @@ a.button,
           line-height: 1;
           text-align: left; } }
 
+#content .widget {
+  color: #202223; }
+
 .single .entry-header {
   border-bottom: 1px solid #5c6d7c;
   border-top: 1px solid #5c6d7c;
