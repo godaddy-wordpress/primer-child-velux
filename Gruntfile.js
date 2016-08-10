@@ -3,7 +3,8 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+
+		pkg: grunt.file.readJSON( 'package.json' ),
 
 		sass: {
 			dist: {
@@ -20,9 +21,6 @@ module.exports = function(grunt) {
 		},
 
 		autoprefixer: {
-			options: {
-				// Task-specific options go here.
-			},
 			dist: {
 				src: '*.css'
 			}
@@ -64,7 +62,7 @@ module.exports = function(grunt) {
 					]
 				},
 				files:{
-					src:  [ '**/*.php' ], //Parse all php files
+					src:  [ '**/*.php' ],
 					expand: true
 				}
 		},
@@ -112,15 +110,15 @@ module.exports = function(grunt) {
 	});
 
 
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-sass');
-	grunt.loadNpmTasks('grunt-browser-sync');
-	grunt.loadNpmTasks('grunt-cssjanus');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-pot');
-	grunt.registerTask('default',['browserSync', 'watch']);
-	grunt.registerTask('lint',['jshint']);
-	grunt.registerTask('translate',['pot']);
+	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
+	grunt.loadNpmTasks( 'grunt-sass' );
+	grunt.loadNpmTasks( 'grunt-browser-sync' );
+	grunt.loadNpmTasks( 'grunt-cssjanus' );
+	grunt.loadNpmTasks( 'grunt-autoprefixer' );
+	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-pot' );
+	grunt.registerTask( 'default',['browserSync', 'watch' ] );
+	grunt.registerTask( 'lint',[ 'jshint' ] );
+	grunt.registerTask( 'translate',[ 'pot' ] );
 
 };
