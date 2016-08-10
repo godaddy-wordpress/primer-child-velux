@@ -52,7 +52,7 @@ function velux_register_nav_menu( $menu ) {
 	return $menu;
 
 }
-add_filter( 'primer_nav_menus', 'activation_register_nav_menu' );
+add_filter( 'primer_nav_menus', 'velux_register_nav_menu' );
 
 /**
  * Add mobile menu to header
@@ -100,35 +100,6 @@ function velux_move_navigation() {
 add_action( 'primer_header', 'velux_move_navigation', 19 );
 
 /**
- * Get header image with image size
- *
- * @package Velux
- * @since 1.0.0
- *
- * @return false|string
- */
-function velux_get_header_image() {
-
-	$image_size    = (int) get_theme_mod( 'full_width' ) === 1 ? 'hero-2x' : 'hero';
-	$custom_header = get_custom_header();
-
-	if ( ! empty( $custom_header->attachment_id ) ) {
-
-		$image = wp_get_attachment_image_url( $custom_header->attachment_id, $image_size );
-
-		if ( getimagesize( $image ) ) {
-
-			return $image;
-
-		}
-
-	}
-
-	return get_header_image();
-
-}
-
-/**
  * Register sidebar areas.
  *
  * @link    http://codex.wordpress.org/Function_Reference/register_sidebar
@@ -145,7 +116,7 @@ function velux_register_sidebars( $sidebars ) {
 	/**
 	 * Register Hero Widget.
 	 */
-	$sidebars[] = array(
+	$sidebars['hero'] = array(
 		'name'          => esc_attr__( 'Hero', 'velux' ),
 		'id'            => 'hero',
 		'description'   => esc_attr__( 'The Hero widget area.', 'velux' ),
@@ -164,15 +135,31 @@ add_filter( 'primer_sidebars', 'velux_register_sidebars' );
  * Add image size for hero image
  *
  * @package Velux
- * @since 1.0.0
- * @link https://codex.wordpress.org/Function_Reference/add_image_size
+ * @since   1.0.0
+ * @link    https://codex.wordpress.org/Function_Reference/add_image_size
+ *
+ * @param array $images_sizes
+ *
+ * @return array
  */
-function velux_add_image_size() {
+function velux_add_image_size( $images_sizes ) {
 
-	add_image_size( 'hero', 2400, 1320, array( 'center', 'center' ) );
+	$images_sizes[ 'primer-hero' ] = array(
+		'width'  => 1200,
+		'height' => 660,
+		'crop'   => array( 'center', 'center' ),
+	);
+
+	$images_sizes[ 'primer-hero-2x' ] = array(
+		'width'  => 2400,
+		'height' => 1320,
+		'crop'   => array( 'center', 'center' ),
+	);
+
+	return $images_sizes;
 
 }
-add_action( 'after_setup_theme', 'velux_add_image_size' );
+add_filter( 'primer_image_sizes', 'velux_add_image_size' );
 
 /**
  * Update custom header arguments
