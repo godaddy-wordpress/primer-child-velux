@@ -17,7 +17,6 @@ function velux_remove_hero_if_not_home() {
 	}
 
 }
-
 add_action( 'primer_before_header', 'velux_remove_hero_if_not_home' );
 
 /**
@@ -36,23 +35,24 @@ function velux_theme_enqueue_styles() {
 	wp_style_add_data( 'velux-lt-ie9-style', 'conditional', 'lt IE 9' );
 
 }
-
 add_action( 'wp_enqueue_scripts', 'velux_theme_enqueue_styles' );
 
 /**
- *
  * Register Footer Menu.
  *
- * @package Velux
- * @since 1.0.0
+ * @package velux
+ * @since   1.0.0
+ *
+ * @param $menu
  */
-function velux_theme_register_nav_menu() {
+function velux_register_nav_menu( $menu ) {
 
-	 register_nav_menu( 'footer', __( 'Footer Menu', 'velux' ) );
+	$menu[ 'footer' ] = __( 'Footer Menu', 'activation' );
+
+	return $menu;
 
 }
-
-add_action( 'after_setup_theme', 'velux_theme_register_nav_menu' );
+add_filter( 'primer_nav_menus', 'activation_register_nav_menu' );
 
 /**
  * Add mobile menu to header
@@ -67,7 +67,6 @@ function velux_add_mobile_menu() {
 	get_template_part( 'templates/parts/mobile-menu' );
 
 }
-
 add_action( 'primer_header', 'velux_add_mobile_menu', 0 );
 
 /**
@@ -81,7 +80,6 @@ function velux_add_nav_footer() {
 	get_template_part( 'templates/parts/footer-nav' );
 
 }
-
 add_action( 'primer_after_footer', 'velux_add_nav_footer', 10 );
 
 /**
@@ -99,7 +97,6 @@ function velux_move_navigation() {
 	get_template_part( 'templates/parts/primary-navigation' );
 
 }
-
 add_action( 'primer_header', 'velux_move_navigation', 19 );
 
 /**
@@ -161,7 +158,7 @@ function velux_register_sidebars( $sidebars ) {
 	return $sidebars;
 
 }
-add_action( 'primer_sidebars', 'velux_register_sidebars' );
+add_filter( 'primer_sidebars', 'velux_register_sidebars' );
 
 /**
  * Add image size for hero image
