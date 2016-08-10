@@ -1,6 +1,6 @@
 {
   "name": "velux",
-  "title": "Primer",
+  "title": "Velux",
   "description": "",
   "version": "1.0.0",
   "license": "GPL-2.0",
@@ -11,8 +11,7 @@
     "type": "git",
     "url": "git://github.com/godaddy/wp-velux-theme.git"
   },
-  "author": "LiftUX",
-  "license": "GPLv2",
+  "author": "GoDaddy",
   "bugs": {
     "url": "https://github.com/godaddy/wp-velux-theme/issues"
   },
