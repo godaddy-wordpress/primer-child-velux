@@ -139,26 +139,25 @@ function velux_get_header_image() {
  * @package Velux
  * @since 1.0.0
  */
-function velux_register_sidebars() {
+function velux_register_sidebars( $sidebars ) {
 
 	/**
 	 * Register Hero Widget.
 	 */
-	register_sidebar(
-		array(
-			'name'          => esc_attr__( 'Hero', 'velux' ),
-			'id'            => 'hero',
-			'description'   => esc_attr__( 'The Hero widget area.', 'velux' ),
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h6 class="widget-title">',
-			'after_title'   => '</h6>',
-		)
+	$sidebars[] = array(
+		'name'          => esc_attr__( 'Hero', 'velux' ),
+		'id'            => 'hero',
+		'description'   => esc_attr__( 'The Hero widget area.', 'velux' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h6 class="widget-title">',
+		'after_title'   => '</h6>',
 	);
 
-}
+	return $sidebars;
 
-add_action( 'widgets_init', 'velux_register_sidebars' );
+}
+add_action( 'primer_sidebars', 'velux_register_sidebars' );
 
 /**
  * Add image size for hero image
@@ -172,7 +171,6 @@ function velux_add_image_size() {
 	add_image_size( 'hero', 2400, 1320, array( 'center', 'center' ) );
 
 }
-
 add_action( 'after_setup_theme', 'velux_add_image_size' );
 
 /**
@@ -192,7 +190,6 @@ function velux_update_custom_header_args( $args ) {
 	return $args;
 
 }
-
 add_filter( 'primer_custom_header_args', 'velux_update_custom_header_args' );
 
 /**
@@ -260,7 +257,6 @@ function velux_colors() {
 	);
 
 }
-
 add_action( 'primer_colors', 'velux_colors', 9 );
 
 /**
@@ -289,7 +285,6 @@ function velux_color_schemes() {
 	);
 
 }
-
 add_action( 'primer_color_schemes', 'velux_color_schemes' );
 
 /**
@@ -327,7 +322,6 @@ function velux_update_font_types() {
 	);
 
 }
-
 add_action( 'primer_font_types', 'velux_update_font_types' );
 
 /**
@@ -347,6 +341,5 @@ function velux_add_default_header_image( $array ) {
 	return $array;
 
 }
-
 add_filter( 'primer_custom_header_args', 'velux_add_default_header_image', 20 );
 
