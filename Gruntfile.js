@@ -1,28 +1,44 @@
-/* global module */
+/* global module, require */
 
 module.exports = function(grunt) {
 
+	var pkg = grunt.file.readJSON( 'package.json' );
+
 	grunt.initConfig({
 
-		pkg: grunt.file.readJSON( 'package.json' ),
+		pkg: pkg,
 
-		sass: {
+		autoprefixer: {
+			options: {
+				browsers: [
+					'Android >= 2.1',
+					'Chrome >= 21',
+					'Edge >= 12',
+					'Explorer >= 7',
+					'Firefox >= 17',
+					'Opera >= 12.1',
+					'Safari >= 6.0'
+				],
+				cascade: false
+			},
 			dist: {
-				files: {
-					'style.css'        : '.dev/sass/style.scss',
-					'editor-style.css' : '.dev/sass/editor-style.scss',
-					'ie.css'           : '.dev/sass/ie.scss'
-				}
+				src: [ '*.css', '!ie.css' ]
 			}
 		},
 
-		jshint: {
-			all: ['js/**/*.js', 'Gruntfile.js']
-		},
-
-		autoprefixer: {
-			dist: {
-				src: '*.css'
+		browserSync: {
+			dev: {
+				bsFiles: {
+					src: [
+						'*.css',
+						'**/*.php',
+						'*.js'
+					]
+				},
+				options: {
+					proxy: 'http://wp.dev', // enter your local WP URL here
+					watchTask: true
+				}
 			}
 		},
 
@@ -37,6 +53,13 @@ module.exports = function(grunt) {
 						dest: 'style-rtl.css'
 					}
 				]
+			}
+		},
+
+		po2mo: {
+			files: {
+				src: 'languages/*.po',
+				expand: true
 			}
 		},
 
@@ -67,58 +90,58 @@ module.exports = function(grunt) {
 				}
 		},
 
-		phplint: {
-			options: {
-				swapPath: '/.phplint'
-			},
-			all: ['**/*.php']
+		replace: {
+			pot: {
+				src: 'languages/*.po*',
+				overwrite: true,
+				replacements: [
+					{
+						from: 'SOME DESCRIPTIVE TITLE.',
+						to: pkg.title
+					},
+					{
+						from: 'YEAR THE PACKAGE\'S COPYRIGHT HOLDER',
+						to: new Date().getFullYear()
+					},
+					{
+						from: 'FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.',
+						to: 'GoDaddy Operating Company, LLC.'
+					},
+					{
+						from: 'charset=CHARSET',
+						to: 'charset=UTF-8'
+					}
+				]
+			}
 		},
 
-		browserSync: {
-			dev: {
-			bsFiles: {
-				src: [
-					'*.css',
-					'**/*.php',
-					'*.js'
-				]
-			},
-			options: {
-				proxy: 'http://wp.dev', // enter your local WP URL here
-				watchTask: true
-			}
+		sass: {
+			dist: {
+				files: {
+					'style.css'        : '.dev/sass/style.scss',
+					'editor-style.css' : '.dev/sass/editor-style.scss',
+					'ie.css'           : '.dev/sass/ie.scss'
+				}
 			}
 		},
 
 		watch: {
 			css: {
 				files: '.dev/**/*.scss',
-				tasks: ['sass','autoprefixer','cssjanus']
-			},
-			scripts: {
-				files: ['js/**/*.js', 'Gruntfile.js' ],
-				tasks: ['jshint'],
-				options: {
-					interrupt: true
-				}
+				tasks: [ 'sass','autoprefixer','cssjanus' ]
 			},
 			pot: {
 				files: [ '**/*.php' ],
-				tasks: ['pot']
+				tasks: [ 'pot' ]
 			}
 		}
 	});
 
 
-	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
-	grunt.loadNpmTasks( 'grunt-sass' );
-	grunt.loadNpmTasks( 'grunt-browser-sync' );
-	grunt.loadNpmTasks( 'grunt-cssjanus' );
-	grunt.loadNpmTasks( 'grunt-autoprefixer' );
-	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-pot' );
-	grunt.registerTask( 'default',['browserSync', 'watch' ] );
-	grunt.registerTask( 'lint',[ 'jshint' ] );
-	grunt.registerTask( 'translate',[ 'pot' ] );
+	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
+
+	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus' ] );
+	grunt.registerTask( 'lint', [ 'jshint' ] );
+	grunt.registerTask( 'update-pot', [ 'pot', 'replace:pot' ] );
 
 };

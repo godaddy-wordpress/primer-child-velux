@@ -23,6 +23,7 @@ Variables
   position: relative;
   z-index: 999; }
   .home .site-header {
+    -webkit-background-size: cover;
     background-size: cover;
     min-height: 100vh;
     width: 100vw; }
@@ -306,6 +307,7 @@ button,
 a.button,
 .fl-button {
   background: none;
+  -webkit-border-radius: 0;
   border-radius: 0;
   border-bottom: 1px solid #ffffff;
   letter-spacing: .4em;
@@ -338,6 +340,9 @@ a.button,
           line-height: 1;
           text-align: right; } }
 
+#content .widget {
+  color: #202223; }
+
 .single .entry-header {
   border-bottom: 1px solid #5c6d7c;
   border-top: 1px solid #5c6d7c;
@@ -365,6 +370,7 @@ button {
   background-color: transparent;
   border: 0;
   border-bottom: 2px solid #8e452a;
+  -webkit-border-radius: 0;
   border-radius: 0;
   font-size: .875rem;
   letter-spacing: .2em;

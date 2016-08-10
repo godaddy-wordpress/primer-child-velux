@@ -1,8 +1,9 @@
 {
-  "name": "Velux",
-  "version": "1.0.0",
+  "name": "velux",
+  "title": "Primer",
   "description": "",
-  "main": "index.php",
+  "version": "1.0.0",
+  "license": "GPL-2.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,13 +19,16 @@
   "homepage": "https://github.com/godaddy/wp-velux-theme/issues",
   "devDependencies": {
     "grunt": "~0.4.5",
-    "grunt-autoprefixer": "~1.0.0",
+    "grunt-autoprefixer": "~3.0.4",
     "grunt-browser-sync": "~2.2.0",
+    "grunt-cssjanus": "~0.3.2",
     "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-sass": "^0.7.3",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-cssjanus": "~0.2.2",
     "grunt-pot": "~0.1.2",
-    "grunt-sass": "^1.2.0"
+    "grunt-po2mo": "~0.1.2",
+    "grunt-sass": "^1.2.0",
+    "grunt-text-replace": "~0.4.0",
+    "load-grunt-tasks": "~3.5.0",
+    "matchdep": "~1.0.1"
   }
 }
