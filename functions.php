@@ -192,8 +192,7 @@ add_filter( 'primer_custom_header_args', 'velux_update_custom_header_args' );
 function velux_colors() {
 
 	return array(
-		array(
-			'name'    => 'link_color',
+		'link_color' => array(
 			'label'   => __( 'Link Color', 'velux' ),
 			'default' => '#51748e',
 			'css'     => array(
@@ -202,8 +201,7 @@ function velux_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'background_color',
+		'background_color' => array(
 			'default' => '#fff',
 			'css'     => array(
 				'body' => array(
@@ -211,8 +209,7 @@ function velux_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'button_color',
+		'button_color' => array(
 			'label'   => __( 'Button Color', 'velux' ),
 			'default' => '#8e452a',
 			'css'     => array(
@@ -222,8 +219,7 @@ function velux_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'w_background_color',
+		'w_background_color' => array(
 			'label'   => __( 'Widget Background Color', 'velux' ),
 			'default' => '#212121',
 			'css'     => array(
@@ -232,8 +228,7 @@ function velux_colors() {
 				),
 			),
 		),
-		array(
-			'name'    => 'footer_backgroundcolor',
+		'footer_background_color' => array(
 			'label'   => __( 'Footer Background Color', 'velux' ),
 			'default' => '#191919',
 			'css'     => array(
@@ -267,7 +262,7 @@ function velux_color_schemes() {
 				'link_color'               => '#363a3d',
 				'button_color'			   => '#3f7b84',
 				'w_background_color'	   => '#212121',
-				'footer_backgroundcolor'   => '#191919',
+				'footer_background_color'  => '#191919',
 			),
 		),
 	);
@@ -287,8 +282,7 @@ add_action( 'primer_color_schemes', 'velux_color_schemes' );
 function velux_update_font_types() {
 
 	return array(
-		array(
-			'name'    => 'primary_font',
+		'primary_font' => array(
 			'label'   => __( 'Primary Font', 'velux' ),
 			'default' => 'Roboto',
 			'css'     => array(
@@ -297,8 +291,7 @@ function velux_update_font_types() {
 				),
 			),
 		),
-		array(
-			'name'    => 'secondary_font',
+		'secondary_font' => array(
 			'label'   => __( 'Secondary Font', 'velux' ),
 			'default' => 'Playfair Display',
 			'css'     => array(
