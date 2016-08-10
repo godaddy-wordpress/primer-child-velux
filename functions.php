@@ -134,10 +134,14 @@ function velux_get_header_image() {
 /**
  * Register sidebar areas.
  *
- * @link  http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @link    http://codex.wordpress.org/Function_Reference/register_sidebar
  *
  * @package Velux
- * @since 1.0.0
+ * @since   1.0.0
+ *
+ * @param array $sidebars
+ *
+ * @return array
  */
 function velux_register_sidebars( $sidebars ) {
 
