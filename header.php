@@ -35,10 +35,8 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'primer' ); ?></a>
 
 		<?php do_action( 'primer_before_header' ); ?>
-
-		<?php $header_img = primer_get_header_image(); ?>
-
-		<header id="masthead" class="site-header" role="banner"<?php if ( ! empty( $header_img ) ) : ?> style="background:url('<?php echo esc_attr( $header_img ); ?>') no-repeat top center; background-size: cover;"<?php endif; ?>>
+		
+		<header id="masthead" class="site-header" role="banner"<?php if ( primer_has_hero_image() ) : ?> style="background:url('<?php echo esc_attr( primer_get_hero_image() ); ?>') no-repeat top center; background-size: cover;"<?php endif; ?>>
 
 			<div class="site-header-wrapper">
 
