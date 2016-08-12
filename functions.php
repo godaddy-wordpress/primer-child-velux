@@ -196,7 +196,8 @@ function velux_colors() {
 			'label'   => __( 'Link Color', 'velux' ),
 			'default' => '#51748e',
 			'css'     => array(
-				'#content a, #content a:visited, .entry-footer a, .entry-footer a:visited, .sticky .entry-title a:before, .footer-widget-area .footer-widget .widget a, .footer-widget-area .footer-widget .widget a:visited' => array(
+				'#content a, #content a:visited, .entry-footer a, .entry-footer a:visited, .sticky .entry-title a:before, .footer-widget-area .footer-widget .widget a, .footer-widget-area .footer-widget .widget a:visited, header .main-navigation-container .menu li.current-menu-item > a:hover ,
+				header .main-navigation-container .menu li.current-menu-item > a {' => array(
 					'color' => '%1$s',
 				),
 			),
@@ -323,4 +324,3 @@ function velux_add_default_header_image( $array ) {
 
 }
 add_filter( 'primer_custom_header_args', 'velux_add_default_header_image', 20 );
-

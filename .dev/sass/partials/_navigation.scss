@@ -117,5 +117,11 @@
 	a:hover,
 	a:visited:hover{
 		background: none;
+		color: #ff6663;
 	}
+}
+
+header .main-navigation-container .menu li.current-menu-item > a:hover ,
+header .main-navigation-container .menu li.current-menu-item > a {
+	color: #ff6663;
 }
