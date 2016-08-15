@@ -99,19 +99,20 @@ Variables
 .site-title a:hover {
   color: #ffffff; }
 
-.row, .site-footer-inner .footer-menu,
+.row, .hero,
 .footer-widget-area {
   padding-left: 25px;
   padding-right: 25px;
   width: 100%; }
 
 .page-title-container {
-  padding: 3em 0; }
+  padding: 3em 0;
+  background-color: inherit; }
   .page-title-container .page-title {
     color: #ffffff; }
 
 @media only screen and (min-width: 800px) {
-  .row, .site-footer-inner .footer-menu,
+  .row, .hero,
   .footer-widget-area {
     max-width: 1100px;
     margin-left: auto;
@@ -238,34 +239,32 @@ header .main-navigation-container .menu li.current-menu-item > a {
   .site-info-wrapper a {
     color: #606365; }
 
-.site-footer-inner {
-  background: #191919; }
-  .site-footer-inner .footer-menu {
-    margin: 0 auto;
-    padding: 30px 0; }
+.footer-menu {
+  margin: 0 auto;
+  padding: 30px 0; }
+  @media only screen and (min-width: 64.063em) {
+    .footer-menu {
+      padding: 30px 0 0 0; } }
+  .footer-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; }
     @media only screen and (min-width: 64.063em) {
-      .site-footer-inner .footer-menu {
-        padding: 30px 0 0 0; } }
-    .site-footer-inner .footer-menu ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      text-align: center; }
+      .footer-menu ul {
+        text-align: left; } }
+    .footer-menu ul li {
+      display: inline-block;
+      font-size: .875rem;
+      font-weight: 600;
+      margin: 0 10px;
+      text-align: center;
+      text-transform: uppercase; }
       @media only screen and (min-width: 64.063em) {
-        .site-footer-inner .footer-menu ul {
+        .footer-menu ul li {
           text-align: left; } }
-      .site-footer-inner .footer-menu ul li {
-        display: inline-block;
-        font-size: .875rem;
-        font-weight: 600;
-        margin: 0 10px;
-        text-align: center;
-        text-transform: uppercase; }
-        @media only screen and (min-width: 64.063em) {
-          .site-footer-inner .footer-menu ul li {
-            text-align: left; } }
-        .site-footer-inner .footer-menu ul li a {
-          color: #ffffff; }
+      .footer-menu ul li a {
+        color: #ffffff; }
 
 .site-info-wrapper .site-info {
   overflow: visible;

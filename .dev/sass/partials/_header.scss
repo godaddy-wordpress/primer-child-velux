@@ -27,6 +27,8 @@
 	position: static;
 	top: auto;
 
+	@extend .row;
+
 	@media screen and (max-width: 799px) {
 
 		.hero-wrapper {
@@ -126,6 +128,7 @@
 
 .page-title-container {
 	padding: 3em 0;
+	background-color: inherit;
 
 	.page-title{
 		color: $color-white;

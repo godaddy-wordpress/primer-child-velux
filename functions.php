@@ -10,17 +10,47 @@ function velux_move_elements() {
 
 	remove_action( 'primer_header', 'primer_add_hero' );
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
+	remove_action( 'primer_after_header', 'primer_add_page_title' );
+	remove_action( 'primer_before_site_navigation', 'primer_add_mobile_menu' );
 
 	add_action( 'primer_header', 'primer_add_primary_navigation' );
+	add_action( 'primer_after_site_header_wrapper', 'primer_add_page_title' );
 
 	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
 
-		add_action( 'primer_header', 'primer_add_hero', 12 );
+		add_action( 'primer_after_site_header_wrapper', 'primer_add_hero' );
 
 	}
 
 }
 add_action( 'primer_before_header', 'velux_move_elements' );
+
+/**
+ * Add mobile menu to header
+ *
+ * @package Velux
+ * @since 1.0.0
+ *
+ * @link https://codex.wordpress.org/Function_Reference/get_template_part
+ */
+function velux_add_mobile_menu() {
+
+	get_template_part( 'templates/parts/mobile-menu' );
+
+}
+add_action( 'primer_header', 'velux_add_mobile_menu', 0 );
+
+/**
+ * Add foother navigation
+ *
+ * @since 1.0.0
+ */
+function velux_add_footer_navigation() {
+
+	get_template_part( 'templates/parts/footer-navigation' );
+
+}
+add_action( 'primer_before_site_info', 'velux_add_footer_navigation' );
 
 /**
  * Add background images if there is one
@@ -45,12 +75,20 @@ function velux_header_style_attr( $header_styles ) {
 }
 add_filter( 'primer_header_style_attr', 'velux_header_style_attr' );
 
-function velux_add_footer_navigation() {
+/**
+ * If there is a custom logo we don't want to print the site title text.
+ *
+ * @param boolean $bool
+ * @param boolean $has_logo
+ *
+ * @return bool
+ */
+function velux_print_site_title( $bool, $has_logo ) {
 
-	get_template_part( 'templates/parts/footer-navigation' );
+	return ! $has_logo;
 
 }
-add_action( 'primer_footer', 'velux_add_footer_navigation' );
+add_filter( 'primer_print_site_title_text', 'velux_print_site_title', 10, 2 );
 
 /**
  *
@@ -83,34 +121,6 @@ function velux_register_nav_menu( $menu ) {
 
 }
 add_filter( 'primer_nav_menus', 'velux_register_nav_menu' );
-
-/**
- * Add mobile menu to header
- *
- * @package Velux
- * @since 1.0.0
- *
- * @link https://codex.wordpress.org/Function_Reference/get_template_part
- */
-function velux_add_mobile_menu() {
-
-	get_template_part( 'templates/parts/mobile-menu' );
-
-}
-add_action( 'primer_header', 'velux_add_mobile_menu', 0 );
-
-/**
- * Display the footer nav before the site info.
- *
- * @package Velux
- * @since 1.0.0
- */
-function velux_add_nav_footer() {
-
-	get_template_part( 'templates/parts/footer-nav' );
-
-}
-//add_action( 'primer_after_footer', 'velux_add_nav_footer', 10 );
 
 /**
  * Register sidebar areas.
@@ -246,7 +256,7 @@ function velux_colors() {
 			'label'   => __( 'Footer Background Color', 'velux' ),
 			'default' => '#191919',
 			'css'     => array(
-				'.site-info-wrapper, .footer-nav, .site-info-wrapper' => array(
+				'.site-info-wrapper, .site-info-wrapper' => array(
 					'background-color' => '%1$s',
 				),
 			),
@@ -309,7 +319,7 @@ function velux_update_font_types() {
 			'label'   => __( 'Secondary Font', 'velux' ),
 			'default' => 'Playfair Display',
 			'css'     => array(
-				'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"], blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text, .site-title, .hero-wrapper .textwidget h1, .hero-wrapper .textwidget .button, .main-navigation li a, .widget-title, .footer-nav ul li a, h1, h2, h3, h4, h5, .entry-title, .single .entry-meta, .hero .widget h1, button, .button, .btn, input[type="submit"], .fl-button, .fl-button a' => array(
+				'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"], blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text, .site-title, .hero-wrapper .textwidget h1, .hero-wrapper .textwidget .button, .main-navigation li a, .widget-title, .footer-menu ul li a, h1, h2, h3, h4, h5, .entry-title, .single .entry-meta, .hero .widget h1, button, .button, .btn, input[type="submit"], .fl-button, .fl-button a' => array(
 					'font-family' => '"%s", serif',
 				),
 			),
