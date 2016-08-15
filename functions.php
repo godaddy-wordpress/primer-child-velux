@@ -1,20 +1,22 @@
 <?php
 
 /**
- * Remove hero for all pages except front.
+ * Moving templates elements around
  *
  * @package Velux
  * @since 1.0.0
  */
 function velux_move_elements() {
 
-	remove_action( 'primer_header', 'primer_add_hero' );
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
-	remove_action( 'primer_after_header', 'primer_add_page_title' );
-	remove_action( 'primer_before_site_navigation', 'primer_add_mobile_menu' );
+	remove_action( 'primer_header',                    'primer_add_hero' );
+	remove_action( 'primer_after_header',              'primer_add_primary_navigation' );
+	remove_action( 'primer_after_header',              'primer_add_page_title' );
+	remove_action( 'primer_before_site_navigation',    'primer_add_mobile_menu' );
+	remove_action( 'primer_after_post_title_template', 'primer_add_post_meta' );
 
-	add_action( 'primer_header', 'primer_add_primary_navigation' );
+	add_action( 'primer_header',                    'primer_add_primary_navigation' );
 	add_action( 'primer_after_site_header_wrapper', 'primer_add_page_title' );
+	add_action( 'primer_after_post_title',          'primer_add_post_meta' );
 
 	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
 
@@ -23,7 +25,7 @@ function velux_move_elements() {
 	}
 
 }
-add_action( 'primer_before_header', 'velux_move_elements' );
+add_action( 'template_redirect', 'velux_move_elements' );
 
 /**
  * Add mobile menu to header
@@ -167,17 +169,8 @@ add_filter( 'primer_sidebars', 'velux_register_sidebars' );
  */
 function velux_add_image_size( $images_sizes ) {
 
-	$images_sizes[ 'primer-hero' ] = array(
-		'width'  => 1200,
-		'height' => 660,
-		'crop'   => array( 'center', 'center' ),
-	);
-
-	$images_sizes[ 'primer-hero-2x' ] = array(
-		'width'  => 2400,
-		'height' => 1320,
-		'crop'   => array( 'center', 'center' ),
-	);
+	$images_sizes['primer-hero']['width']  = 2400;
+	$images_sizes['primer-hero']['height'] = 1320;
 
 	return $images_sizes;
 
