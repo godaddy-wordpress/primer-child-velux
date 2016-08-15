@@ -3,7 +3,6 @@
 /**
  * Moving templates elements around
  *
- * @package Velux
  * @since 1.0.0
  */
 function velux_move_elements() {
@@ -30,7 +29,6 @@ add_action( 'template_redirect', 'velux_move_elements' );
 /**
  * Add mobile menu to header
  *
- * @package Velux
  * @since 1.0.0
  *
  * @link https://codex.wordpress.org/Function_Reference/get_template_part
@@ -57,8 +55,7 @@ add_action( 'primer_before_site_info', 'velux_add_footer_navigation' );
 /**
  * Add background images if there is one
  *
- * @package Velux
- * @since   1.0.0
+ * @since 1.0.0
  *
  * @param string $header_styles
  *
@@ -96,7 +93,6 @@ add_filter( 'primer_print_site_title_text', 'velux_print_site_title', 10, 2 );
  *
  * Add child and parent theme files.
  *
- * @package Velux
  * @since 1.0.0
  */
 function velux_theme_enqueue_styles() {
@@ -110,7 +106,6 @@ add_action( 'wp_enqueue_scripts', 'velux_theme_enqueue_styles' );
 /**
  * Register Footer Menu.
  *
- * @package velux
  * @since   1.0.0
  *
  * @param $menu
@@ -129,7 +124,6 @@ add_filter( 'primer_nav_menus', 'velux_register_nav_menu' );
  *
  * @link    http://codex.wordpress.org/Function_Reference/register_sidebar
  *
- * @package Velux
  * @since   1.0.0
  *
  * @param array $sidebars
@@ -159,7 +153,6 @@ add_filter( 'primer_sidebars', 'velux_register_sidebars' );
 /**
  * Add image size for hero image
  *
- * @package Velux
  * @since   1.0.0
  * @link    https://codex.wordpress.org/Function_Reference/add_image_size
  *
@@ -180,7 +173,6 @@ add_filter( 'primer_image_sizes', 'velux_add_image_size' );
 /**
  * Update custom header arguments
  *
- * @package Velux
  * @since 1.0.0
  * @param $args
  *
@@ -199,7 +191,6 @@ add_filter( 'primer_custom_header_args', 'velux_update_custom_header_args' );
 /**
  * Update colors
  *
- * @package Velux
  * @since 1.0.0
  * @action primer_colors
  *
@@ -264,7 +255,6 @@ add_action( 'primer_colors', 'velux_colors', 9 );
  *
  * @action primer_color_schemes
  *
- * @package Velux
  * @since 1.0.0
  *
  * @return array
@@ -291,7 +281,6 @@ add_action( 'primer_color_schemes', 'velux_color_schemes' );
  *
  * Add selectors for font customizing.
  *
- * @package Velux
  * @since 1.0.0
  *
  * @return array
