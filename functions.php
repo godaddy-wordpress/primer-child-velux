@@ -95,20 +95,6 @@ function velux_print_site_title( $bool, $has_logo ) {
 add_filter( 'primer_print_site_title_text', 'velux_print_site_title', 10, 2 );
 
 /**
- * Add child and parent theme files.
- *
- * @action wp_enqueue_scripts
- * @since 1.0.0
- */
-function velux_theme_enqueue_styles() {
-
-	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'parent-style' ) );
-
-}
-add_action( 'wp_enqueue_scripts', 'velux_theme_enqueue_styles' );
-
-/**
  * Register Footer Menu.
  *
  * @filter primer_nav_menus
