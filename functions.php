@@ -6,18 +6,51 @@
  * @package Velux
  * @since 1.0.0
  */
-function velux_remove_hero_if_not_home() {
+function velux_move_elements() {
 
-	remove_action( 'primer_header', 'primer_add_hero', 10 );
+	remove_action( 'primer_header', 'primer_add_hero' );
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
+
+	add_action( 'primer_header', 'primer_add_primary_navigation' );
 
 	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
 
-		add_action( 'primer_after_header', 'primer_add_hero' );
+		add_action( 'primer_header', 'primer_add_hero', 12 );
 
 	}
 
 }
-add_action( 'primer_before_header', 'velux_remove_hero_if_not_home' );
+add_action( 'primer_before_header', 'velux_move_elements' );
+
+/**
+ * Add background images if there is one
+ *
+ * @package Velux
+ * @since   1.0.0
+ *
+ * @param string $header_styles
+ *
+ * @return string
+ */
+function velux_header_style_attr( $header_styles ) {
+
+	if ( primer_has_hero_image() ) {
+
+		$header_styles .= sprintf( "background:url('%s') no-repeat top center; background-size: cover;", esc_attr( primer_get_hero_image() ) );
+
+	}
+
+	return $header_styles;
+
+}
+add_filter( 'primer_header_style_attr', 'velux_header_style_attr' );
+
+function velux_add_footer_navigation() {
+
+	get_template_part( 'templates/parts/footer-navigation' );
+
+}
+add_action( 'primer_footer', 'velux_add_footer_navigation' );
 
 /**
  *
@@ -30,9 +63,6 @@ function velux_theme_enqueue_styles() {
 
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'parent-style' ) );
-
-	wp_enqueue_style( 'velux-lt-ie9-style', get_stylesheet_directory_uri() . '/ie.css', array(), PRIMER_VERSION );
-	wp_style_add_data( 'velux-lt-ie9-style', 'conditional', 'lt IE 9' );
 
 }
 add_action( 'wp_enqueue_scripts', 'velux_theme_enqueue_styles' );
@@ -80,24 +110,7 @@ function velux_add_nav_footer() {
 	get_template_part( 'templates/parts/footer-nav' );
 
 }
-add_action( 'primer_after_footer', 'velux_add_nav_footer', 10 );
-
-/**
- * Move navigation from after_header to header
- *
- * @package Velux
- * @since 1.0.0
- * @link https://codex.wordpress.org/Function_Reference/remove_action
- * @link https://codex.wordpress.org/Function_Reference/add_action
- */
-function velux_move_navigation() {
-
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 20 );
-
-	get_template_part( 'templates/parts/primary-navigation' );
-
-}
-add_action( 'primer_header', 'velux_move_navigation', 19 );
+//add_action( 'primer_after_footer', 'velux_add_nav_footer', 10 );
 
 /**
  * Register sidebar areas.
@@ -305,22 +318,3 @@ function velux_update_font_types() {
 
 }
 add_action( 'primer_font_types', 'velux_update_font_types' );
-
-/**
- * Add a default hero image in the header area.
- *
- * @package Velux
- * @since   1.0.0
- *
- * @param array $array
- *
- * @return array
- */
-function velux_add_default_header_image( $array ) {
-
-	$array['default-image'] = get_stylesheet_directory_uri() . '/assets/img/header.png';
-
-	return $array;
-
-}
-add_filter( 'primer_custom_header_args', 'velux_add_default_header_image', 20 );

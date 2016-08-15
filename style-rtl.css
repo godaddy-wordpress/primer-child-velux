@@ -99,7 +99,7 @@ Variables
 .site-title a:hover {
   color: #ffffff; }
 
-.row,
+.row, .site-footer-inner .footer-menu,
 .footer-widget-area {
   padding-right: 25px;
   padding-left: 25px;
@@ -111,7 +111,7 @@ Variables
     color: #ffffff; }
 
 @media only screen and (min-width: 800px) {
-  .row,
+  .row, .site-footer-inner .footer-menu,
   .footer-widget-area {
     max-width: 1100px;
     margin-right: auto;
@@ -198,7 +198,12 @@ Variables
 .main-navigation .current-menu-ancestor > a,
 .main-navigation a:hover,
 .main-navigation a:visited:hover {
-  background: none; }
+  background: none;
+  color: #ff6663; }
+
+header .main-navigation-container .menu li.current-menu-item > a:hover,
+header .main-navigation-container .menu li.current-menu-item > a {
+  color: #ff6663; }
 
 .site-footer {
   background-color: #212121; }
@@ -233,33 +238,34 @@ Variables
   .site-info-wrapper a {
     color: #606365; }
 
-.footer-nav {
-  background: #191919;
-  margin: 0 auto;
-  padding: 30px 0; }
-  @media only screen and (min-width: 64.063em) {
-    .footer-nav {
-      padding: 30px 0 0 0; } }
-  .footer-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center; }
+.site-footer-inner {
+  background: #191919; }
+  .site-footer-inner .footer-menu {
+    margin: 0 auto;
+    padding: 30px 0; }
     @media only screen and (min-width: 64.063em) {
-      .footer-nav ul {
-        text-align: right; } }
-    .footer-nav ul li {
-      display: inline-block;
-      font-size: .875rem;
-      font-weight: 600;
-      margin: 0 10px;
-      text-align: center;
-      text-transform: uppercase; }
+      .site-footer-inner .footer-menu {
+        padding: 30px 0 0 0; } }
+    .site-footer-inner .footer-menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center; }
       @media only screen and (min-width: 64.063em) {
-        .footer-nav ul li {
+        .site-footer-inner .footer-menu ul {
           text-align: right; } }
-      .footer-nav ul li a {
-        color: #ffffff; }
+      .site-footer-inner .footer-menu ul li {
+        display: inline-block;
+        font-size: .875rem;
+        font-weight: 600;
+        margin: 0 10px;
+        text-align: center;
+        text-transform: uppercase; }
+        @media only screen and (min-width: 64.063em) {
+          .site-footer-inner .footer-menu ul li {
+            text-align: right; } }
+        .site-footer-inner .footer-menu ul li a {
+          color: #ffffff; }
 
 .site-info-wrapper .site-info {
   overflow: visible;
