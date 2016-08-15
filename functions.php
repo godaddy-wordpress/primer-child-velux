@@ -3,6 +3,7 @@
 /**
  * Moving templates elements around
  *
+ * @action template_redirect
  * @since 1.0.0
  */
 function velux_move_elements() {
@@ -29,6 +30,7 @@ add_action( 'template_redirect', 'velux_move_elements' );
 /**
  * Add mobile menu to header
  *
+ * @action primer_header
  * @since 1.0.0
  *
  * @link https://codex.wordpress.org/Function_Reference/get_template_part
@@ -43,6 +45,7 @@ add_action( 'primer_header', 'velux_add_mobile_menu', 0 );
 /**
  * Add foother navigation
  *
+ * @action primer_before_site_info
  * @since 1.0.0
  */
 function velux_add_footer_navigation() {
@@ -55,6 +58,7 @@ add_action( 'primer_before_site_info', 'velux_add_footer_navigation' );
 /**
  * Add background images if there is one
  *
+ * @filter primer_header_style_attr
  * @since 1.0.0
  *
  * @param string $header_styles
@@ -77,6 +81,7 @@ add_filter( 'primer_header_style_attr', 'velux_header_style_attr' );
 /**
  * If there is a custom logo we don't want to print the site title text.
  *
+ * @filter primer_print_site_title_text
  * @param boolean $bool
  * @param boolean $has_logo
  *
@@ -90,9 +95,9 @@ function velux_print_site_title( $bool, $has_logo ) {
 add_filter( 'primer_print_site_title_text', 'velux_print_site_title', 10, 2 );
 
 /**
- *
  * Add child and parent theme files.
  *
+ * @action wp_enqueue_scripts
  * @since 1.0.0
  */
 function velux_theme_enqueue_styles() {
@@ -106,6 +111,7 @@ add_action( 'wp_enqueue_scripts', 'velux_theme_enqueue_styles' );
 /**
  * Register Footer Menu.
  *
+ * @filter primer_nav_menus
  * @since   1.0.0
  *
  * @param $menu
@@ -124,6 +130,7 @@ add_filter( 'primer_nav_menus', 'velux_register_nav_menu' );
  *
  * @link    http://codex.wordpress.org/Function_Reference/register_sidebar
  *
+ * @filter primer_sidebars
  * @since   1.0.0
  *
  * @param array $sidebars
@@ -153,6 +160,7 @@ add_filter( 'primer_sidebars', 'velux_register_sidebars' );
 /**
  * Add image size for hero image
  *
+ * @filter primer_image_sizes
  * @since   1.0.0
  * @link    https://codex.wordpress.org/Function_Reference/add_image_size
  *
@@ -173,6 +181,7 @@ add_filter( 'primer_image_sizes', 'velux_add_image_size' );
 /**
  * Update custom header arguments
  *
+ * @filter primer_custom_header_args
  * @since 1.0.0
  * @param $args
  *
@@ -191,6 +200,7 @@ add_filter( 'primer_custom_header_args', 'velux_update_custom_header_args' );
 /**
  * Update colors
  *
+ * @filter primer_colors
  * @since 1.0.0
  * @action primer_colors
  *
@@ -248,13 +258,12 @@ function velux_colors() {
 	);
 
 }
-add_action( 'primer_colors', 'velux_colors', 9 );
+add_filter( 'primer_colors', 'velux_colors', 9 );
 
 /**
  * Change velux color schemes
  *
  * @action primer_color_schemes
- *
  * @since 1.0.0
  *
  * @return array
@@ -275,12 +284,13 @@ function velux_color_schemes() {
 	);
 
 }
-add_action( 'primer_color_schemes', 'velux_color_schemes' );
+add_filter( 'primer_color_schemes', 'velux_color_schemes' );
 
 /**
  *
  * Add selectors for font customizing.
  *
+ * @filter primer_font_types
  * @since 1.0.0
  *
  * @return array
@@ -309,4 +319,4 @@ function velux_update_font_types() {
 	);
 
 }
-add_action( 'primer_font_types', 'velux_update_font_types' );
+add_filter( 'primer_font_types', 'velux_update_font_types' );
