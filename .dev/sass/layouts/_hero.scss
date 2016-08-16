@@ -35,6 +35,36 @@
 			text-align: left;
 		}
 
+		a.button{
+			font-family: $font__main;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			background-color: transparent;
+			padding-left: 0;
+			padding-right: 0;
+			color: white;
+			border-bottom: 2px solid rgba(255,255,255,.8);
+			transition: 50ms linear border-color;
+
+			&:after{
+				content: ' \25b6';
+				font-size: .5rem;
+				padding-left: 5px;
+				position: relative;
+				top: -2px;
+				transition: 75ms ease-in-out padding;
+			}
+
+			&:hover{
+				border-color: white;
+				background-color: transparent;
+
+				&:after{
+					padding-left: 10px;
+				}
+			}
+		}
+
 		@media #{$medium-up} {
 			padding: 3em 20px;
 

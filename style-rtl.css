@@ -1704,6 +1704,30 @@ body.no-max-width .page-title-container .page-header {
       font-size: 3rem;
       line-height: 1;
       text-align: right; }
+    .hero .widget a.button {
+      font-family: "Roboto", "Helvetica Neue", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-color: transparent;
+      padding-right: 0;
+      padding-left: 0;
+      color: white;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+      -webkit-transition: 50ms linear border-color;
+      transition: 50ms linear border-color; }
+      .hero .widget a.button:after {
+        content: ' \25b6';
+        font-size: .5rem;
+        padding-right: 5px;
+        position: relative;
+        top: -2px;
+        -webkit-transition: 75ms ease-in-out padding;
+        transition: 75ms ease-in-out padding; }
+      .hero .widget a.button:hover {
+        border-color: white;
+        background-color: transparent; }
+        .hero .widget a.button:hover:after {
+          padding-right: 10px; }
     @media only screen and (min-width: 40.063em) {
       .hero .widget {
         padding: 3em 20px; }
@@ -1730,7 +1754,6 @@ body.no-max-width .page-title-container .page-header {
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  clear: both;
   background-color: #212121; }
 
 .footer-nav,
@@ -1828,7 +1851,7 @@ body.no-max-width .footer-widget-area {
     margin-left: 1.3888888889%;
     font-size: 90%;
     line-height: 38px; }
-  .site-info-wrapper .footer-nav {
+  .site-info-wrapper .footer-menu {
     width: 63.8888888889%;
     float: right;
     margin-right: 1.3888888889%;
@@ -1838,6 +1861,9 @@ body.no-max-width .footer-widget-area {
     float: left;
     margin-right: 1.3888888889%;
     margin-left: 1.3888888889%; }
+    @media only screen and (min-width: 40.063em) {
+      .site-info-wrapper .social-menu {
+        text-align: left; } }
   @media only screen and (max-width: 40.063em) {
     .site-info-wrapper .footer-nav,
     .site-info-wrapper .site-info-text,
@@ -1982,15 +2008,15 @@ body.no-max-width .site-info-wrapper .site-info {
   .social-menu a[href*="linkedin.com"]:before:hover {
     color: #0e76a8; }
 
-.footer-nav-container ul {
+.footer-menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: center; }
   @media only screen and (min-width: 40.063em) {
-    .footer-nav-container ul {
+    .footer-menu ul {
       text-align: right; } }
-  .footer-nav-container ul li {
+  .footer-menu ul li {
     display: inline-block;
     font-family: "Roboto", "Helvetica Neue", sans-serif;
     font-size: .875rem;
@@ -1998,11 +2024,19 @@ body.no-max-width .site-info-wrapper .site-info {
     margin: 0 10px;
     text-align: center;
     text-transform: uppercase; }
+    .footer-menu ul li:first-of-type {
+      margin-right: 0; }
     @media only screen and (min-width: 568px) {
-      .footer-nav-container ul li {
+      .footer-menu ul li {
         text-align: right; } }
-    .footer-nav-container ul li a {
-      color: #fff; }
+    .footer-menu ul li a {
+      color: #fff;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 5px; }
+      .footer-menu ul li a:hover {
+        border-color: #fff; }
+        .footer-menu ul li a:hover:after {
+          padding-right: 10px; }
 
 /*--------------------------------------------------------------
 # Widgets
