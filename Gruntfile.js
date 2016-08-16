@@ -36,8 +36,7 @@ module.exports = function(grunt) {
 					]
 				},
 				options: {
-					proxy: 'http://wp.dev', // enter your local WP URL here
-					watchTask: true
+					proxy: 'http://vagrant.local', // enter your local WP URL here
 				}
 			}
 		},

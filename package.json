@@ -1,33 +1,34 @@
 {
   "name": "velux",
   "title": "Velux",
-  "description": "",
+  "description": "Velux is a modern WordPress theme based on _s.",
   "version": "1.0.0",
-  "license": "GPL-2.0",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/godaddy/wp-velux-theme.git"
-  },
   "author": "GoDaddy",
+  "license": "GPL-2.0",
+  "repository": "godaddy/wp-velux-theme",
+  "homepage": "https://wordpress.org/themes/velux/",
   "bugs": {
     "url": "https://github.com/godaddy/wp-velux-theme/issues"
   },
-  "homepage": "https://github.com/godaddy/wp-velux-theme/issues",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
-    "grunt": "~0.4.5",
+    "grunt": "^0.4.5",
     "grunt-autoprefixer": "~3.0.4",
-    "grunt-browser-sync": "~2.2.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-cssmin": "~0.14.0",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-contrib-watch": "~1.0.0",
     "grunt-cssjanus": "~0.3.2",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-pot": "~0.1.2",
+    "grunt-dev-update": "~2.0.0",
     "grunt-po2mo": "~0.1.2",
-    "grunt-sass": "^1.2.0",
+    "grunt-pot": "~0.2.1",
+    "grunt-sass": "1.2.0",
     "grunt-text-replace": "~0.4.0",
     "load-grunt-tasks": "~3.5.0",
-    "matchdep": "~1.0.1"
+    "matchdep": "~1.0.1",
+    "susy": "~2.2.12"
   }
 }

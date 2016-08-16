@@ -1,0 +1,25 @@
+button,
+a.button,
+a.button:visited,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	display: inline-block;
+	border: none;
+	background-color: $color__background-button;
+	color: $color__text-button;
+	line-height: 1;
+	white-space: nowrap;
+	border-radius: 2px;
+	font-size: .9375rem;
+	font-weight: 500;
+	padding: 17px 2rem;
+
+	&:hover,
+	&:active,
+	&:focus {
+		cursor: pointer;
+		background-color: $color__background-button-hover;
+		color: $color__text-button;
+	}
+}

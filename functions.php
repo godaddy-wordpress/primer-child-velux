@@ -27,6 +27,13 @@ function velux_move_elements() {
 }
 add_action( 'template_redirect', 'velux_move_elements' );
 
+function velux_add_footer_menu(){
+
+	get_template_part( 'templates/parts/footer-nav' );
+
+}
+add_action( 'primer_site_info', 'velux_add_footer_menu' );
+
 /**
  * Add mobile menu to header
  *
@@ -288,7 +295,7 @@ function velux_update_font_types() {
 			'label'   => __( 'Primary Font', 'velux' ),
 			'default' => 'Roboto',
 			'css'     => array(
-				'body, p, .hero-wrapper .textwidget p, .site-description, .search-form input[type="search"], .widget li a, .site-info-text, h6, body p, .widget p, ' => array(
+				'p, .site-description, .search-form input[type="search"], .widget a, .site-info-text, h6, .widget p, ' => array(
 					'font-family' => '"%s", sans-serif',
 				),
 			),

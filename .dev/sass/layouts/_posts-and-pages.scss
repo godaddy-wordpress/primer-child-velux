@@ -1,0 +1,172 @@
+.hentry {
+	margin: 0 0 1.5em;
+	padding: 2.5em 3.375em;
+	font-size: 120%;
+
+	@media #{$medium-only} {
+		padding: 1.5em 2.375em;
+	}
+
+	@media #{$small-only} {
+		padding: 1em;
+	}
+}
+
+.sticky {
+	display: block;
+
+	@media #{$medium-up} {
+
+		.entry-title {
+			position: relative;
+
+			a:before {
+				font-family: 'Genericons';
+				content: '\f308';
+				line-height: $font__line-height-headings;
+				position: absolute;
+				top: 2px;
+				left: -40px;
+				opacity: 0.2;
+			}
+		}
+	}
+}
+
+.entry-title {
+	a,
+	a:visited,
+	a:before {
+		color: $color__text-main;
+	}
+
+	a:hover,
+	a:visited:hover {
+		color: $color__link;
+	}
+}
+
+.entry-meta {
+	font-size: 90%;
+	color: $color__text-secondary;
+}
+
+@media #{$small-only} {
+
+	.comments-number {
+		display: block;
+	}
+
+	.post-navigation {
+		font-size: 90%;
+	}
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.entry-footer {
+	font-size: 85%;
+	color: $color__text-secondary;
+
+	.entry-footer-right {
+		float: right;
+	}
+
+	.cat-links,
+	.tag-links {
+		display: block;
+	}
+}
+
+.paging-navigation {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+@media #{$medium-up} {
+
+	.hentry {
+		padding: 0 15px 0 0;
+	}
+
+}
+
+.featured-image img{
+	display: block;
+	margin-bottom: 2rem;
+}
+
+.single {
+
+	.entry-header {
+		border-bottom: 1px solid $color__border;
+		border-top: 1px solid $color__border;
+		margin: 50px 0;
+		padding: 30px 0 40px;
+		text-align: center;
+	}
+
+	.posted-author,
+	.comments-number{
+		&:before{
+			content: " \00b7 ";
+			padding-left: 3px;
+			padding-right: 3px;
+			display: inline-block;
+		}
+	}
+
+	.entry-meta {
+		margin: 0;
+		padding: 0;
+	}
+	.entry-title {
+		clear: none;
+		font-size: 3rem;
+		margin-bottom: 0;
+	}
+
+	.author-image {
+
+		@media #{$medium-up} {
+			float: right;
+			width: 90px;
+			margin-left: 20px;
+		}
+
+		img {
+			border: 3px solid $color__border;
+			border-radius: 50%;
+			display: block;
+			margin: 15px auto;
+			padding: 3px;
+		}
+
+	}
+
+	.entry-meta {
+		color: $color__text-input;
+		font-size: 1.125rem;
+
+		a {
+			color: $color__text-input;
+		}
+
+	}
+
+}

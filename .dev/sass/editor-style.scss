@@ -1,17 +1,19 @@
-/*
-Theme Name: Velux
-Theme URI: http://godaddy.com
-Author: GoDaddy
-Author URI: http://godaddy.com
-Description: This is a child theme for Basis.
-Version: 0.0.6
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: velux
-Domain Path: /languages/
-Tags:
-Template: primer
+@import "common/variables";
+@import "common/mixins";
+@import "common/normalize";
+@import "components/typography";
+@import "components/elements";
+@import "components/lists";
+@import "components/tables";
+@import "components/forms";
+@import "components/buttons";
+@import "components/links";
+@import "components/media";
+@import "components/captions";
+@import "components/galleries";
+@import "modules/alignments";
 
-This theme, like WordPress, is licensed under the GPL.
-
-*/
+body {
+	margin: 20px;
+	background-color: #fff;
+}

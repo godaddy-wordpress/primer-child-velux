@@ -1,0 +1,101 @@
+.widget {
+	margin: 0 0 1.5rem;
+	padding: 0;
+
+	@media #{$medium-only} {
+		padding: 1.5rem;
+	}
+
+	@media #{$small-only} {
+		padding: 1rem;
+	}
+
+	.widget-title{
+		font-size: 1.125rem;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="range"],
+	input[type="date"],
+	input[type="month"],
+	input[type="week"],
+	input[type="time"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="color"],
+	select,
+	textarea {
+		width: 100%;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		padding: 0.25rem 0;
+
+		ul {
+			padding-left: 1.5rem;
+		}
+	}
+}
+
+.widget_calendar #calendar_wrap #wp-calendar {
+	td#today {
+		font-weight: bold;
+	}
+
+	tfoot {
+		td#prev {
+			text-align: left;
+		}
+
+		td#next {
+			text-align: right;
+		}
+	}
+}
+
+.footer-widget .widget:last-child {
+	margin-bottom: 0;
+}
+
+.widget_search {
+	padding: 0;
+
+	.widget-title {
+		padding: 2rem 2rem 0;
+
+		+ .search-form {
+			padding: 0 2rem 2rem;
+		}
+	}
+
+	.search-field {
+		width: 100%;
+		background: #fff;
+		border-radius: 0;
+		box-sizing: border-box;
+
+		&:focus {
+			background: #fff;
+		}
+
+		&::-webkit-search-cancel-button {
+			z-index: 1;
+		}
+	}
+
+	.search-submit {
+		display: none;
+	}
+}

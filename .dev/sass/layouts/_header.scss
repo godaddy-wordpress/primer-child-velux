@@ -1,0 +1,138 @@
+.site-header-wrapper {
+	@include container($container-size);
+	border-bottom: 1px solid white;
+	padding-bottom: 25px;
+
+	@media screen and (min-width: 800px) {
+		padding-bottom: 0;
+	}
+
+	body.no-max-width &{
+		max-width: none;
+	}
+}
+
+.site-header {
+	position: relative;
+	background-size: cover;
+	z-index: 999;
+	background-color: $color__background-header;
+
+	.home & {
+		background-size: cover;
+	}
+
+	.row{
+		@include container($container-size);
+
+		.site-title-wrapper,
+		.hero{
+			@include span(12);
+		}
+
+		@media #{$medium-up}{
+			.hero{
+				@include span(7);
+			}
+		}
+	}
+}
+
+body.custom-header-image {
+	.site-title,
+	.site-description {
+		text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+	}
+}
+
+.site-title-wrapper {
+	padding: 20px 0 0 20px;
+	width: auto;
+	float: left;
+
+	@media #{$medium-up} {
+		padding-top: 0;
+		text-align: left;
+	}
+
+}
+
+.site-title {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 0.25rem;
+	letter-spacing: -0.03em;
+	font-weight: 700;
+	font-size: 2em;
+	font-size: 1.6rem;
+	font-weight: 100;
+	margin: 0 8px 0 0;
+	padding: 0;
+	text-transform: uppercase;
+	border-right: none;
+	display: block;
+
+	@media #{$medium-up} {
+		display: inline-block;
+		font-size: 2rem;
+		padding: 38px 0;
+	}
+
+	a {
+		color: $header-textcolor;
+
+		&:hover,
+		&:visited:hover {
+			color: rgba($header-textcolor, 0.8);
+		}
+	}
+}
+
+.site-description {
+	font-size: .875rem;
+	font-weight: 100;
+	position: relative;
+	display: inline;
+	padding: 0 15px 0 0px;
+	color: $color__text-tagline;
+
+	@media #{$medium-up} {
+		padding-left: 8px;
+		border-left: 1px solid #fff;
+		text-align: left;
+		padding-left: 10px;
+		display: inline-block;
+		top: -4px;
+	}
+}
+
+.header-image img {
+	display: block;
+}
+
+body.no-max-width .page-title-container .page-header {
+	max-width: none;
+}
+
+
+.page-title-container {
+	background-color: transparent;
+
+	.page-header {
+		@include container($container-size);
+		position: relative;
+		z-index: 100;
+		clear: both;
+
+
+		.page-title{
+			@include span(12);
+			color: white;
+			font-weight: 200;
+			padding: 3% 1rem;
+			margin-bottom: 0;
+			font-weight: 300;
+			font-size: 3rem;
+		}
+	}
+}

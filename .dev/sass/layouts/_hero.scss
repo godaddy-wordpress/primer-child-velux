@@ -1,0 +1,77 @@
+.hero {
+	@include container($container-size);
+	color: white;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	clear: both;
+
+	@media #{$medium-up} {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	.hero-inner{
+		@include span(12);
+		padding-left: 10px;
+		padding-right: 10px;
+
+		@media #{$medium-up}{
+			@include span(8);
+		}
+	}
+
+	.widget {
+		margin-bottom: 1em;
+		font-size: 1.2em;
+		font-weight: 300;
+		background: none;
+		color: white;
+		padding: 0;
+
+		.widget-title {
+			color: white;
+			font-size: 3rem;
+			line-height: 1;
+			text-align: left;
+		}
+
+		@media #{$medium-up} {
+			padding: 3em 20px;
+
+			.widget-title {
+				color: white;
+				font-size: 5.5rem;
+				line-height: 1;
+				text-align: left;
+			}
+
+		}
+
+		&::last-child {
+			margin-bottom: 0;
+		}
+
+		h1,h2,h3,h4,h5,h6,p,ul,ol,li{
+			color: white;
+		}
+
+		ul, ol {
+			padding-left: 0;
+
+			li {
+				list-style: none;
+			}
+		}
+
+		input, select, textarea {
+			color: $color__text-input;
+		}
+	}
+
+	label, input, select, textarea {
+		display: inline;
+		width: auto;
+	}
+
+
+}

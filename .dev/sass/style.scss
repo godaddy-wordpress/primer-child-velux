@@ -1,32 +1,164 @@
-/*
-Theme Name: Velux
-Theme URI: https://www.godaddy.com/
-Author: GoDaddy
-Author URI: http://godaddy.com
-Description: This is a child theme for Primer.
-Version: 0.0.9
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: velux
-Domain Path: /languages/
-Tags:
-Template: primer
+/**
+ * Theme Name: Velux
+ * Theme URI: https://wordpress.org/themes/velux/
+ * Author: GoDaddy
+ * Author URI: https://www.godaddy.com/
+ * Description: Velux is a modern WordPress theme based on _s.
+ * Version: 1.0.0
+ * License: GPL-2.0
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: velux
+ * Domain Path: /languages
+ * Tags: custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, left-sidebar, one-column, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
+ * Template: primer
+ *
+ * This theme, like WordPress, is licensed under the GPL.
+ * Use it to make something cool, have fun, and share what you've learned with others.
+ *
+ * Copyright © 2016 GoDaddy Operating Company, LLC. All Rights Reserved.
+ */
 
-This theme, like WordPress, is licensed under the GPL.
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "common/variables";
+@import "common/mixins";
 
-*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "common/normalize";
 
-@import "variables/variables";
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "components/typography";
 
-@import "mixins/functions";
-@import "mixins/global";
-@import "mixins/grid";
-@import "mixins/color-contrast";
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "components/elements";
 
-@import "partials/header";
-@import "partials/navigation";
-@import "partials/footer";
-@import "partials/typography";
-@import "partials/widgets";
-@import "partials/single";
-@import "partials/forms";
+/*--------------------------------------------------------------
+# Lists
+--------------------------------------------------------------*/
+@import "components/lists";
+
+/*--------------------------------------------------------------
+# Tables
+--------------------------------------------------------------*/
+@import "components/tables";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "components/forms";
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+@import "components/buttons";
+
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+@import "components/links";
+
+/*--------------------------------------------------------------
+# Menus
+--------------------------------------------------------------*/
+@import "components/menus";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "components/media";
+
+/*--------------------------------------------------------------
+# Captions
+--------------------------------------------------------------*/
+@import "components/captions";
+
+/*--------------------------------------------------------------
+# Galleries
+--------------------------------------------------------------*/
+@import "components/galleries";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Jetpack
+--------------------------------------------------------------*/
+@import "modules/jetpack";
+
+/*--------------------------------------------------------------
+# Genericons
+--------------------------------------------------------------*/
+@import "modules/genericons";
+
+/*--------------------------------------------------------------
+# Site Layout
+--------------------------------------------------------------*/
+@import "layouts/site";
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+@import "layouts/header";
+
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+@import "layouts/hero";
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+@import "layouts/footer";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "layouts/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "layouts/posts-and-pages";
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+@import "layouts/comments";
