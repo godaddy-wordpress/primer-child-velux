@@ -98,62 +98,69 @@ function velux_default_hero_images( $defaults ) {
 add_filter( 'primer_default_hero_images', 'velux_default_hero_images' );
 
 /**
- * Register font types.
+ * Set font types.
  *
  * @filter primer_font_types
  * @since  1.0.0
  *
+ * @param  array $font_types
+ *
  * @return array
  */
-function velux_update_font_types() {
+function velux_font_types( $font_types ) {
 
-	return array(
-		'primary_font' => array(
-			'label'   => __( 'Primary Font', 'velux' ),
-			'default' => 'Roboto',
+	$overrides = array(
+		'header_font' => array(
+			'default' => 'Playfair Display',
 			'css'     => array(
-				'p, .site-description, .search-form input[type="search"], .widget a, .site-info-text, h6, .widget p, ' => array(
-					'font-family' => '"%s", sans-serif',
+				'nav.main-navigation ul li a' => array(
+					'font-family' => '"%1$s", serif',
 				),
 			),
 		),
+		'primary_font' => array(
+			'default' => 'Roboto',
+		),
 		'secondary_font' => array(
-			'label'   => __( 'Secondary Font', 'velux' ),
-			'default' => 'Playfair Display',
-			'css'     => array(
-				'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"], blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text, .site-title, .hero-wrapper .textwidget h1, .hero-wrapper .textwidget .button, .main-navigation li a, .widget-title, .footer-menu ul li a, h1, h2, h3, h4, h5, .entry-title, .single .entry-meta, .hero .widget h1, button, .button, .btn, input[type="submit"], .fl-button, .fl-button a' => array(
-					'font-family' => '"%s", serif',
-				),
-			),
+			'default' => 'Raleway',
 		),
 	);
 
+	return primer_array_replace_recursive( $font_types, $overrides );
+
 }
-add_filter( 'primer_font_types', 'velux_update_font_types' );
+add_filter( 'primer_font_types', 'velux_font_types' );
 
 /**
- * Register colors.
+ * Set colors.
  *
  * @filter primer_colors
  * @since  1.0.0
  *
+ * @param  array $colors
+ *
  * @return array
  */
-function velux_colors() {
+function velux_colors( $colors ) {
 
 	return array(
 		'link_color' => array(
 			'label'   => __( 'Link Color', 'velux' ),
 			'default' => '#51748e',
 			'css'     => array(
-				'#content a, #content a:visited, .entry-footer a, .entry-footer a:visited, .sticky .entry-title a:before, .footer-widget-area .footer-widget .widget a, .footer-widget-area .footer-widget .widget a:visited, header .main-navigation-container .menu li.current-menu-item > a:hover ,
+				'#content a, #content a:visited,
+				.entry-footer a, .entry-footer a:visited,
+				.sticky .entry-title a:before,
+				.footer-widget-area .footer-widget .widget a,
+				.footer-widget-area .footer-widget .widget a:visited,
+				header .main-navigation-container .menu li.current-menu-item > a:hover,
 				header .main-navigation-container .menu li.current-menu-item > a {' => array(
 					'color' => '%1$s',
 				),
 			),
 		),
 		'background_color' => array(
-			'default' => '#fff',
+			'default' => '#ffffff',
 			'css'     => array(
 				'body' => array(
 					'background-color' => '%1$s',
@@ -191,27 +198,29 @@ function velux_colors() {
 	);
 
 }
-add_filter( 'primer_colors', 'velux_colors', 9 );
+add_filter( 'primer_colors', 'velux_colors' );
 
 /**
- * Register color schemes.
+ * Set color schemes.
  *
  * @filter primer_color_schemes
  * @since  1.0.0
  *
+ * @param  array $color_schemes
+ *
  * @return array
  */
-function velux_color_schemes() {
+function velux_color_schemes( $color_schemes ) {
 
 	return array(
 		'dark_blue' => array(
 			'label'  => esc_html__( 'Dark Blue', 'velux' ),
 			'colors' => array(
-				'background_color'         => '#ffffff',
-				'link_color'               => '#363a3d',
-				'button_color'			   => '#3f7b84',
-				'w_background_color'	   => '#212121',
-				'footer_background_color'  => '#191919',
+				'background_color'        => '#ffffff',
+				'link_color'              => '#363a3d',
+				'button_color'            => '#3f7b84',
+				'w_background_color'      => '#212121',
+				'footer_background_color' => '#191919',
 			),
 		),
 	);
