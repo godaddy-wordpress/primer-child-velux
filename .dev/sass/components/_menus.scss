@@ -14,6 +14,10 @@
 	display: none;
 	font-family: $font__secondary;
 
+  &.open {
+    display: block;
+  }
+
 	@media #{$medium-up}{
 		display: block;
 	}

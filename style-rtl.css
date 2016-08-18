@@ -588,6 +588,8 @@ a {
     content: " ";
     display: block;
     clear: both; }
+  .main-navigation.open {
+    display: block; }
   @media only screen and (min-width: 40.063em) {
     .main-navigation {
       display: block; } }
