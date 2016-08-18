@@ -41,22 +41,23 @@ function velux_add_mobile_menu() {
 add_action( 'primer_header', 'velux_add_mobile_menu', 0 );
 
 /**
- * If there is a custom logo we don't want to print the site title text.
+ * Hide site title and description when a custom logo is present.
  *
- * @filter primer_print_site_title_text
+ * @filter primer_the_site_title
+ * @filter primer_the_site_description
  * @since  1.0.0
  *
- * @param bool $bool
- * @param bool $has_logo
+ * @param  string $html
  *
- * @return bool
+ * @return string|null
  */
-function velux_print_site_title( $bool, $has_logo ) {
+function velux_the_site_title( $html ) {
 
-	return ! $has_logo;
+	return primer_has_custom_logo() ? null : $html;
 
 }
-add_filter( 'primer_print_site_title_text', 'velux_print_site_title', 10, 2 );
+add_filter( 'primer_the_site_title',       'velux_the_site_title' );
+add_filter( 'primer_the_site_description', 'velux_the_site_title' );
 
 /**
  * Set custom logo args.
