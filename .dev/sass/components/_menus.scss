@@ -1,4 +1,31 @@
 .main-navigation-container {
+	clear: both;
+
+	@media #{$small-only} {
+		@include clearfix;
+		width: 100%;
+		position: relative;
+	}
+
+	@media #{$medium-up} {
+		clear: none;
+		float: right;
+	}
+}
+
+.main-navigation {
+	font-size: 1rem;
+	font-weight: 500;
+	display: none;
+	background-color: $color__background-menu;
+
+	&.open {
+		display: block;
+
+		@media #{$small-only}{
+			margin-top: 25px;
+		}
+	}
 
 	@media #{$small-only}{
 		position: absolute;
@@ -7,30 +34,71 @@
 		right: 0;
 		z-index: 9999;
 	}
-}
 
-.main-navigation {
-	@include container($container-size);
-	display: none;
-	font-family: $font__secondary;
-
-  &.open {
-    display: block;
-  }
-
-	@media #{$medium-up}{
+	@media #{$medium-up} {
 		display: block;
+		background-color: transparent;
 	}
 
 	.menu-main-menu-container {
+		@media #{$medium-up} {
+			width: auto;
+			text-align: center;
+		}
+	}
+
+	.expand{
+		font-size: 1.8rem;
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 19px 0;
+		width: 50px;
+		line-height: 1;
+		text-align: center;
+		border-bottom: none;
+		border-left: 2px solid rgba(0, 0, 0, 0.05);
+		text-indent: 0;
+
+		&:hover{
+			background-color: rgba(0,0,0,.1);
+		}
+
+		&:before{
+			content: "+";
+		}
 
 		@media #{$medium-up}{
-			@include span(12);
-			margin-left: 30px;
-			margin-right: 0;
-			width: auto;
-			float: right;
+			display: none;
 		}
+
+	}
+
+	.menu-item-has-children{
+		position: relative;
+
+		&.open > .expand:before{
+			content: "-";
+		}
+	}
+
+	@media #{$small-only}{
+
+		li li{
+			text-indent: 1rem;
+		}
+
+		li li li{
+			text-indent: 1.5rem;
+		}
+
+		.open > .sub-menu{
+			display: block;
+		}
+	}
+
+	.menu-item-has-children > .sub-menu{
+		padding-top: 1px;
 	}
 
 	ul {
@@ -38,18 +106,33 @@
 		margin: 0;
 		padding-left: 0;
 
-		a{
-			color: $color__text-menu;
-		}
+		a {
+			color: white;
+			display: block;
+			padding: 1.2em .75em;
+			border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 
-		li li{
-			text-indent: 1rem;
+			@media #{$medium-up} {
+				padding-top: 2.9em;
+				padding-bottom: 2.9em;
+				border-bottom: none;
+			}
 		}
 
 		ul {
 			z-index: 99999;
+			display: none;
 
-			@media #{$medium-up}{
+			a {
+
+				@media #{$medium-up} {
+					padding: 1em .75em;
+					text-align: left;
+				}
+			}
+
+			@media #{$medium-up} {
+				display: block;
 				position: absolute;
 				left: -999em;
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -67,9 +150,7 @@
 				}
 
 				a {
-					background-color: $color__background-menu;
 					width: 200px;
-					padding: 1.3em 1em;
 				}
 			}
 		}
@@ -80,51 +161,44 @@
 		}
 	}
 
-	@media #{$medium-up}{
+	@media #{$medium-up} {
+
 		li {
 			position: relative;
-			float: left;
+			display: inline-block;
 		}
-	}
 
-	a {
-		display: block;
-		text-decoration: none;
-		padding: 3em 1em;
-		color: $color__text-menu;
-
-		&:hover,
-		&:visited:hover {
+		a {
+			text-decoration: none;
+			padding: .25em .75em;
 			color: $color__text-menu;
+			text-transform: uppercase;
+			border-top: 2px solid transparent;
+			background-color: $color__background-menu;
+
+			&:hover,
+			&:visited:hover {
+				background-color: darken($color__background-menu,5%);
+			}
+		}
+
+		#menu-main-menu > li > a{
+			background-color: transparent;
+
+			&:hover,
+			&:visited:hover {
+				background-color: transparent;
+				border-color: darken($color__background-menu,5%);
+			}
 		}
 	}
 
-	.menu > li > a{
-		&:hover:after,
-		&:visited:hover:after{
-			content: "";
-			border-top: 3px solid $color__background-menu;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-		}
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current_page_parent > a,
-	.current-menu-ancestor > a {
-		position: relative;
-
-		&:after{
-			content:" ";
-			border-top: 3px solid white;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
+	#menu-main-menu {
+		> .current_page_item > a,
+		> .current-menu-item > a
+		> .current_page_parent > a {
+			font-weight: 700;
+			border-color: white;
 		}
 	}
 
@@ -133,7 +207,7 @@
 		content: "";
 		width: 0;
 		height: 0;
-		right: 20px;
+		right: 10px;
 		top: 50%;
 		border-bottom: 7px solid transparent;
 		border-top: 7px solid transparent;
@@ -141,75 +215,9 @@
 		transform: translateY(-50%);
 		display: none;
 
-		@media #{$medium-up}{
+		@media #{$medium-up} {
 			display: inline;
 		}
-	}
-
-	.search-form {
-		padding: 20px;
-		clear: both;
-		position: relative;
-
-		@media #{$medium-up} {
-			padding: 0;
-			float: right;
-			margin: 1em;
-			height: 48px;
-			clear: none;
-		}
-
-		.site-footer & {
-			display: inline-block;
-			float: none;
-		}
-
-		.screen-reader-text {
-			display: none;
-		}
-
-		input[type="search"] {
-			background: none;
-			border: none;
-			color: #fff;
-			font-size: 14px;
-			margin: 0;
-			position: relative;
-			padding: 10px 35px 10px 0;
-			display: block;
-			width: 100%;
-			border-bottom: 1px solid transparentize(#fff, .8);
-		}
-
-		input[type="submit"] {
-			background: transparent url('assets/img/search-icon.png') no-repeat center bottom;
-			background-size: 13px;
-			display: block;
-			height: 21px;
-			text-indent: -9999px;
-			vertical-align: middle;
-			width: 21px;
-			padding: 0;
-			display: inline-block;
-			position: absolute;
-			right: 30px;
-			top: 27px;
-
-			@media #{$medium-up} {
-				right: 10px;
-				top: 7px;
-			}
-
-		}
-
-		::-webkit-input-placeholder,
-		:-moz-placeholder,
-		::-moz-placeholder,
-		:-ms-input-placeholder {
-		   color: #fff;
-		   font-size: 8px;
-		}
-
 	}
 }
 
@@ -218,42 +226,17 @@ body.no-max-width .main-navigation {
 }
 
 .menu-toggle {
-	display: block;
-	width: 3.4rem;
+	display: inline-block;
+	margin: 0 auto;
+	width: 3.9rem;
 	padding: 0.6rem;
 	cursor: pointer;
-	position: relative;
-	z-index: 9999;
-	display: none;
-	top: 25px;
+    position: absolute;
+    z-index: 9999;
+    right: 20px;
+    top: 20px;
 
-	@media #{$small-only} {
-
-		display: block;
-		right: 15px;
-		padding: 0 9px 24px 0;
-		position: absolute;
-		top: 22px;
-		z-index: 99999;
-
-		.admin-bar &{
-			top: 48px;
-		}
-
-		div {
-			height: 0.45rem;
-			margin-left: 0;
-			margin-right: 0.86rem;
-		}
-	}
-
-	@media only screen and (max-width: 768px) {
-		.admin-bar &{
-			top: 68px;
-		}
-	}
-
-	@media #{$medium-up}{
+	@media #{$medium-up} {
 		display: none;
 	}
 
