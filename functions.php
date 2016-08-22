@@ -99,6 +99,27 @@ function velux_default_hero_images( $defaults ) {
 add_filter( 'primer_default_hero_images', 'velux_default_hero_images' );
 
 /**
+ * Set fonts.
+ *
+ * @filter primer_fonts
+ * @since  1.0.0
+ *
+ * @param  array $fonts
+ *
+ * @return array
+ */
+function velux_fonts( $fonts ) {
+
+	$fonts[] = 'Playfair Display';
+	$fonts[] = 'Raleway';
+	$fonts[] = 'Roboto';
+
+	return $fonts;
+
+}
+add_filter( 'primer_fonts', 'velux_fonts' );
+
+/**
  * Set font types.
  *
  * @filter primer_font_types
@@ -111,13 +132,14 @@ add_filter( 'primer_default_hero_images', 'velux_default_hero_images' );
 function velux_font_types( $font_types ) {
 
 	$overrides = array(
-		'header_font' => array(
+		'site_title_font' => array(
 			'default' => 'Playfair Display',
-			'css'     => array(
-				'nav.main-navigation ul li a' => array(
-					'font-family' => '"%1$s", serif',
-				),
-			),
+		),
+		'navigation_font' => array(
+			'default' => 'Playfair Display',
+		),
+		'heading_font' => array(
+			'default' => 'Playfair Display',
 		),
 		'primary_font' => array(
 			'default' => 'Roboto',
@@ -144,59 +166,66 @@ add_filter( 'primer_font_types', 'velux_font_types' );
  */
 function velux_colors( $colors ) {
 
-	return array(
-		'link_color' => array(
-			'label'   => __( 'Link Color', 'velux' ),
-			'default' => '#51748e',
-			'css'     => array(
-				'#content a, #content a:visited,
-				.entry-footer a, .entry-footer a:visited,
-				.sticky .entry-title a:before,
-				.footer-widget-area .footer-widget .widget a,
-				.footer-widget-area .footer-widget .widget a:visited,
-				header .main-navigation-container .menu li.current-menu-item > a:hover,
-				header .main-navigation-container .menu li.current-menu-item > a {' => array(
-					'color' => '%1$s',
+	unset( $colors['screen_background_color'] );
+
+	$overrides = array(
+		/**
+		 * Text colors
+		 */
+		'menu_text_color' => array(
+			'css' => array(
+				'.site-header-wrapper' => array(
+					'border-color' => '%1$s',
 				),
 			),
 		),
-		'background_color' => array(
+		'footer_widget_text_color' => array(
 			'default' => '#ffffff',
+		),
+		'footer_text_color' => array(
+			'default' => '#ffffff',
+		),
+		/**
+		 * Link / Button colors
+		 */
+		'link_color' => array(
+			'default' => '#51748e',
 			'css'     => array(
-				'body' => array(
+				'.main-navigation ul ul, .main-navigation .sub-menu' => array(
 					'background-color' => '%1$s',
+				),
+				'.main-navigation ul.menu > li > a:hover' => array(
+					'border-color' => '%1$s',
 				),
 			),
 		),
 		'button_color' => array(
-			'label'   => __( 'Button Color', 'velux' ),
 			'default' => '#8e452a',
-			'css'     => array(
-				'.cta, button, input[type="button"], input[type="reset"], input[type="submit"]:not(.search-submit), a.fl-button' => array(
-					'border-bottom' => '2px solid %1$s',
-					'color' => '%1$s',
+		),
+		/**
+		 * Background colors
+		 */
+		'hero_background_color' => array(
+			'default' => '#191919',
+		),
+		'menu_background_color' => array(
+			'default'     => '#212121',
+			'description' => esc_html__( 'Sub-menu only', 'velux' ),
+			'css'         => array(
+				'.main-navigation-container' => array(
+					'background-color' => 'transparent',
 				),
 			),
 		),
-		'w_background_color' => array(
-			'label'   => __( 'Widget Background Color', 'velux' ),
+		'footer_widget_background_color' => array(
 			'default' => '#212121',
-			'css'     => array(
-				'.site-footer' => array(
-					'background-color' => '%1$s',
-				),
-			),
 		),
 		'footer_background_color' => array(
-			'label'   => __( 'Footer Background Color', 'velux' ),
 			'default' => '#191919',
-			'css'     => array(
-				'.site-info-wrapper, .site-info-wrapper' => array(
-					'background-color' => '%1$s',
-				),
-			),
 		),
 	);
+
+	return primer_array_replace_recursive( $colors, $overrides );
 
 }
 add_filter( 'primer_colors', 'velux_colors' );
@@ -213,18 +242,89 @@ add_filter( 'primer_colors', 'velux_colors' );
  */
 function velux_color_schemes( $color_schemes ) {
 
-	return array(
-		'dark_blue' => array(
-			'label'  => esc_html__( 'Dark Blue', 'velux' ),
+	$overrides = array(
+		'blush' => array(
 			'colors' => array(
-				'background_color'        => '#ffffff',
-				'link_color'              => '#363a3d',
-				'button_color'            => '#3f7b84',
-				'w_background_color'      => '#212121',
-				'footer_background_color' => '#191919',
+				'footer_widget_text_color'       => '#ffffff',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
+				'footer_background_color'        => '#191919',
+			),
+		),
+		'bronze' => array(
+			'colors' => array(
+				'footer_widget_text_color'       => '#ffffff',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
+				'footer_background_color'        => '#191919',
+			),
+		),
+		'canary' => array(
+			'colors' => array(
+				'footer_widget_text_color'       => '#ffffff',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
+				'footer_background_color'        => '#191919',
+			),
+		),
+		'dark' => array(
+			'colors' => array(
+				'footer_widget_text_color'       => '#ffffff',
+				'hero_background_color'          => '#212121',
+				'background_color'               => '#191919',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
+				'footer_background_color'        => '#191919',
+			),
+		),
+		'iguana' => array(
+			'colors' => array(
+				'footer_widget_text_color'       => '#ffffff',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
+				'footer_background_color'        => '#191919',
+			),
+		),
+		'muted' => array(
+			'colors' => array(
+				'footer_widget_text_color' => '#ffffff',
+			),
+		),
+		'plum' => array(
+			'colors' => array(
+				'footer_widget_text_color'       => '#ffffff',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
+				'footer_background_color'        => '#191919',
+			),
+		),
+		'rose' => array(
+			'colors' => array(
+				'footer_widget_text_color'       => '#ffffff',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
+				'footer_background_color'        => '#191919',
+			),
+		),
+		'tangerine' => array(
+			'colors' => array(
+				'footer_widget_text_color'       => '#ffffff',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
+				'footer_background_color'        => '#191919',
+			),
+		),
+		'turquoise' => array(
+			'colors' => array(
+				'footer_widget_text_color'       => '#ffffff',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
+				'footer_background_color'        => '#191919',
 			),
 		),
 	);
+
+	return primer_array_replace_recursive( $color_schemes, $overrides );
 
 }
 add_filter( 'primer_color_schemes', 'velux_color_schemes' );

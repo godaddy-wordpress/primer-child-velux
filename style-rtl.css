@@ -585,8 +585,7 @@ a {
 .main-navigation {
   font-size: 1rem;
   font-weight: 500;
-  display: none;
-  background-color: #51748e; }
+  display: none; }
   .main-navigation.open {
     display: block; }
     @media only screen and (max-width: 40.063em) {
@@ -601,8 +600,7 @@ a {
       z-index: 9999; } }
   @media only screen and (min-width: 40.063em) {
     .main-navigation {
-      display: block;
-      background-color: transparent; } }
+      display: block; } }
   @media only screen and (min-width: 40.063em) {
     .main-navigation .menu-main-menu-container {
       width: auto;
@@ -637,12 +635,19 @@ a {
       text-indent: 1.5rem; }
     .main-navigation .open > .sub-menu {
       display: block; } }
-  .main-navigation .menu-item-has-children > .sub-menu {
-    padding-top: 1px; }
   .main-navigation ul {
     list-style: none;
     margin: 0;
     padding-right: 0; }
+    .main-navigation ul.menu > li > a {
+      border-top: 3px solid transparent; }
+    .main-navigation ul.menu > li.current_page_item > a,
+    .main-navigation ul.menu > li.current-menu-item > a,
+    .main-navigation ul.menu > li.current_page_ancestor > a,
+    .main-navigation ul.menu > li.current_page_parent > a,
+    .main-navigation ul.menu > li.current-menu-ancestor > a {
+      font-weight: 700;
+      border-color: white; }
     .main-navigation ul a {
       color: white;
       display: block;
@@ -686,20 +691,7 @@ a {
       text-decoration: none;
       padding: .25em .75em;
       color: #fff;
-      text-transform: uppercase;
-      border-top: 2px solid transparent;
-      background-color: #51748e; }
-      .main-navigation a:hover, .main-navigation a:visited:hover {
-        background-color: #48677e; }
-    .main-navigation #menu-main-menu > li > a {
-      background-color: transparent; }
-      .main-navigation #menu-main-menu > li > a:hover, .main-navigation #menu-main-menu > li > a:visited:hover {
-        background-color: transparent;
-        border-color: #48677e; } }
-  .main-navigation #menu-main-menu > .current_page_item > a,
-  .main-navigation #menu-main-menu > .current-menu-item > a > .current_page_parent > a {
-    font-weight: 700;
-    border-color: white; }
+      text-transform: uppercase; } }
   .main-navigation .sub-menu .menu-item-has-children > a::after {
     position: absolute;
     content: "";

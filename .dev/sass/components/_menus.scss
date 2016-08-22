@@ -3,6 +3,7 @@
 
 	@media #{$small-only} {
 		@include clearfix;
+
 		width: 100%;
 		position: relative;
 	}
@@ -17,17 +18,16 @@
 	font-size: 1rem;
 	font-weight: 500;
 	display: none;
-	background-color: $color__background-menu;
 
 	&.open {
 		display: block;
 
-		@media #{$small-only}{
+		@media #{$small-only} {
 			margin-top: 25px;
 		}
 	}
 
-	@media #{$small-only}{
+	@media #{$small-only} {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -37,7 +37,6 @@
 
 	@media #{$medium-up} {
 		display: block;
-		background-color: transparent;
 	}
 
 	.menu-main-menu-container {
@@ -47,7 +46,7 @@
 		}
 	}
 
-	.expand{
+	.expand {
 		font-size: 1.8rem;
 		position: absolute;
 		right: 0;
@@ -60,51 +59,61 @@
 		border-left: 2px solid rgba(0, 0, 0, 0.05);
 		text-indent: 0;
 
-		&:hover{
-			background-color: rgba(0,0,0,.1);
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.1);
 		}
 
-		&:before{
+		&:before {
 			content: "+";
 		}
 
-		@media #{$medium-up}{
+		@media #{$medium-up} {
 			display: none;
 		}
-
 	}
 
-	.menu-item-has-children{
+	.menu-item-has-children {
 		position: relative;
 
-		&.open > .expand:before{
+		&.open > .expand:before {
 			content: "-";
 		}
 	}
 
-	@media #{$small-only}{
+	@media #{$small-only} {
 
-		li li{
+		li li {
 			text-indent: 1rem;
 		}
 
-		li li li{
+		li li li {
 			text-indent: 1.5rem;
 		}
 
-		.open > .sub-menu{
+		.open > .sub-menu {
 			display: block;
 		}
-	}
-
-	.menu-item-has-children > .sub-menu{
-		padding-top: 1px;
 	}
 
 	ul {
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+
+		&.menu > li {
+			> a {
+				border-top: 3px solid transparent;
+			}
+
+			&.current_page_item > a,
+			&.current-menu-item > a,
+			&.current_page_ancestor > a,
+			&.current_page_parent > a,
+			&.current-menu-ancestor > a {
+				font-weight: 700;
+				border-color: white;
+			}
+		}
 
 		a {
 			color: white;
@@ -124,7 +133,6 @@
 			display: none;
 
 			a {
-
 				@media #{$medium-up} {
 					padding: 1em .75em;
 					text-align: left;
@@ -173,32 +181,6 @@
 			padding: .25em .75em;
 			color: $color__text-menu;
 			text-transform: uppercase;
-			border-top: 2px solid transparent;
-			background-color: $color__background-menu;
-
-			&:hover,
-			&:visited:hover {
-				background-color: darken($color__background-menu,5%);
-			}
-		}
-
-		#menu-main-menu > li > a{
-			background-color: transparent;
-
-			&:hover,
-			&:visited:hover {
-				background-color: transparent;
-				border-color: darken($color__background-menu,5%);
-			}
-		}
-	}
-
-	#menu-main-menu {
-		> .current_page_item > a,
-		> .current-menu-item > a
-		> .current_page_parent > a {
-			font-weight: 700;
-			border-color: white;
 		}
 	}
 
@@ -231,10 +213,10 @@ body.no-max-width .main-navigation {
 	width: 3.9rem;
 	padding: 0.6rem;
 	cursor: pointer;
-    position: absolute;
-    z-index: 9999;
-    right: 20px;
-    top: 20px;
+	position: absolute;
+	z-index: 9999;
+	right: 20px;
+	top: 20px;
 
 	@media #{$medium-up} {
 		display: none;
