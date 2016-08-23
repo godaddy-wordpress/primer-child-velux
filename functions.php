@@ -176,9 +176,9 @@ function velux_colors( $colors ) {
 		 * Text colors
 		 */
 		'menu_text_color' => array(
-			'css' => array(
+			'rgba_css' => array(
 				'.site-header-wrapper' => array(
-					'border-color' => '%1$s',
+					'border-color' => 'rgba(%1$s, 0.1)',
 				),
 			),
 		),
@@ -219,7 +219,7 @@ function velux_colors( $colors ) {
 			'default' => '#ffffff',
 		),
 		'hero_background_color' => array(
-			'default' => '#191919',
+			'default' => '#435f75',
 		),
 		'menu_background_color' => array(
 			'default'     => '#212121',
@@ -258,106 +258,69 @@ function velux_color_schemes( $color_schemes ) {
 	$overrides = array(
 		'blush' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#999999',
-				'footer_menu_text_color'           => '#686868',
-				'background_color'                 => '#ffffff',
-				'menu_background_color'            => '#212121',
-				'footer_widget_background_color'   => '#212121',
-				'footer_background_color'          => '#191919',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
 			),
 		),
 		'bronze' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#999999',
-				'footer_menu_text_color'           => '#686868',
-				'background_color'                 => '#ffffff',
-				'menu_background_color'            => '#212121',
-				'footer_widget_background_color'   => '#212121',
-				'footer_background_color'          => '#191919',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
 			),
 		),
 		'canary' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#999999',
-				'footer_menu_text_color'           => '#686868',
-				'background_color'                 => '#ffffff',
-				'menu_background_color'            => '#212121',
-				'footer_widget_background_color'   => '#212121',
-				'footer_background_color'          => '#191919',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
 			),
 		),
 		'dark' => array(
 			'colors' => array(
-				'footer_widget_text_color'         => '#999999',
-				'footer_menu_text_color'           => '#686868',
-				'footer_text_color'                => '#686868',
-				'background_color'                 => '#191919',
-				'hero_background_color'            => '#212121',
-				'footer_widget_background_color'   => '#212121',
-				'footer_background_color'          => '#191919',
+				'footer_widget_text_color'       => '#999999',
+				'link_color'                     => '#51748e',
+				'button_color'                   => '#51748e',
+				'background_color'               => '#191919',
+				'hero_background_color'          => '#191919',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
+				'footer_background_color'        => '#191919',
 			),
 		),
 		'iguana' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#999999',
-				'footer_menu_text_color'           => '#686868',
-				'background_color'                 => '#ffffff',
-				'menu_background_color'            => '#212121',
-				'footer_widget_background_color'   => '#212121',
-				'footer_background_color'          => '#191919',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
 			),
 		),
 		'muted' => array(
 			'colors' => array(
-				'footer_widget_text_color' => '#ffffff',
+				'footer_widget_heading_text_color' => '#ffffff',
+				'footer_widget_text_color'         => '#d5d6e0',
+				'footer_widget_background_color'   => '#767f99',
 			),
 		),
 		'plum' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#999999',
-				'footer_menu_text_color'           => '#686868',
-				'background_color'                 => '#ffffff',
-				'menu_background_color'            => '#212121',
-				'footer_widget_background_color'   => '#212121',
-				'footer_background_color'          => '#191919',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
 			),
 		),
 		'rose' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#999999',
-				'footer_menu_text_color'           => '#686868',
-				'background_color'                 => '#ffffff',
-				'menu_background_color'            => '#212121',
-				'footer_widget_background_color'   => '#212121',
-				'footer_background_color'          => '#191919',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
 			),
 		),
 		'tangerine' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#999999',
-				'footer_menu_text_color'           => '#686868',
-				'background_color'                 => '#ffffff',
-				'menu_background_color'            => '#212121',
-				'footer_widget_background_color'   => '#212121',
-				'footer_background_color'          => '#191919',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
 			),
 		),
 		'turquoise' => array(
 			'colors' => array(
-				'footer_widget_heading_text_color' => '#ffffff',
-				'footer_widget_text_color'         => '#999999',
-				'footer_menu_text_color'           => '#686868',
-				'background_color'                 => '#ffffff',
-				'menu_background_color'            => '#212121',
-				'footer_widget_background_color'   => '#212121',
-				'footer_background_color'          => '#191919',
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
 			),
 		),
 	);
