@@ -274,6 +274,12 @@ function velux_color_schemes( $color_schemes ) {
 				'footer_widget_background_color' => '#212121',
 			),
 		),
+		'cool' => array(
+			'colors' => array(
+				'menu_background_color'          => '#212121',
+				'footer_widget_background_color' => '#212121',
+			),
+		),
 		'dark' => array(
 			'colors' => array(
 				'footer_widget_text_color'       => '#999999',
