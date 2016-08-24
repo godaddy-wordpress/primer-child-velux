@@ -75,30 +75,36 @@ module.exports = function(grunt) {
 		},
 
 		pot: {
-				options:{
-					text_domain: pkg.name, //Your text domain. Produces my-text-domain.pot
-					dest: 'languages/', //directory to place the pot file
-					keywords: [ //WordPress localisation functions
-						'__:1',
-						'_e:1',
-						'_x:1,2c',
-						'esc_html__:1',
-						'esc_html_e:1',
-						'esc_html_x:1,2c',
-						'esc_attr__:1',
-						'esc_attr_e:1',
-						'esc_attr_x:1,2c',
-						'_ex:1,2c',
-						'_n:1,2',
-						'_nx:1,2,4c',
-						'_n_noop:1,2',
-						'_nx_noop:1,2,3c'
-					]
-				},
-				files:{
-					src:  [ '**/*.php' ],
-					expand: true
-				}
+			files:{
+				expand: true,
+				src: [ '**/*.php', '!node_modules/**' ]
+			},
+			options:{
+				text_domain: pkg.name,
+				msgmerge: true,
+				dest: 'languages/',
+				encoding: 'UTF-8',
+				keywords: [
+					'__',
+					'_e',
+					'__ngettext:1,2',
+					'_n:1,2',
+					'__ngettext_noop:1,2',
+					'_n_noop:1,2',
+					'_c',
+					'_nc:4c,1,2',
+					'_x:1,2c',
+					'_nx:4c,1,2',
+					'_nx_noop:4c,1,2',
+					'_ex:1,2c',
+					'esc_attr__',
+					'esc_attr_e',
+					'esc_attr_x:1,2c',
+					'esc_html__',
+					'esc_html_e',
+					'esc_html_x:1,2c'
+				]
+			}
 		},
 
 		replace: {
@@ -151,7 +157,6 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
 	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus' ] );
-	grunt.registerTask( 'lint', [ 'jshint' ] );
 	grunt.registerTask( 'update-pot', [ 'pot', 'replace:pot' ] );
 
 };

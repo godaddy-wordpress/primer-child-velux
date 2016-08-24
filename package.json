@@ -1,7 +1,7 @@
 {
   "name": "velux",
   "title": "Velux",
-  "description": "Velux is a modern WordPress theme based on _s.",
+  "description": "Velux is a Primer child theme with a clean, profesionnal and upscale design.",
   "version": "1.0.0",
   "author": "GoDaddy",
   "license": "GPL-2.0",
@@ -17,9 +17,6 @@
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "~3.0.4",
     "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-cssmin": "~0.14.0",
-    "grunt-contrib-jshint": "~1.0.0",
-    "grunt-contrib-uglify": "~1.0.1",
     "grunt-contrib-watch": "~1.0.0",
     "grunt-cssjanus": "~0.3.2",
     "grunt-dev-update": "~2.0.0",
