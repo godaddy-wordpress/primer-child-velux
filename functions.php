@@ -80,25 +80,6 @@ function velux_custom_logo_args( $args ) {
 add_filter( 'primer_custom_logo_args', 'velux_custom_logo_args' );
 
 /**
- * Set the default hero image description.
- *
- * @filter primer_default_hero_images
- * @since  1.0.0
- *
- * @param  array $defaults
- *
- * @return array
- */
-function velux_default_hero_images( $defaults ) {
-
-	$defaults['default']['description'] = esc_html__( 'Dress shoes and tie', 'velux' );
-
-	return $defaults;
-
-}
-add_filter( 'primer_default_hero_images', 'velux_default_hero_images' );
-
-/**
  * Set fonts.
  *
  * @filter primer_fonts
