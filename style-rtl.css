@@ -1726,8 +1726,6 @@ body.no-max-width .page-title-container .page-header {
   .site-info-wrapper .site-info {
     overflow: visible;
     padding: 0 20px; }
-    .site-info-wrapper .site-info .social-menu a {
-      background: none; }
   .site-info-wrapper .site-info-text,
   .site-info-wrapper .site-info-text a {
     color: #fff;
