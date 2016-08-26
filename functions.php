@@ -200,7 +200,7 @@ function velux_colors( $colors ) {
 			'default' => '#ffffff',
 		),
 		'hero_background_color' => array(
-			'default' => '#435f75',
+			'default' => '#212121',
 		),
 		'menu_background_color' => array(
 			'default'     => '#212121',
