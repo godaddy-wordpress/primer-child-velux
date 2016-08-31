@@ -14,13 +14,16 @@ function velux_move_elements() {
 	remove_action( 'primer_before_site_navigation',    'primer_add_mobile_menu' );
 	remove_action( 'primer_after_post_title_template', 'primer_add_post_meta' );
 
-	add_action( 'primer_header',                    'primer_add_primary_navigation' );
-	add_action( 'primer_after_site_header_wrapper', 'primer_add_page_title' );
-	add_action( 'primer_after_post_title',          'primer_add_post_meta' );
+	add_action( 'primer_header',           'primer_add_primary_navigation' );
+	add_action( 'primer_after_post_title', 'primer_add_post_meta' );
 
 	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
 
 		add_action( 'primer_after_site_header_wrapper', 'primer_add_hero' );
+
+	} else {
+
+		add_action( 'primer_after_site_header_wrapper', 'primer_add_page_title' );
 
 	}
 

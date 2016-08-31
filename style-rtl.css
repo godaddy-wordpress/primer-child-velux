@@ -1627,8 +1627,7 @@ body.no-max-width .page-title-container .page-header {
   margin-right: auto;
   margin-left: auto;
   color: white;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
   clear: both; }
   .hero:after {
     content: " ";
@@ -1636,15 +1635,13 @@ body.no-max-width .page-title-container .page-header {
     clear: both; }
   @media only screen and (min-width: 40.063em) {
     .hero {
-      padding-top: 3rem;
-      padding-bottom: 3rem; } }
+      padding: 3rem 0; } }
   .hero .hero-inner {
     width: 97.22222%;
     float: right;
     margin-right: 1.38889%;
     margin-left: 1.38889%;
-    padding-right: 10px;
-    padding-left: 10px; }
+    padding: 0 1rem; }
     @media only screen and (min-width: 40.063em) {
       .hero .hero-inner {
         width: 63.88889%;
@@ -1652,7 +1649,7 @@ body.no-max-width .page-title-container .page-header {
         margin-right: 1.38889%;
         margin-left: 1.38889%; } }
   .hero .widget {
-    margin-bottom: 1em;
+    margin-bottom: 3rem;
     font-size: 1.2em;
     font-weight: 300;
     background: none;
@@ -1688,17 +1685,31 @@ body.no-max-width .page-title-container .page-header {
         .hero .widget a.button:hover:after {
           padding-right: 10px; }
     @media only screen and (min-width: 40.063em) {
-      .hero .widget {
-        padding: 3em 20px; }
-        .hero .widget .widget-title {
-          color: white;
-          font-size: 5.5rem;
-          line-height: 1;
-          text-align: right; } }
-    .hero .widget::last-child {
+      .hero .widget .widget-title {
+        color: white;
+        font-size: 5.5rem;
+        line-height: 1;
+        text-align: right; } }
+    .hero .widget:last-child {
       margin-bottom: 0; }
-    .hero .widget h1, .hero .widget h2, .hero .widget h3, .hero .widget h4, .hero .widget h5, .hero .widget h6, .hero .widget p, .hero .widget ul, .hero .widget ol, .hero .widget li {
-      color: white; }
+    .hero .widget h1,
+    .hero .widget h2,
+    .hero .widget h3,
+    .hero .widget h4,
+    .hero .widget h5,
+    .hero .widget h6,
+    .hero .widget p,
+    .hero .widget blockquote,
+    .hero .widget cite,
+    .hero .widget table,
+    .hero .widget ul,
+    .hero .widget li,
+    .hero .widget dd,
+    .hero .widget dt,
+    .hero .widget address,
+    .hero .widget code,
+    .hero .widget pre {
+      color: #fff; }
     .hero .widget ul, .hero .widget ol {
       padding-right: 0; }
       .hero .widget ul li, .hero .widget ol li {

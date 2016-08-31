@@ -1,27 +1,26 @@
 .hero {
 	@include container($container-size);
+
 	color: white;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	padding: 2rem 0;
 	clear: both;
 
 	@media #{$medium-up} {
-		padding-top: 3rem;
-		padding-bottom: 3rem;
+		padding: 3rem 0;
 	}
 
-	.hero-inner{
+	.hero-inner {
 		@include span(12);
-		padding-left: 10px;
-		padding-right: 10px;
 
-		@media #{$medium-up}{
+		padding: 0 1rem;
+
+		@media #{$medium-up} {
 			@include span(8);
 		}
 	}
 
 	.widget {
-		margin-bottom: 1em;
+		margin-bottom: 3rem;
 		font-size: 1.2em;
 		font-weight: 300;
 		background: none;
@@ -35,7 +34,7 @@
 			text-align: left;
 		}
 
-		a.button{
+		a.button {
 			font-family: $font__main;
 			text-transform: uppercase;
 			letter-spacing: 1px;
@@ -43,10 +42,10 @@
 			padding-left: 0;
 			padding-right: 0;
 			color: white;
-			border-bottom: 2px solid rgba(255,255,255,.8);
+			border-bottom: 2px solid rgba(255, 255, 255, 0.8);
 			transition: 50ms linear border-color;
 
-			&:after{
+			&:after {
 				content: ' \25b6';
 				font-size: .5rem;
 				padding-left: 5px;
@@ -55,18 +54,17 @@
 				transition: 75ms ease-in-out padding;
 			}
 
-			&:hover{
+			&:hover {
 				border-color: white;
 				background-color: transparent;
 
-				&:after{
+				&:after {
 					padding-left: 10px;
 				}
 			}
 		}
 
 		@media #{$medium-up} {
-			padding: 3em 20px;
 
 			.widget-title {
 				color: white;
@@ -74,15 +72,30 @@
 				line-height: 1;
 				text-align: left;
 			}
-
 		}
 
-		&::last-child {
+		&:last-child {
 			margin-bottom: 0;
 		}
 
-		h1,h2,h3,h4,h5,h6,p,ul,ol,li{
-			color: white;
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		blockquote,
+		cite,
+		table,
+		ul,
+		li,
+		dd,
+		dt,
+		address,
+		code,
+		pre {
+			color: #fff;
 		}
 
 		ul, ol {
@@ -102,6 +115,4 @@
 		display: inline;
 		width: auto;
 	}
-
-
 }
