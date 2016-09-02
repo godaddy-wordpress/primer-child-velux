@@ -590,6 +590,12 @@ a {
     @media only screen and (max-width: 40.063em) {
       .main-navigation.open {
         margin-top: 25px; } }
+  .main-navigation:not(.open) ul.menu > li.current_page_item > a,
+  .main-navigation:not(.open) ul.menu > li.current-menu-item > a,
+  .main-navigation:not(.open) ul.menu > li.current_page_ancestor > a,
+  .main-navigation:not(.open) ul.menu > li.current_page_parent > a,
+  .main-navigation:not(.open) ul.menu > li.current-menu-ancestor > a {
+    border-color: white; }
   @media only screen and (max-width: 40.063em) {
     .main-navigation {
       position: absolute;
@@ -645,8 +651,7 @@ a {
     .main-navigation ul.menu > li.current_page_ancestor > a,
     .main-navigation ul.menu > li.current_page_parent > a,
     .main-navigation ul.menu > li.current-menu-ancestor > a {
-      font-weight: 700;
-      border-color: white; }
+      font-weight: 700; }
     .main-navigation ul a {
       color: white;
       display: block;

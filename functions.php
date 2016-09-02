@@ -188,7 +188,7 @@ function velux_colors( $colors ) {
 				'.main-navigation ul ul, .main-navigation .sub-menu' => array(
 					'background-color' => '%1$s',
 				),
-				'.main-navigation ul.menu > li > a:hover' => array(
+				'.main-navigation:not(.open) ul.menu > li > a:hover' => array(
 					'border-color' => '%1$s',
 				),
 			),
