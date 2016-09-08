@@ -49,13 +49,44 @@
 .entry-meta {
 	font-size: 90%;
 	color: $color__text-secondary;
+
+	.posted-date,
+	.posted-author,
+	.comments-number {
+		margin-right: 1rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media #{$small-only} {
+			display: block;
+			margin-right: 0;
+		}
+
+		&:before {
+			position: relative;
+			top: 3px;
+			font-family: 'genericons';
+			font-size: 18px;
+			padding-right: 2px;
+		}
+	}
+
+	.posted-date:before {
+		content: '\f303';
+	}
+
+	.posted-author:before {
+		content: '\f304';
+	}
+
+	.comments-number:before {
+		content: '\f300';
+	}
 }
 
 @media #{$small-only} {
-
-	.comments-number {
-		display: block;
-	}
 
 	.post-navigation {
 		font-size: 90%;
@@ -97,22 +128,19 @@
 	margin: 0 0 1.5em;
 }
 
-
 @media #{$medium-up} {
 
 	.hentry {
 		padding: 0 15px 0 0;
 	}
-
 }
 
-.featured-image img{
+.featured-image img {
 	display: block;
 	margin-bottom: 2rem;
 }
 
 .single {
-
 	.entry-header {
 		border-bottom: 1px solid $color__border;
 		border-top: 1px solid $color__border;
@@ -121,20 +149,6 @@
 		text-align: center;
 	}
 
-	.posted-author,
-	.comments-number{
-		&:before{
-			content: " \00b7 ";
-			padding-left: 3px;
-			padding-right: 3px;
-			display: inline-block;
-		}
-	}
-
-	.entry-meta {
-		margin: 0;
-		padding: 0;
-	}
 	.entry-title {
 		clear: none;
 		font-size: 3rem;
@@ -142,7 +156,6 @@
 	}
 
 	.author-image {
-
 		@media #{$medium-up} {
 			float: right;
 			width: 90px;
@@ -156,7 +169,6 @@
 			margin: 15px auto;
 			padding: 3px;
 		}
-
 	}
 
 	.entry-meta {
@@ -166,7 +178,5 @@
 		a {
 			color: $color__text-input;
 		}
-
 	}
-
 }
