@@ -564,6 +564,9 @@ a {
   a:hover, a:active, a:focus {
     outline: 0; }
 
+.wp-pointer-content h3 {
+  font-family: inherit; }
+
 .wp-pointer-content .wp-pointer-buttons a.close,
 .wp-pointer-content .wp-pointer-buttons a.close:visited {
   color: #0073aa; }
@@ -572,9 +575,6 @@ a {
   .wp-pointer-content .wp-pointer-buttons a.close:visited:active,
   .wp-pointer-content .wp-pointer-buttons a.close:visited:focus {
     color: #00a0d2; }
-
-.wp-pointer-content h3 {
-  font-family: inherit; }
 
 /*--------------------------------------------------------------
 # Menus

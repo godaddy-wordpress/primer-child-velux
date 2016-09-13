@@ -21,6 +21,10 @@ a {
 
 .wp-pointer-content {
 
+	h3 {
+		font-family: inherit;
+	}
+
 	.wp-pointer-buttons a.close,
 	.wp-pointer-buttons a.close:visited {
 		color: #0073aa;
@@ -30,9 +34,5 @@ a {
 		&:focus {
 			color: #00a0d2;
 		}
-	}
-
-	h3 {
-		font-family: inherit;
 	}
 }
