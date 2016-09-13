@@ -564,6 +564,18 @@ a {
   a:hover, a:active, a:focus {
     outline: 0; }
 
+.wp-pointer-content .wp-pointer-buttons a.close,
+.wp-pointer-content .wp-pointer-buttons a.close:visited {
+  color: #0073aa; }
+  .wp-pointer-content .wp-pointer-buttons a.close:hover, .wp-pointer-content .wp-pointer-buttons a.close:active, .wp-pointer-content .wp-pointer-buttons a.close:focus,
+  .wp-pointer-content .wp-pointer-buttons a.close:visited:hover,
+  .wp-pointer-content .wp-pointer-buttons a.close:visited:active,
+  .wp-pointer-content .wp-pointer-buttons a.close:visited:focus {
+    color: #00a0d2; }
+
+.wp-pointer-content h3 {
+  font-family: inherit; }
+
 /*--------------------------------------------------------------
 # Menus
 --------------------------------------------------------------*/

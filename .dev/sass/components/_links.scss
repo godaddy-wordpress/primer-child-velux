@@ -18,3 +18,21 @@ a {
 		outline: 0;
 	}
 }
+
+.wp-pointer-content {
+
+	.wp-pointer-buttons a.close,
+	.wp-pointer-buttons a.close:visited {
+		color: #0073aa;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: #00a0d2;
+		}
+	}
+
+	h3 {
+		font-family: inherit;
+	}
+}
