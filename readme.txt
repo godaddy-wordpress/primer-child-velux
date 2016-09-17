@@ -7,11 +7,11 @@ Stable tag:        1.0.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Velux is a Primer child theme with a clean, professional, and upscale design.
+Velux is a GoDaddy Primer child theme with a clean, professional, and upscale design.
 
 == Description ==
 
-Velux is a Primer child theme with a clean, professional, and upscale design.
+Velux is a GoDaddy Primer child theme with a clean, professional, and upscale design.
 
 **Languages Supported:**
 
