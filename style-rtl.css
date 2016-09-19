@@ -2203,6 +2203,9 @@ body.no-max-width .site-info-wrapper .site-info {
 .entry-summary {
   margin: 1.5em 0 0; }
 
+.entry-content {
+  margin-bottom: 1.5em; }
+
 .entry-footer {
   font-size: 85%;
   color: #686868; }
