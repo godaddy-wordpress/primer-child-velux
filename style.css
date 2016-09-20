@@ -239,7 +239,8 @@ textarea {
 --------------------------------------------------------------*/
 body {
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  word-wrap: break-word; }
 
 body,
 button,
@@ -2201,6 +2202,9 @@ body.no-max-width .site-info-wrapper .site-info {
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0; }
+
+.entry-content {
+  margin-bottom: 1.5em; }
 
 .entry-footer {
   font-size: 85%;
