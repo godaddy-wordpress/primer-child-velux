@@ -1,0 +1,29 @@
+sudo: false
+
+language:
+  - php
+  - node_js
+
+before_script:
+  - curl -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
+
+script:
+  - echo "Deploy only"
+
+before_deploy:
+  - export RELEASE_FOLDER=velux
+  - php /tmp/wp-cli.phar package install runcommand/dist-archive
+  - cp -rv ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
+  - mv /tmp/${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}
+  - php /tmp/wp-cli.phar dist-archive ${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}/${RELEASE_FOLDER}.zip --format=zip --debug
+
+deploy:
+  provider: releases
+  api_key:
+    secure: bq6iVDJDQ8AN8KlRTZGokhX5TtleAYidPFDzEQnnoIEx//A+xZOgM1jyIlf9EW7Y7prD4f07PYWcoRj4C5vFgxhCalQui0jcHseed6PDTQ9gktjETReFy+yzD8KJWAO/FMr3xFCeO2gp5P77jVPxEwZ6dwNKZGTDfAGtyJjFQqACjebDX/UM+Ed5GsTzPdjaRXjq0f8Hn7gU1uTU/g1SFLy/HZHjsr9WWV0HbJdFcD3hDILMdivHfiWLLssLlfnIopCDwdFiTIvpNvUt0eR8YZzcoONJUEiFQM8V+/80hT4QwYj8/oRdO/5I3pJxepp5v/VZiLx/6eZ4do2kTk4A3nbk1T31t5rhH5TuuYXZPunc2ebPSSMw6x74S3U5Z3UCG4y2JmEKQk8otli0P4Pw6tXVLUckotWwEtOvSYs83hncLBxWae5zDRFMt3QPynPCEtIUXfnGjx01Z7M+bJT3IddR/qyzdiao3itQAJhV9r+W0ZqwwnAuPk6kMNfOBAKAZT83+Y7p4+g3MzodkI8joNluo0kCb7ajOa7yQT3kI5oYQ0vUEcOIXKFmSHuXFnEw/bws9TtHp+V5bSWJRQPnAqnxWumJAn6gqvIYiWeFbKxGYESMXtJI7smrdTWmHxK2fNZYrsdG0vxQWy/IpB0/X+xmhX08N1bTXDY4GedhiSY=
+  file: velux.zip
+  on:
+    tags: true
+    repo: godaddy/wp-velux-theme
+  skip_cleanup: true
+  overwrite: true
