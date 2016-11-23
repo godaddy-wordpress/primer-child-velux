@@ -2394,10 +2394,6 @@ ul.site-header-cart.menu ul.product_list_widget li {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-ul.site-header-cart.menu ul.product_list_widget li.mini_cart_item a {
-  line-height: 20px;
-  padding-bottom: .25em; }
-
 ul.site-header-cart.menu .widget_shopping_cart {
   margin-bottom: 0;
   padding: 10px 0 2px 0; }
@@ -2424,6 +2420,9 @@ ul.site-header-cart.menu .widget_shopping_cart .buttons a {
   display: block;
   width: 100%;
   text-align: center; }
+
+ul.site-header-cart.menu .widget_shopping_cart .buttons a.remove {
+  padding-top: 2px; }
 
 .site-header-cart-container {
   width: 100%;
