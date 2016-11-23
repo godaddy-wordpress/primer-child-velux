@@ -1,4 +1,7 @@
 .site-header-wrapper {
+
+	position: relative;
+
 	@include container($container-size);
 	border-bottom: 1px solid white;
 	padding-bottom: 25px;
