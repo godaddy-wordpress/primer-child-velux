@@ -116,3 +116,12 @@
 		width: auto;
 	}
 }
+
+@media #{$webkit} {
+
+	html :lang(hi) h2.widget-title,
+	html :lang(mr) h2.widget-title {
+		font-family: -webkit-body;
+	}
+
+}

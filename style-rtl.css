@@ -1760,6 +1760,11 @@ body.no-max-width .page-title-container .page-header {
     display: inline;
     width: auto; }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  html :lang(hi) h2.widget-title,
+  html :lang(mr) h2.widget-title {
+    font-family: -webkit-body; } }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
