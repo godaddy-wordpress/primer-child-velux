@@ -16,6 +16,7 @@ $medium-up: "only screen and (min-width: #{$medium-screen})";
 $medium-down: "only screen and (max-width: #{$large-screen})";
 $medium-only: "only screen and (min-width: #{$medium-screen}) and (max-width: #{$large-screen})";
 $large-up: "only screen and (min-width: #{$large-screen})";
+$webkit: "screen and (-webkit-min-device-pixel-ratio:0)";
 
 // Typography
 $font__main: $primary-font, "Helvetica Neue", sans-serif;
