@@ -402,7 +402,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+.select2-container .select2-choice {
   color: rgba(34, 34, 34, 0.5);
   border: 1px solid rgba(34, 34, 34, 0.1);
   -webkit-border-radius: 3px;
@@ -424,8 +425,18 @@ textarea {
   input[type="datetime"]:focus,
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
-  textarea:focus {
+  textarea:focus,
+  .select2-container .select2-choice:focus {
     color: #222222; }
+
+.select2-container .select2-choice {
+  padding: 0.16rem 0.75rem; }
+
+.select2-drop-active,
+.select2-drop.select2-drop-above.select2-drop-active,
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+  border-color: rgba(34, 34, 34, 0.1); }
 
 input[type="checkbox"],
 input[type="radio"] {
