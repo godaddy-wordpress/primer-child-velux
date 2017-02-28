@@ -815,6 +815,7 @@ body.no-max-width .main-navigation {
   @media only screen and (max-width: 40.063em) {
     .navigation.pagination .paging-nav-text {
       display: inline-block;
+      float: right;
       font-size: 0.9rem;
       font-weight: normal;
       color: #222222; }
