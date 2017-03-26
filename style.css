@@ -1566,6 +1566,8 @@ body.page-template-page-builder-no-header .content-area {
   background-size: cover;
   z-index: 999;
   background-color: #51748e; }
+  .site-header #wp-custom-header img {
+    display: none; }
   .home .site-header {
     -webkit-background-size: cover;
     background-size: cover; }
