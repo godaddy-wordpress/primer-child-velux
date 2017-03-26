@@ -28,7 +28,7 @@ function velux_move_elements() {
 
 	add_action( 'primer_after_post_title', 'primer_add_post_meta' );
 
-	add_action( 'primer_after_site_header_wrapper', 'primer_video_header',           3 );
+	add_action( 'primer_after_site_header_wrapper', 'primer_video_header' );
 
 	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
 
