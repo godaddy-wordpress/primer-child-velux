@@ -1,6 +1,7 @@
 .site-header-wrapper {
 
 	position: relative;
+	z-index: 1;
 
 	@include container($container-size);
 	border-bottom: 1px solid white;
