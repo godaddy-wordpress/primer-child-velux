@@ -1,35 +1,3 @@
-.site-header.video-header {
-	background-color: #000;
-	color: #000;
-
-	.hero,
-	aside.primer-hero-text-widget {
-		position: relative;
-		z-index: 5;
-	}
-
-	#wp-custom-header {
-		position: absolute;
-		height: 100%;
-		top: 0;
-		left: 0;
-
-		img {
-			display: none;
-		}
-	}
-
-	#wp-custom-header-video-button {
-		display: none;
-	}
-
-	iframe#wp-custom-header-video {
-		height: 100%;
-		max-width: 100%;
-	}
-
-}
-
 .hero {
 	@include container($container-size);
 
