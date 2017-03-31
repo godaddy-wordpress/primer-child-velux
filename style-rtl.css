@@ -1550,8 +1550,37 @@ body.page-template-page-builder-no-header .content-area {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.site-header.video-header {
+  overflow: hidden;
+  background-color: #000;
+  color: #000; }
+  .site-header.video-header .hero,
+  .site-header.video-header aside.primer-hero-text-widget {
+    position: relative;
+    z-index: 5; }
+  .site-header.video-header #wp-custom-header {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto; }
+    .site-header.video-header #wp-custom-header img {
+      display: none; }
+  .site-header.video-header #wp-custom-header-video-button {
+    position: absolute;
+    top: 89vh;
+    left: 1em;
+    opacity: 0.5;
+    padding: 10px 1rem; }
+  .site-header.video-header iframe#wp-custom-header-video {
+    height: 100%;
+    max-width: 100%; }
+
 .site-header-wrapper {
   position: relative;
+  z-index: 1;
   max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
@@ -1573,6 +1602,8 @@ body.page-template-page-builder-no-header .content-area {
   background-size: cover;
   z-index: 999;
   background-color: #51748e; }
+  .site-header #wp-custom-header img {
+    display: none; }
   .home .site-header {
     -webkit-background-size: cover;
     background-size: cover; }
@@ -1599,7 +1630,7 @@ body.page-template-page-builder-no-header .content-area {
 
 body.custom-header-image .site-title,
 body.custom-header-image .site-description {
-  text-shadow: -1px -1px 15px rgba(0, 0, 0, 0.5); }
+  text-shadow: -1px 1px 15px rgba(0, 0, 0, 0.5); }
 
 .site-title-wrapper {
   padding: 20px 20px 0 0;
