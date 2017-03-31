@@ -2,7 +2,7 @@
 Contributors:      godaddy, fjarrett, jonathanbardo
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      4.6
+Tested up to:      4.7
 Stable tag:        1.0.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -89,6 +89,13 @@ TODO
 
 == Changelog ==
 
-= 1.0.0 - June, 2016 =
+= 1.1.0 =
+
+* New: Added Ninja Forms compatibility styles. Style Ninja Forms response messages. @props [evanherman](https://github.com/EvanHerman)
+* New: Added video header styles, requires Primer 1.7.0. @props [evanherman](https://github.com/EvanHerman)
+* New: Added pagination styles. @props [fjarrett](https://github.com/fjarrett), [evanherman](https://github.com/EvanHerman)
+* Tweak: Various WooCommerce style enhancements, including i10n site button tweaks. @props [evanherman](https://github.com/EvanHerman)
+
+= 1.0.0 =
 
 * Initial release.
