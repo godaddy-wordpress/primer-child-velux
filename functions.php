@@ -7,7 +7,7 @@
  *
  * @var string
  */
-define( 'PRIMER_CHILD_VERSION', '1.0.0' );
+define( 'PRIMER_CHILD_VERSION', '1.1.0' );
 
 /**
  * Move some elements around.
@@ -17,22 +17,26 @@ define( 'PRIMER_CHILD_VERSION', '1.0.0' );
  */
 function velux_move_elements() {
 
-	remove_action( 'primer_header',                    'primer_add_hero' );
-	remove_action( 'primer_after_header',              'primer_add_primary_navigation' );
-	remove_action( 'primer_after_header',              'primer_add_page_title' );
+	remove_action( 'primer_header',                    'primer_add_hero',               7 );
+	remove_action( 'primer_after_header',              'primer_add_primary_navigation', 11 );
+	remove_action( 'primer_after_header',              'primer_add_page_title',         12 );
 	remove_action( 'primer_before_site_navigation',    'primer_add_mobile_menu' );
 	remove_action( 'primer_after_post_title_template', 'primer_add_post_meta' );
+	remove_action( 'primer_before_header_wrapper',     'primer_video_header',           5 );
 
 	add_action( 'primer_header',           'primer_add_primary_navigation' );
+
 	add_action( 'primer_after_post_title', 'primer_add_post_meta' );
+
+	add_action( 'primer_after_site_header_wrapper', 'primer_video_header' );
 
 	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
 
-		add_action( 'primer_after_site_header_wrapper', 'primer_add_hero' );
+		add_action( 'primer_after_site_header_wrapper', 'primer_add_hero', 7 );
 
 	} else {
 
-		add_action( 'primer_after_site_header_wrapper', 'primer_add_page_title' );
+		add_action( 'primer_after_site_header_wrapper', 'primer_add_page_title', 12 );
 
 	}
 

@@ -1,3 +1,5 @@
+@import "../compat/ninja-forms.scss";
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -13,7 +15,8 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
-textarea {
+textarea,
+.select2-container .select2-choice {
 	color: $color__text-input;
 	border: 1px solid $color__border;
 	border-radius: 3px;
@@ -23,6 +26,17 @@ textarea {
 	&:focus {
 		color: $color__text-input-focus;
 	}
+}
+
+.select2-container .select2-choice {
+	padding: 0.42rem 0.75rem;
+}
+
+.select2-drop-active,
+.select2-drop.select2-drop-above.select2-drop-active,
+.select2-dropdown-open.select2-drop-above .select2-choice,
+.select2-dropdown-open.select2-drop-above .select2-choices {
+	border-color: $color__border;
 }
 
 input[type="checkbox"],

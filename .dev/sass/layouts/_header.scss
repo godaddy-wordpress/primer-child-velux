@@ -1,4 +1,10 @@
+@import "video-header";
+
 .site-header-wrapper {
+
+	position: relative;
+	z-index: 1;
+
 	@include container($container-size);
 	border-bottom: 1px solid white;
 	padding-bottom: 25px;
@@ -17,6 +23,14 @@
 	background-size: cover;
 	z-index: 999;
 	background-color: $color__background-header;
+
+
+	#wp-custom-header {
+
+		img {
+			display: none;
+		}
+	}
 
 	.home & {
 		background-size: cover;
