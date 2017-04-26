@@ -765,7 +765,7 @@ body.no-max-width .main-navigation {
   display: inline-block;
   margin: 0 auto;
   width: 3.9rem;
-  padding: 0.6rem;
+  padding: 0.15rem 0.6rem 0.6rem 0.6rem;
   cursor: pointer;
   position: absolute;
   z-index: 9999;
@@ -1666,12 +1666,13 @@ body.custom-header-image .site-description {
 
 .site-title-wrapper {
   padding: 20px 0 0 20px;
-  width: auto;
+  width: 80%;
   float: left; }
   @media only screen and (min-width: 40.063em) {
     .site-title-wrapper {
       padding-top: 0;
-      text-align: left; } }
+      text-align: left;
+      width: 100%; } }
 
 .site-title {
   text-transform: uppercase;
