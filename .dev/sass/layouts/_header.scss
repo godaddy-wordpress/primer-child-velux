@@ -135,7 +135,6 @@ body.no-max-width .page-title-container .page-header {
 	.page-header {
 		@include container($container-size);
 		position: relative;
-		z-index: 100;
 		clear: both;
 
 

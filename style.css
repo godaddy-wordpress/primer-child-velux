@@ -1588,8 +1588,7 @@ body.page-template-page-builder-no-header .content-area {
   color: #000; }
   .site-header.video-header .hero,
   .site-header.video-header aside.primer-hero-text-widget {
-    position: relative;
-    z-index: 5; }
+    position: relative; }
   .site-header.video-header #wp-custom-header {
     position: absolute;
     height: 100vh;
@@ -1726,7 +1725,6 @@ body.no-max-width .page-title-container .page-header {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    z-index: 100;
     clear: both; }
     .page-title-container .page-header:after {
       content: " ";
