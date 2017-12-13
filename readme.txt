@@ -89,6 +89,10 @@ TODO
 
 == Changelog ==
 
+= 1.1.1 =
+
+* Tweak: Fix WooCommerce cart menu item background. @props [evanherman](https://github.com/EvanHerman)
+
 = 1.1.0 =
 
 * New: Added Ninja Forms compatibility styles. Style Ninja Forms response messages. @props [evanherman](https://github.com/EvanHerman)
