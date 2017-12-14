@@ -61,12 +61,13 @@ body.custom-header-image {
 
 .site-title-wrapper {
 	padding: 20px 0 0 20px;
-	width: auto;
+	width: 80%;
 	float: left;
 
 	@media #{$medium-up} {
 		padding-top: 0;
 		text-align: left;
+		width: 100%;
 	}
 
 }
@@ -135,7 +136,6 @@ body.no-max-width .page-title-container .page-header {
 	.page-header {
 		@include container($container-size);
 		position: relative;
-		z-index: 100;
 		clear: both;
 
 
