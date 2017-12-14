@@ -1,5 +1,6 @@
 node_modules
 /.DS_Store
+build/
 /templates/parts/.DS_Store
 /templates/.DS_Store
 /assets/.DS_Store
