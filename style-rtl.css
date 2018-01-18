@@ -1665,13 +1665,12 @@ body.custom-header-image .site-description {
 
 .site-title-wrapper {
   padding: 20px 20px 0 0;
-  width: 80%;
+  width: auto;
   float: right; }
   @media only screen and (min-width: 40.063em) {
     .site-title-wrapper {
       padding-top: 0;
-      text-align: right;
-      width: 100%; } }
+      text-align: right; } }
 
 .site-title {
   text-transform: uppercase;
