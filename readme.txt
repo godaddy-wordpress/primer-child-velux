@@ -79,6 +79,10 @@ Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
+Stock photography, pexels
+License: Creative Commons Zero
+Source: https://www.pexels.com/photo/fashion-man-vintage-shoes-63196/
+
 == Frequently Asked Questions ==
 
 TODO
