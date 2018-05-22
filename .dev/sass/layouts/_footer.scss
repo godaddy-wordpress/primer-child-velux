@@ -19,6 +19,18 @@
 		padding: 0 20px;
 	}
 
+
+	.privacy-policy-link {
+		font-size: .875rem;
+
+		@media #{$small-only} {
+			margin-bottom: 1em;
+			display: inline-block;
+			margin: 10px auto 0 auto;
+			line-height: 38px;
+		}
+	}
+
 	.site-info-text,
 	.site-info-text a {
 		color: $color__text-footer;
@@ -91,11 +103,16 @@ body.no-max-width .footer-widget-area {
 
 	.site-info {
 		@include container($container-size);
+
+		@media #{$small-only} {
+			text-align: center;
+		}
 	}
 
 	.site-info-text {
-		@include span(12);
-
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
 		font-size: 90%;
 		line-height: 38px;
 	}
