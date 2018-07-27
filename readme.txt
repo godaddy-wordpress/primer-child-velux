@@ -93,6 +93,10 @@ TODO
 
 == Changelog ==
 
+= 1.1.3 =
+
+* New: Introduce styles for Gutenberg. @props [evanherman](https://github.com/EvanHerman)
+
 = 1.1.2 =
 
 * Tweak: Adjust site title wrapper width so long titles wrap properly. @props [evanherman](https://github.com/EvanHerman)
