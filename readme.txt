@@ -80,14 +80,6 @@ Stock photography, Pexels
 License: Creative Commons Zero
 Source: https://www.pexels.com/photo/fashion-man-vintage-shoes-63196/
 
-== Frequently Asked Questions ==
-
-TODO
-
-== Developer Tools ==
-
-TODO
-
 == Changelog ==
 
 = 1.1.3 =
