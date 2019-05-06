@@ -76,6 +76,11 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
+Velux is a child theme of Primer:
+
+Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC.
+Primer is distributed under the terms of the GNU GPL
+
 Velux bundles the following third-party resources:
 
 Stock photography, Pexels
