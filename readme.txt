@@ -2,7 +2,8 @@
 Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      4.9
+Tested up to:      5.1
+Requires PHP:      5.6.0
 Stable tag:        1.1.3
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -52,7 +53,7 @@ You can fork and contribute to Velux by visiting [our public repo on GitHub](htt
 
 == Installation ==
 
-1. In your admin panel, nagivate to **Appearance > Themes** and click the **Add New** button.
+1. In your admin panel, navigate to **Appearance > Themes** and click the **Add New** button.
 2. Type **Velux** in the search form and press the **Enter** key on your keyboard.
 3. Click the **Activate** button to begin using Velux on your website.
 4. In your admin panel, navigate to **Appearance > Customize**.
@@ -73,23 +74,16 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Velux bundles the following third-party resources:
+Velux is a child theme of Primer:
 
-Genericons icon font, Copyright 2013 Automattic, Inc.
-License: GPL-2.0 (or later)
-Source: https://genericons.com/
+Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC.
+Primer is distributed under the terms of the GNU GPL
+
+Velux bundles the following third-party resources:
 
 Stock photography, Pexels
 License: Creative Commons Zero
 Source: https://www.pexels.com/photo/fashion-man-vintage-shoes-63196/
-
-== Frequently Asked Questions ==
-
-TODO
-
-== Developer Tools ==
-
-TODO
 
 == Changelog ==
 
