@@ -5,3 +5,4 @@ build/
 /templates/.DS_Store
 /assets/.DS_Store
 .dev/local-url
+vendor/
