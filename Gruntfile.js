@@ -10,24 +10,15 @@ module.exports = function( grunt ) {
 
 		pkg: pkg,
 
-		autoprefixer: {
+		postcss: {
 			options: {
-				browsers: [
-					'Android >= 2.1',
-					'Chrome >= 21',
-					'Edge >= 12',
-					'Explorer >= 7',
-					'Firefox >= 17',
-					'Opera >= 12.1',
-					'Safari >= 6.0'
-				],
-				cascade: false
+				map: false, // inline sourcemaps
+				processors: [
+					require( 'autoprefixer' ), // add vendor prefixes
+				]
 			},
-			editor: {
-				src: [ 'editor-style.css' ]
-			},
-			main: {
-				src: [ 'style.css' ]
+			dist: {
+				src: [ 'editor-style.css', 'style.css' ],
 			}
 		},
 
@@ -155,6 +146,7 @@ module.exports = function( grunt ) {
 
 		sass: {
 			options: {
+				implementation: require( 'node-sass' ),
 				precision: 5,
 				sourceMap: false
 			},
@@ -177,7 +169,7 @@ module.exports = function( grunt ) {
 			},
 			sass: {
 				files: '.dev/sass/**/*.scss',
-				tasks: [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus' ]
+				tasks: [ 'sass', 'replace:charset', 'postcss', 'cssjanus' ]
 			}
 		},
 
@@ -215,7 +207,7 @@ module.exports = function( grunt ) {
 
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
-	grunt.registerTask( 'default', [ 'sass', 'replace:charset', 'autoprefixer', 'cssjanus', 'jshint', 'imagemin' ] );
+	grunt.registerTask( 'default', [ 'sass', 'replace:charset', 'postcss', 'cssjanus', 'jshint', 'imagemin' ] );
 	grunt.registerTask( 'build',   [ 'default', 'clean', 'copy' ] );
 	grunt.registerTask( 'readme',  [ 'wp_readme_to_markdown' ] );
 	grunt.registerTask( 'version', [ 'replace', 'readme', 'build' ] );
